@@ -180,14 +180,14 @@
                     <span class="text-[11px] sm:text-xs text-slate-400 mt-1">Calçados & Performance</span>
                 </div>
                 <!-- Integralmédica -->
-                <div class="glass-panel px-2.5 py-4 sm:p-6 rounded-2xl flex flex-col items-center justify-center text-center group hover:border-[#FF4D00]/40 transition min-h-[120px] sm:min-h-[140px] overflow-hidden">
+                <div class="glass-panel px-3 py-4 sm:p-6 rounded-2xl flex flex-col items-center justify-center text-center group hover:border-[#FF4D00]/40 transition min-h-[120px] sm:min-h-[140px] overflow-hidden">
                     <span class="text-[9px] sm:text-[10px] uppercase font-bold text-slate-400 mb-2 tracking-wider">Nutrição Oficial</span>
-                    <span class="text-xs sm:text-base md:text-lg xl:text-xl font-black font-syne tracking-tighter text-white group-hover:text-[#FF4D00] transition w-full block text-center truncate">INTEGRALMÉDICA</span>
+                    <span class="text-[clamp(11px,1.15vw,17px)] font-black font-syne tracking-tighter text-white group-hover:text-[#FF4D00] transition whitespace-nowrap block text-center leading-tight my-0.5">INTEGRALMÉDICA</span>
                     <span class="text-[11px] sm:text-xs text-slate-400 mt-1">Suplementação & Recovery</span>
                 </div>
                 <!-- Invictus -->
                 <div class="glass-panel p-4 sm:p-6 rounded-2xl flex flex-col items-center justify-center text-center group hover:border-[#FF4D00]/40 transition min-h-[120px] sm:min-h-[140px]">
-                    <span class="text-[9px] sm:text-[10px] uppercase font-bold text-slate-400 mb-2 tracking-wider">Equipamentos & BolsAS PRO</span>
+                    <span class="text-[9px] sm:text-[10px] uppercase font-bold text-slate-400 mb-2 tracking-wider">Equipamentos & Bolsas PRO</span>
                     <span class="text-xl sm:text-2xl font-black font-syne tracking-wider text-white group-hover:text-[#FF7A00] transition">INVICTUS</span>
                     <span class="text-[11px] sm:text-xs text-slate-400 mt-1">Acessórios Táticos & Outdoor</span>
                 </div>

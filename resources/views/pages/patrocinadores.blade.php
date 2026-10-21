@@ -64,7 +64,7 @@
                     <!-- Integralmédica -->
                     <div class="glass-panel px-4 py-8 sm:p-8 rounded-3xl text-center space-y-3 hover:border-[#FF4D00]/50 transition group overflow-hidden">
                         <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Nutrição Esportiva</span>
-                        <h4 class="font-syne font-black text-lg sm:text-xl md:text-lg lg:text-xl xl:text-2xl tracking-tighter text-white group-hover:text-[#FF4D00] transition truncate max-w-full block">INTEGRALMÉDICA</h4>
+                        <h4 class="font-syne font-black text-[clamp(13px,1.4vw,22px)] tracking-tighter text-white group-hover:text-[#FF4D00] transition whitespace-nowrap block text-center">INTEGRALMÉDICA</h4>
                         <p class="text-xs text-slate-300">Recovery avançado, hidratação com isotônicos e sachês energéticos em todos os kits.</p>
                     </div>
 
