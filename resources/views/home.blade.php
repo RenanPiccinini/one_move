@@ -33,76 +33,262 @@
         </svg>
 
         <!-- ============================================================== -->
-        <!-- 01. HERO — IMPACTO IMEDIATO                                   -->
+        <!-- 01. HERO — VÍDEO FULL SCREEN DE ALTO IMPACTO (ONE MOVE RUN)    -->
         <!-- ============================================================== -->
-        <section class="relative min-h-[92vh] flex flex-col justify-between pt-12 md:pt-20 pb-16 px-4 sm:px-6 lg:px-12 max-w-[1700px] mx-auto z-10">
-            
-            <!-- Top Subtle Meta Track -->
-            <div class="flex items-center justify-between text-xs font-bold tracking-widest text-neutral-500 uppercase border-b border-black/5 pb-4">
-                <div class="flex items-center gap-2">
-                    <span class="w-2 h-2 rounded-full bg-[#FF4D00] animate-ping"></span>
-                    <span class="text-neutral-900 font-extrabold">ONE MOVE RUN</span>
-                    <span class="text-neutral-300">•</span>
-                    <span>CIRCUITO NACIONAL 2027</span>
-                </div>
-                <div class="hidden sm:flex items-center gap-6 text-[11px]">
-                    <span>12 CAPITAIS</span>
-                    <span>5K • 10K • 15K</span>
-                    <span class="text-[#FF4D00] font-black">LARGADA: JANEIRO</span>
-                </div>
-            </div>
+        <section 
+            id="hero-video-section"
+            x-data="{
+                isPlaying: true,
+                isMuted: true,
+                progress: 0,
+                showHint: true,
+                init() {
+                    const video = this.$refs.videoPlayer;
+                    if (!video) return;
 
-            <!-- Massive Minimalist Editorial Headline -->
-            <div class="my-auto py-12 md:py-16">
-                <div class="max-w-6xl">
-                    <span class="inline-block text-xs md:text-sm font-black uppercase tracking-[0.25em] text-[#FF4D00] mb-4">
-                        A Marca da Experiência
-                    </span>
-                    <h1 class="font-syne font-black text-5xl sm:text-7xl md:text-8xl lg:text-9xl tracking-tighter leading-[0.9] uppercase text-[#0A0A0C] mb-8">
+                    // Autoplay safely with promise handling
+                    video.play().then(() => {
+                        this.isPlaying = true;
+                    }).catch(() => {
+                        this.isPlaying = false;
+                    });
+
+                    // Pause when scrolled out of view to preserve resources
+                    if ('IntersectionObserver' in window) {
+                        const observer = new IntersectionObserver((entries) => {
+                            entries.forEach(entry => {
+                                if (entry.isIntersecting) {
+                                    if (this.isPlaying) video.play().catch(() => {});
+                                } else {
+                                    video.pause();
+                                }
+                            });
+                        }, { threshold: 0.15 });
+                        observer.observe(this.$el);
+                    }
+
+                    setTimeout(() => { this.showHint = false; }, 8000);
+                },
+                togglePlay() {
+                    const video = this.$refs.videoPlayer;
+                    if (!video) return;
+                    if (video.paused) {
+                        video.play().then(() => { this.isPlaying = true; }).catch(() => {});
+                    } else {
+                        video.pause();
+                        this.isPlaying = false;
+                    }
+                },
+                toggleMute() {
+                    const video = this.$refs.videoPlayer;
+                    if (!video) return;
+                    video.muted = !video.muted;
+                    this.isMuted = video.muted;
+                    this.showHint = false;
+                    if (!video.muted && video.paused) {
+                        video.play().then(() => { this.isPlaying = true; }).catch(() => {});
+                    }
+                },
+                updateProgress() {
+                    const video = this.$refs.videoPlayer;
+                    if (!video || !video.duration) return;
+                    this.progress = (video.currentTime / video.duration) * 100;
+                },
+                seek(e) {
+                    const video = this.$refs.videoPlayer;
+                    if (!video || !video.duration) return;
+                    const rect = e.currentTarget.getBoundingClientRect();
+                    const pos = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+                    video.currentTime = pos * video.duration;
+                }
+            }"
+            class="relative w-full min-h-[90vh] md:min-h-[94vh] lg:min-h-[calc(100vh-4.5rem)] flex flex-col justify-between overflow-hidden bg-[#0A0A0C] text-white z-10 select-none">
+
+            <!-- Background Video Element -->
+            <video 
+                x-ref="videoPlayer"
+                autoplay 
+                loop 
+                muted 
+                playsinline 
+                preload="auto"
+                poster="{{ asset('images/editorial/runner_course_dawn.jpg') }}"
+                @timeupdate="updateProgress()"
+                class="absolute inset-0 w-full h-full object-cover object-center z-0 scale-[1.01] transition-transform duration-1000 ease-out">
+                <source src="{{ asset('images/video2.mp4') }}" type="video/mp4">
+                Seu navegador não suporta a reprodução deste vídeo.
+            </video>
+
+            <!-- Cinematic Multi-layer Overlay (Ensures perfect text contrast) -->
+            <div class="absolute inset-0 bg-gradient-to-b from-black/85 via-black/45 to-black/90 z-10 pointer-events-none"></div>
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(10,10,12,0.75)_100%)] z-10 pointer-events-none"></div>
+            
+            <!-- Subtle Technical Grid Overlay -->
+            <div class="absolute inset-0 opacity-[0.05] bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)] bg-[size:4rem_4rem] z-10 pointer-events-none"></div>
+
+            <!-- Main Content Container -->
+            <div class="relative z-20 w-full max-w-[1700px] mx-auto px-4 sm:px-6 lg:px-12 flex-1 flex flex-col justify-between pt-8 md:pt-12 pb-8">
+                
+                <!-- Top Meta Bar -->
+                <div class="flex items-center justify-between text-xs font-bold tracking-widest uppercase border-b border-white/10 pb-4 text-white/80">
+                    <div class="flex items-center gap-2.5">
+                        <span class="w-2.5 h-2.5 rounded-full bg-[#FF4D00] shadow-[0_0_10px_#FF4D00] animate-pulse"></span>
+                        <span class="text-white font-extrabold tracking-wider">ONE MOVE RUN</span>
+                        <span class="text-white/40">•</span>
+                        <span class="text-white/90">CIRCUITO NACIONAL 2027</span>
+                    </div>
+                    <div class="hidden sm:flex items-center gap-6 text-[11px] font-semibold tracking-wider text-white/70">
+                        <span>12 CAPITAIS</span>
+                        <span class="text-white/30">•</span>
+                        <span>5K • 10K • 15K</span>
+                        <span class="text-white/30">•</span>
+                        <span class="text-[#FF4D00] font-black">LARGADA: JANEIRO</span>
+                    </div>
+                </div>
+
+                <!-- Center High-Impact Master Headline -->
+                <div class="my-auto py-10 md:py-14 max-w-5xl">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[#FF4D00] font-black uppercase text-xs tracking-[0.2em] mb-6 shadow-lg">
+                        <span class="w-2 h-2 rounded-full bg-[#FF4D00]"></span>
+                        <span>A Marca da Experiência em Corrida</span>
+                    </div>
+
+                    <h1 class="font-syne font-black text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl tracking-tighter leading-[0.9] uppercase text-white mb-6 drop-shadow-[0_10px_35px_rgba(0,0,0,0.9)]">
                         ONE MOVE RUN.<br>
-                        <span class="text-neutral-400 font-bold">12 CIDADES.</span><br>
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#FF7A00] via-[#FF4D00] to-[#E62E00]">
+                        <span class="text-white/70">12 CIDADES.</span><br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#FF7A00] via-[#FF4D00] to-[#FF8C33]">
                             UM SÓ MOVIMENTO.
                         </span>
                     </h1>
 
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6 pt-4">
-                        <a href="#cidades" class="btn-editorial-dark text-sm px-10 py-4 shadow-lg group">
-                            <span>ENCONTRE SUA ETAPA</span>
-                            <i data-lucide="arrow-down" class="w-4 h-4 text-[#FF4D00] group-hover:translate-y-1 transition-transform"></i>
+                    <p class="text-sm sm:text-base md:text-lg text-white/85 max-w-2xl font-normal leading-relaxed mb-8 drop-shadow-md">
+                        A corrida é o produto. A experiência ONE MOVE é o diferencial. Escolha sua largada e sinta a energia de milhares de corredores conectados em 12 capitais brasileiras.
+                    </p>
+
+                    <!-- Interactive CTAs -->
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 sm:gap-6 pt-2">
+                        <a href="#cidades" 
+                           class="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#FF7A00] to-[#FF4D00] hover:brightness-110 text-white font-syne font-black text-xs sm:text-sm uppercase tracking-wider px-8 py-4 rounded-full shadow-[0_10px_30px_rgba(255,77,0,0.45)] hover:scale-105 transition-all duration-300 group">
+                            <span>ESCOLHA SUA CIDADE</span>
+                            <svg class="w-4 h-4 text-white group-hover:translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                            </svg>
                         </a>
 
-                        <a href="{{ route('stages.show', 'brasilia') }}" class="inline-flex items-center gap-3 text-xs md:text-sm font-bold text-neutral-800 hover:text-[#FF4D00] transition py-3">
-                            <span class="w-2.5 h-2.5 rounded-full bg-[#FF4D00]"></span>
-                            <span>Próxima largada em <strong>Brasília</strong> • Inscrições Abertas</span>
-                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        <a href="{{ route('stages.show', 'brasilia') }}" 
+                           class="inline-flex items-center justify-center gap-3 bg-black/40 hover:bg-white/15 backdrop-blur-md text-white border border-white/25 hover:border-white/50 font-syne font-bold text-xs sm:text-sm uppercase tracking-wider px-7 py-4 rounded-full transition-all duration-300 group">
+                            <span class="w-2.5 h-2.5 rounded-full bg-[#FF4D00] animate-ping"></span>
+                            <span>Próxima largada: <strong>Brasília / DF</strong></span>
+                            <svg class="w-4 h-4 text-[#FF4D00] group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" />
+                            </svg>
                         </a>
                     </div>
                 </div>
-            </div>
 
-            <!-- Full-width Luminous Photography Banner -->
-            <div class="relative w-full rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl aspect-[16/9] md:aspect-[21/9] max-h-[640px]">
-                <img src="{{ asset('images/editorial/runner_course_dawn.jpg') }}" 
-                     alt="Corredores em movimento ONE MOVE RUN ao amanhecer" 
-                     class="w-full h-full object-cover object-center scale-105 hover:scale-100 transition-transform duration-1000 ease-out">
-                
-                <!-- Gentle Bottom Vignette & Information Stamp -->
-                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20 flex flex-col justify-between p-6 md:p-10 text-white pointer-events-none">
-                    <div class="flex items-center justify-between text-xs uppercase font-bold tracking-widest text-white/90">
-                        <span class="px-3 py-1 rounded-full bg-white/20 backdrop-blur-md border border-white/20">
-                            Etapa 01 • Brasília
-                        </span>
-                        <span>15°47'38"S 47°51'53"W</span>
-                    </div>
-                    <div>
-                        <p class="font-syne font-black text-2xl sm:text-4xl text-white tracking-tight uppercase">
+                <!-- Bottom Bar: Coordinates + Scroll Prompt + Floating Video Controls -->
+                <div class="flex flex-col md:flex-row items-start md:items-end justify-between gap-6 pt-6 border-t border-white/10">
+                    
+                    <!-- Left: Coordinates and Stage Identifier -->
+                    <div class="space-y-1">
+                        <div class="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-white/60">
+                            <span class="text-[#FF4D00] font-bold">ETAPA 01</span>
+                            <span>•</span>
+                            <span>15°47'38"S 47°51'53"W</span>
+                        </div>
+                        <p class="font-syne font-bold text-sm sm:text-base text-white uppercase tracking-tight">
                             Uma corrida desenhada para ser vivida.
                         </p>
-                        <p class="text-xs sm:text-sm text-neutral-200 mt-1 max-w-xl font-medium">
-                            A corrida é o produto. A experiência ONE MOVE é o diferencial.
-                        </p>
                     </div>
+
+                    <!-- Center: Scroll to explore trigger -->
+                    <a href="#cidades" class="hidden lg:flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-white/70 hover:text-[#FF4D00] transition group">
+                        <span>Role para explorar as etapas</span>
+                        <svg class="w-4 h-4 animate-bounce text-[#FF4D00]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                        </svg>
+                    </a>
+
+                    <!-- Right: Intuitive Video Controllers (Sound & Playback) -->
+                    <div class="flex items-center gap-3 self-end md:self-auto relative">
+                        
+                        <!-- Sound Hint Tooltip -->
+                        <div x-show="showHint && isMuted" 
+                             x-transition:enter="transition ease-out duration-300"
+                             x-transition:enter-start="opacity-0 translate-y-2"
+                             x-transition:enter-end="opacity-100 translate-y-0"
+                             x-transition:leave="transition ease-in duration-200"
+                             x-transition:leave-start="opacity-100 translate-y-0"
+                             x-transition:leave-end="opacity-0 translate-y-2"
+                             class="absolute -top-12 right-0 hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#FF4D00] text-white text-[11px] font-bold shadow-xl whitespace-nowrap pointer-events-none z-30">
+                            <span>🔊 Clique para ouvir o som da largada</span>
+                            <div class="absolute -bottom-1 right-6 w-2 h-2 bg-[#FF4D00] rotate-45"></div>
+                        </div>
+
+                        <!-- Sound On/Off Pill Button -->
+                        <button 
+                            type="button"
+                            @click="toggleMute()" 
+                            :class="!isMuted ? 'bg-[#FF4D00] border-[#FF4D00] text-white ring-2 ring-[#FF4D00]/50 shadow-[0_0_25px_rgba(255,77,0,0.6)]' : 'bg-black/60 hover:bg-black/80 border-white/25 text-white/90 hover:border-white/50'"
+                            class="px-4 py-2.5 rounded-full backdrop-blur-md border text-xs font-syne font-black uppercase tracking-wider flex items-center gap-2.5 transition-all duration-300 shadow-xl cursor-pointer">
+                            
+                            <!-- When Muted: Muted Icon -->
+                            <template x-if="isMuted">
+                                <span class="flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-white/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
+                                    </svg>
+                                    <span>ATIVAR ÁUDIO</span>
+                                </span>
+                            </template>
+
+                            <!-- When Unmuted: Animated Equalizer Wave Bars -->
+                            <template x-if="!isMuted">
+                                <span class="flex items-center gap-2">
+                                    <span class="flex items-end gap-[3px] h-4 w-4 justify-center">
+                                        <span class="w-[2.5px] bg-white rounded-full animate-audio-bar-1"></span>
+                                        <span class="w-[2.5px] bg-white rounded-full animate-audio-bar-2"></span>
+                                        <span class="w-[2.5px] bg-white rounded-full animate-audio-bar-3"></span>
+                                        <span class="w-[2.5px] bg-white rounded-full animate-audio-bar-4"></span>
+                                    </span>
+                                    <span>ÁUDIO ATIVADO</span>
+                                </span>
+                            </template>
+                        </button>
+
+                        <!-- Play / Pause Toggle Button -->
+                        <button 
+                            type="button"
+                            @click="togglePlay()" 
+                            class="w-10 h-10 rounded-full bg-black/60 hover:bg-white text-white hover:text-black border border-white/25 hover:border-white backdrop-blur-md flex items-center justify-center transition-all duration-300 shadow-xl cursor-pointer"
+                            :title="isPlaying ? 'Pausar vídeo' : 'Reproduzir vídeo'">
+                            
+                            <!-- Pause Icon when playing -->
+                            <template x-if="isPlaying">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
+                                </svg>
+                            </template>
+
+                            <!-- Play Icon when paused -->
+                            <template x-if="!isPlaying">
+                                <svg class="w-4 h-4 translate-x-0.5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </template>
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Interactive Video Playback Scrubber / Progress Bar (bottom edge) -->
+            <div class="relative w-full h-1 bg-white/15 z-30 cursor-pointer group" @click="seek($event)" title="Avançar / Retroceder vídeo">
+                <div class="h-full bg-gradient-to-r from-[#FF7A00] to-[#FF4D00] transition-all duration-75 ease-linear shadow-[0_0_12px_#FF4D00] relative"
+                     :style="'width: ' + progress + '%'">
+                    <span class="absolute right-0 top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-white shadow-md scale-0 group-hover:scale-100 transition-transform"></span>
                 </div>
             </div>
 
