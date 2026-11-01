@@ -56,67 +56,39 @@
             <div class="flex items-center justify-between h-20 gap-4">
                 
                 <!-- Logo -->
-                <a href="{{ route('home') }}" class="flex items-center gap-2.5 shrink-0 group focus:outline-none">
-                    <div class="flex items-center gap-2">
-                        <!-- Custom ONE MOVE Brand Mark -->
-                        <div class="flex items-center gap-1">
-                            <span class="font-syne font-black text-2xl tracking-widest text-[#0A0A0C] group-hover:text-neutral-700 transition">ONE</span>
-                            <div class="w-4 h-1 bg-gradient-to-r from-[#FF7A00] to-[#FF4D00] rounded-full group-hover:w-6 transition-all duration-300"></div>
-                            <span class="font-syne font-black text-2xl tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#FF7A00] via-[#FF4D00] to-[#E62E00] group-hover:brightness-110 transition">
-                                MOVE
-                            </span>
-                        </div>
-                        <span class="px-1.5 py-0.5 rounded text-[10px] font-black uppercase tracking-widest bg-black text-white shrink-0">
-                            RUN
-                        </span>
-                    </div>
+                <a href="{{ route('home') }}" class="flex items-center gap-2 shrink-0 group focus:outline-none" aria-label="ONE MOVE RUN Home">
+                    <img src="{{ asset('images/logo_cropped_dark.png') }}" 
+                         alt="ONE MOVE RUN" 
+                         class="h-10 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
                 </a>
 
-                <!-- Desktop Navigation Links -->
-                <nav class="hidden xl:flex items-center gap-4 2xl:gap-7 text-xs 2xl:text-sm font-bold text-neutral-700 whitespace-nowrap tracking-wide">
+                <!-- Desktop Navigation Links (Home, Calendário, Regulamento) -->
+                <nav class="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-bold text-neutral-800 tracking-wide">
                     <a href="{{ route('home') }}" class="whitespace-nowrap shrink-0 hover:text-[#FF4D00] transition {{ request()->routeIs('home') ? 'text-[#FF4D00]' : '' }}">
                         Home
                     </a>
-                    <a href="{{ route('home') }}#cidades" 
-                       @click="if (window.location.pathname === '/' || window.location.pathname === '') { const el = document.getElementById('cidades'); if (el) { $event.preventDefault(); el.scrollIntoView({ behavior: 'smooth' }); history.pushState(null, null, '#cidades'); } }"
-                       class="whitespace-nowrap shrink-0 hover:text-[#FF4D00] transition">
-                        12 Cidades
-                    </a>
-                    <a href="{{ route('pages.circuito') }}" class="whitespace-nowrap shrink-0 hover:text-[#FF4D00] transition {{ request()->routeIs('pages.circuito') ? 'text-[#FF4D00]' : '' }}">
-                        O Circuito
-                    </a>
-                    <a href="{{ route('pages.calendario') }}" class="whitespace-nowrap shrink-0 hover:text-[#FF4D00] transition {{ request()->routeIs('pages.calendario') ? 'text-[#FF4D00]' : '' }}">
+                    <a href="{{ route('pages.calendario') }}" 
+                       @click="if (window.location.pathname === '/' || window.location.pathname === '') { const el = document.getElementById('calendario') || document.getElementById('cidades'); if (el) { $event.preventDefault(); el.scrollIntoView({ behavior: 'smooth' }); history.pushState(null, null, '#calendario'); } }"
+                       class="whitespace-nowrap shrink-0 hover:text-[#FF4D00] transition {{ request()->routeIs('pages.calendario') ? 'text-[#FF4D00]' : '' }}">
                         Calendário
-                    </a>
-                    <a href="{{ route('pages.kits') }}" class="whitespace-nowrap shrink-0 hover:text-[#FF4D00] transition {{ request()->routeIs('pages.kits') ? 'text-[#FF4D00]' : '' }}">
-                        Kits
-                    </a>
-                    <a href="{{ route('pages.percursos') }}" class="whitespace-nowrap shrink-0 hover:text-[#FF4D00] transition {{ request()->routeIs('pages.percursos') ? 'text-[#FF4D00]' : '' }}">
-                        Percursos
-                    </a>
-                    <a href="{{ route('pages.resultados') }}" class="whitespace-nowrap shrink-0 hover:text-[#FF4D00] transition {{ request()->routeIs('pages.resultados') ? 'text-[#FF4D00]' : '' }}">
-                        Resultados & Fotos
                     </a>
                     <a href="{{ route('pages.regulamentos') }}" class="whitespace-nowrap shrink-0 hover:text-[#FF4D00] transition {{ request()->routeIs('pages.regulamentos') ? 'text-[#FF4D00]' : '' }}">
                         Regulamento
-                    </a>
-                    <a href="{{ route('pages.patrocinadores') }}" class="whitespace-nowrap shrink-0 hover:text-[#FF4D00] transition {{ request()->routeIs('pages.patrocinadores') ? 'text-[#FF4D00]' : '' }}">
-                        Parceiros
                     </a>
                 </nav>
 
                 <!-- Action CTA Button -->
                 <div class="hidden sm:flex items-center gap-3 shrink-0">
-                    <a href="{{ route('home') }}#cidades" 
-                       @click="if (window.location.pathname === '/' || window.location.pathname === '') { const el = document.getElementById('cidades'); if (el) { $event.preventDefault(); el.scrollIntoView({ behavior: 'smooth' }); history.pushState(null, null, '#cidades'); } }"
-                       class="btn-editorial-dark text-xs px-6 py-3 whitespace-nowrap shrink-0">
-                        <i data-lucide="map-pin" class="w-3.5 h-3.5 shrink-0 text-[#FF4D00]"></i>
-                        <span>Escolha sua Etapa</span>
+                    <a href="https://inscricoes.onemoverun.com.br/etapa-brasilia-2027" 
+                       target="_blank"
+                       class="btn-editorial-orange text-xs sm:text-sm px-6 py-3 whitespace-nowrap shrink-0 shadow-lg hover:shadow-[#FF4D00]/30 transition-all flex items-center gap-2">
+                        <span>Inscreva-se agora!</span>
+                        <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
                     </a>
                 </div>
 
                 <!-- Mobile Hamburger Toggle -->
-                <div class="xl:hidden flex items-center shrink-0">
+                <div class="md:hidden flex items-center shrink-0">
                     <button @click="mobileMenuOpen = !mobileMenuOpen" type="button" class="p-2 rounded-xl text-neutral-800 hover:text-black hover:bg-neutral-100 focus:outline-none" aria-label="Abrir Menu">
                         <i x-show="!mobileMenuOpen" data-lucide="menu" class="w-6 h-6"></i>
                         <i x-show="mobileMenuOpen" data-lucide="x" class="w-6 h-6"></i>
@@ -133,28 +105,21 @@
              x-transition:leave="transition ease-in duration-150"
              x-transition:leave-start="opacity-100 translate-y-0"
              x-transition:leave-end="opacity-0 -translate-y-4"
-             class="xl:hidden bg-white border-b border-neutral-200 px-6 pt-3 pb-8 space-y-2 shadow-xl"
+             class="md:hidden bg-white border-b border-neutral-200 px-6 pt-3 pb-8 space-y-2 shadow-xl"
              style="display: none;">
             <a @click="mobileMenuOpen = false" href="{{ route('home') }}" class="block px-3 py-2 rounded-lg text-sm font-bold text-neutral-800 hover:text-[#FF4D00] {{ request()->routeIs('home') ? 'text-[#FF4D00] bg-neutral-50' : '' }}">Home</a>
-            <a @click="mobileMenuOpen = false; if (window.location.pathname === '/' || window.location.pathname === '') { const el = document.getElementById('cidades'); if (el) { $event.preventDefault(); el.scrollIntoView({ behavior: 'smooth' }); history.pushState(null, null, '#cidades'); } }" 
-               href="{{ route('home') }}#cidades" 
-               class="block px-3 py-2 rounded-lg text-sm font-bold text-neutral-800 hover:text-[#FF4D00]">As 12 Cidades</a>
-            <a @click="mobileMenuOpen = false" href="{{ route('pages.circuito') }}" class="block px-3 py-2 rounded-lg text-sm font-bold text-neutral-800 hover:text-[#FF4D00] {{ request()->routeIs('pages.circuito') ? 'text-[#FF4D00] bg-neutral-50' : '' }}">O Circuito</a>
-            <a @click="mobileMenuOpen = false" href="{{ route('pages.calendario') }}" class="block px-3 py-2 rounded-lg text-sm font-bold text-neutral-800 hover:text-[#FF4D00] {{ request()->routeIs('pages.calendario') ? 'text-[#FF4D00] bg-neutral-50' : '' }}">Calendário 2027</a>
-            <a @click="mobileMenuOpen = false" href="{{ route('pages.kits') }}" class="block px-3 py-2 rounded-lg text-sm font-bold text-neutral-800 hover:text-[#FF4D00] {{ request()->routeIs('pages.kits') ? 'text-[#FF4D00] bg-neutral-50' : '' }}">Kits do Atleta</a>
-            <a @click="mobileMenuOpen = false" href="{{ route('pages.percursos') }}" class="block px-3 py-2 rounded-lg text-sm font-bold text-neutral-800 hover:text-[#FF4D00] {{ request()->routeIs('pages.percursos') ? 'text-[#FF4D00] bg-neutral-50' : '' }}">Percursos</a>
-            <a @click="mobileMenuOpen = false" href="{{ route('pages.resultados') }}" class="block px-3 py-2 rounded-lg text-sm font-bold text-neutral-800 hover:text-[#FF4D00] {{ request()->routeIs('pages.resultados') ? 'text-[#FF4D00] bg-neutral-50' : '' }}">Resultados & Fotos</a>
+            <a @click="mobileMenuOpen = false; if (window.location.pathname === '/' || window.location.pathname === '') { const el = document.getElementById('calendario') || document.getElementById('cidades'); if (el) { $event.preventDefault(); el.scrollIntoView({ behavior: 'smooth' }); history.pushState(null, null, '#calendario'); } }" 
+               href="{{ route('pages.calendario') }}" 
+               class="block px-3 py-2 rounded-lg text-sm font-bold text-neutral-800 hover:text-[#FF4D00] {{ request()->routeIs('pages.calendario') ? 'text-[#FF4D00] bg-neutral-50' : '' }}">Calendário</a>
             <a @click="mobileMenuOpen = false" href="{{ route('pages.regulamentos') }}" class="block px-3 py-2 rounded-lg text-sm font-bold text-neutral-800 hover:text-[#FF4D00] {{ request()->routeIs('pages.regulamentos') ? 'text-[#FF4D00] bg-neutral-50' : '' }}">Regulamento</a>
-            <a @click="mobileMenuOpen = false" href="{{ route('pages.patrocinadores') }}" class="block px-3 py-2 rounded-lg text-sm font-bold text-neutral-800 hover:text-[#FF4D00] {{ request()->routeIs('pages.patrocinadores') ? 'text-[#FF4D00] bg-neutral-50' : '' }}">Parceiros & Patrocinadores</a>
-            <a @click="mobileMenuOpen = false" href="{{ route('pages.faq') }}" class="block px-3 py-2 rounded-lg text-sm font-bold text-neutral-800 hover:text-[#FF4D00] {{ request()->routeIs('pages.faq') ? 'text-[#FF4D00] bg-neutral-50' : '' }}">Dúvidas Frequentes</a>
-            <a @click="mobileMenuOpen = false" href="{{ route('contact.index') }}" class="block px-3 py-2 rounded-lg text-sm font-bold text-neutral-800 hover:text-[#FF4D00] {{ request()->routeIs('contact.index') ? 'text-[#FF4D00] bg-neutral-50' : '' }}">Contato</a>
             
             <div class="pt-3">
-                <a @click="mobileMenuOpen = false; if (window.location.pathname === '/' || window.location.pathname === '') { const el = document.getElementById('cidades'); if (el) { $event.preventDefault(); el.scrollIntoView({ behavior: 'smooth' }); history.pushState(null, null, '#cidades'); } }" 
-                   href="{{ route('home') }}#cidades" 
-                   class="btn-editorial-orange w-full text-center text-sm py-3.5 justify-center shadow-lg">
-                    <i data-lucide="map-pin" class="w-4 h-4 inline-block mr-1"></i>
-                    <span>Escolha sua Etapa (12 Cidades)</span>
+                <a @click="mobileMenuOpen = false"
+                   href="https://inscricoes.onemoverun.com.br/etapa-brasilia-2027" 
+                   target="_blank"
+                   class="btn-editorial-orange w-full text-center text-sm py-3.5 justify-center shadow-lg flex items-center gap-2">
+                    <span>Inscreva-se agora!</span>
+                    <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
                 </a>
             </div>
         </div>
@@ -165,51 +130,6 @@
         @yield('content')
     </main>
 
-    <!-- Global Official Partners & Sponsors -->
-    <section class="py-16 border-t border-b border-black/5 bg-[#FAFAFB]">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-10">
-                <span class="text-xs uppercase tracking-widest text-[#FF4D00] font-bold">Ecossistema & Parcerias Estratégicas</span>
-                <h3 class="text-xl sm:text-2xl font-syne font-black text-[#0A0A0C] mt-1">QUEM MOVE ESSE CIRCUITO CONOSCO</h3>
-            </div>
-
-            <!-- Sponsor Categories -->
-            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 items-stretch">
-                <!-- Penalty -->
-                <div class="p-6 rounded-2xl bg-white border border-black/5 flex flex-col items-center justify-center text-center group hover:border-[#FF4D00]/30 transition shadow-sm">
-                    <span class="text-[10px] uppercase font-bold text-neutral-400 mb-2 tracking-wider">Equipar o Movimento</span>
-                    <span class="text-2xl font-black font-syne tracking-tighter text-[#0A0A0C] group-hover:text-[#FF4D00] transition">PENALTY</span>
-                    <span class="text-xs text-neutral-500 mt-1">Material Esportivo Oficial</span>
-                </div>
-                <!-- Adrun -->
-                <div class="p-6 rounded-2xl bg-white border border-black/5 flex flex-col items-center justify-center text-center group hover:border-[#FF4D00]/30 transition shadow-sm">
-                    <span class="text-[10px] uppercase font-bold text-neutral-400 mb-2 tracking-wider">Novo Jeito de Viver a Corrida</span>
-                    <span class="text-2xl font-black font-syne tracking-widest text-[#0A0A0C] group-hover:text-[#FF4D00] transition">adrun</span>
-                    <span class="text-xs text-neutral-500 mt-1">Calçados & Performance</span>
-                </div>
-                <!-- Integralmédica -->
-                <div class="p-6 rounded-2xl bg-white border border-black/5 flex flex-col items-center justify-center text-center group hover:border-[#FF4D00]/30 transition shadow-sm">
-                    <span class="text-[10px] uppercase font-bold text-neutral-400 mb-2 tracking-wider">Nutrição Oficial</span>
-                    <span class="text-lg sm:text-xl font-black font-syne tracking-tighter text-[#0A0A0C] group-hover:text-[#FF4D00] transition">INTEGRALMÉDICA</span>
-                    <span class="text-xs text-neutral-500 mt-1">Suplementação & Recovery</span>
-                </div>
-                <!-- Invictus -->
-                <div class="p-6 rounded-2xl bg-white border border-black/5 flex flex-col items-center justify-center text-center group hover:border-[#FF4D00]/30 transition shadow-sm">
-                    <span class="text-[10px] uppercase font-bold text-neutral-400 mb-2 tracking-wider">Equipamentos & Bolsas PRO</span>
-                    <span class="text-2xl font-black font-syne tracking-wider text-[#0A0A0C] group-hover:text-[#FF4D00] transition">INVICTUS</span>
-                    <span class="text-xs text-neutral-500 mt-1">Acessórios Táticos & Outdoor</span>
-                </div>
-            </div>
-
-            <div class="mt-8 text-center">
-                <a href="{{ route('pages.patrocinadores') }}" class="inline-flex items-center gap-2 text-xs font-bold text-neutral-500 hover:text-[#FF4D00] transition">
-                    <span>Sua marca no maior circuito de corrida de experiência do país • Seja um Patrocinador</span>
-                    <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-                </a>
-            </div>
-        </div>
-    </section>
-
     <!-- Modern Architectural Dark Footer -->
     <footer class="bg-[#0A0A0C] text-white pt-20 pb-12 relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -218,10 +138,9 @@
                 <!-- Col 1: Brand & Manifesto -->
                 <div class="lg:col-span-2 space-y-4">
                     <div class="flex items-center gap-2">
-                        <span class="font-syne font-black text-2xl tracking-widest text-white">ONE</span>
-                        <div class="w-6 h-1 bg-[#FF4D00] rounded-full"></div>
-                        <span class="font-syne font-black text-2xl tracking-tight text-[#FF4D00]">MOVE</span>
-                        <span class="ml-2 px-1.5 py-0.5 rounded text-[10px] font-black uppercase bg-white/10 text-white">RUN</span>
+                        <img src="{{ asset('images/logo_cropped_white.png') }}" 
+                             alt="ONE MOVE RUN" 
+                             class="h-10 w-auto object-contain">
                     </div>
                     <p class="text-neutral-400 text-sm max-w-sm leading-relaxed">
                         Não é só uma corrida. É a marca da experiência. 12 cidades conectadas pelo movimento, arquitetura, música e superação.
