@@ -73,7 +73,7 @@
             x-init="startAutoPlay()"
             @mouseenter="isHovered = true"
             @mouseleave="isHovered = false"
-            class="relative w-full h-[76vh] sm:h-[82vh] lg:h-[calc(100vh-5rem)] min-h-[580px] max-h-[820px] overflow-hidden bg-[#0A0A0C] text-white z-10 select-none">
+            class="relative w-full h-[calc(100vh-7.25rem)] min-h-[520px] max-h-[720px] overflow-hidden bg-[#0A0A0C] text-white z-10 select-none">
 
             <!-- SLIDE 0: BANNER OFICIAL ONE MOVE RUN (IMAGEM) -->
             <div 
@@ -94,11 +94,11 @@
                 <div class="absolute inset-0 opacity-[0.04] bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)] bg-[size:4rem_4rem] pointer-events-none"></div>
 
                 <!-- Slide 0 Content -->
-                <div class="relative z-20 w-full h-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 flex flex-col justify-between pt-6 sm:pt-8 pb-16">
+                <div class="relative z-20 w-full h-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 flex flex-col justify-between pt-4 sm:pt-6 pb-10 sm:pb-12">
                     
                     <!-- Meta Header Tag -->
-                    <div class="flex items-center justify-between text-xs font-bold tracking-widest uppercase border-b border-white/10 pb-3 text-white/80">
-                        <div class="flex items-center gap-2.5">
+                    <div class="flex items-center justify-between text-xs font-bold tracking-widest uppercase border-b border-white/10 pb-2 text-white/80">
+                        <div class="flex items-center gap-2">
                             <span class="w-2.5 h-2.5 rounded-full bg-[#FF4D00] shadow-[0_0_10px_#FF4D00] animate-pulse"></span>
                             <span class="text-white font-extrabold tracking-wider">ONE MOVE RUN</span>
                             <span class="text-white/40">•</span>
@@ -114,36 +114,36 @@
                     </div>
 
                     <!-- Center Headline & CTA -->
-                    <div class="my-auto max-w-4xl py-6">
-                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[#FF4D00] font-black uppercase text-xs tracking-[0.2em] mb-4 shadow-lg">
+                    <div class="my-auto max-w-4xl py-2 sm:py-3">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[#FF4D00] font-black uppercase text-xs tracking-[0.2em] mb-3 shadow-lg">
                             <span class="w-2 h-2 rounded-full bg-[#FF4D00]"></span>
                             <span>A Marca da Experiência em Corrida</span>
                         </div>
 
-                        <h1 class="font-syne font-black text-4xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tighter leading-[0.92] uppercase text-white mb-4 drop-shadow-[0_10px_35px_rgba(0,0,0,0.9)]">
+                        <h1 class="font-syne font-black text-3xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tighter leading-[0.95] uppercase text-white mb-3 drop-shadow-[0_10px_35px_rgba(0,0,0,0.9)]">
                             ONE MOVE RUN.<br>
                             <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#FF7A00] via-[#FF4D00] to-[#FF8C33]">
                                 12 CIDADES. UM SÓ MOVIMENTO.
                             </span>
                         </h1>
 
-                        <p class="text-sm sm:text-base md:text-lg text-white/90 max-w-2xl font-normal leading-relaxed mb-6 drop-shadow-md">
+                        <p class="text-xs sm:text-sm md:text-base text-white/90 max-w-2xl font-normal leading-relaxed mb-4 drop-shadow-md">
                             A corrida é o produto. A experiência ONE MOVE é o diferencial. Escolha sua largada e sinta a energia de milhares de corredores conectados em 12 capitais brasileiras.
                         </p>
 
                         <!-- Primary CTA Button -->
-                        <div class="flex flex-wrap items-center gap-4">
+                        <div class="flex flex-wrap items-center gap-3 sm:gap-4">
                             <a href="https://inscricoes.onemoverun.com.br/etapa-brasilia-2027" 
                                target="_blank"
-                               class="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#FF7A00] to-[#FF4D00] hover:brightness-110 text-white font-syne font-black text-sm sm:text-base uppercase tracking-wider px-9 py-4 rounded-full shadow-[0_10px_30px_rgba(255,77,0,0.5)] hover:scale-105 active:scale-95 transition-all duration-300 group">
+                               class="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#FF7A00] to-[#FF4D00] hover:brightness-110 text-white font-syne font-black text-xs sm:text-sm uppercase tracking-wider px-7 sm:px-8 py-3 sm:py-3.5 rounded-full shadow-[0_10px_30px_rgba(255,77,0,0.5)] hover:scale-105 active:scale-95 transition-all duration-300 group">
                                 <span>INSCREVA-SE AGORA!</span>
-                                <svg class="w-5 h-5 text-white group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <svg class="w-4 h-4 text-white group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
                                 </svg>
                             </a>
 
                             <a href="#calendario" 
-                               class="inline-flex items-center justify-center gap-2 bg-black/40 hover:bg-white/15 backdrop-blur-md text-white border border-white/25 hover:border-white/50 font-syne font-bold text-xs sm:text-sm uppercase tracking-wider px-6 py-4 rounded-full transition-all duration-300">
+                               class="inline-flex items-center justify-center gap-2 bg-black/40 hover:bg-white/15 backdrop-blur-md text-white border border-white/25 hover:border-white/50 font-syne font-bold text-xs sm:text-sm uppercase tracking-wider px-5 py-3 sm:py-3.5 rounded-full transition-all duration-300">
                                 <i data-lucide="calendar" class="w-4 h-4 text-[#FF4D00]"></i>
                                 <span>Ver Calendário 2027</span>
                             </a>
@@ -151,7 +151,7 @@
                     </div>
 
                     <!-- Bottom Info -->
-                    <div class="text-xs font-mono uppercase tracking-widest text-white/60">
+                    <div class="text-[11px] sm:text-xs font-mono uppercase tracking-widest text-white/60">
                         <span>ETAPA 01 • BRASÍLIA / DF • 24 DE JANEIRO</span>
                     </div>
 
@@ -181,11 +181,11 @@
                 <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-black/50 pointer-events-none"></div>
 
                 <!-- Slide 1 Content -->
-                <div class="relative z-20 w-full h-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 flex flex-col justify-between pt-6 sm:pt-8 pb-16">
+                <div class="relative z-20 w-full h-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 flex flex-col justify-between pt-4 sm:pt-6 pb-10 sm:pb-12">
                     
                     <!-- Meta Header Tag -->
-                    <div class="flex items-center justify-between text-xs font-bold tracking-widest uppercase border-b border-white/10 pb-3 text-white/80">
-                        <div class="flex items-center gap-2.5">
+                    <div class="flex items-center justify-between text-xs font-bold tracking-widest uppercase border-b border-white/10 pb-2 text-white/80">
+                        <div class="flex items-center gap-2">
                             <span class="w-2.5 h-2.5 rounded-full bg-[#FF4D00] shadow-[0_0_10px_#FF4D00] animate-ping"></span>
                             <span class="text-white font-extrabold tracking-wider">EXPERIÊNCIA IMERSIVA</span>
                             <span class="text-white/40">•</span>
@@ -196,7 +196,7 @@
                         <button 
                             @click="toggleMute()" 
                             type="button" 
-                            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 hover:bg-white/25 backdrop-blur-md border border-white/20 text-xs font-bold tracking-wider transition">
+                            class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/15 hover:bg-white/25 backdrop-blur-md border border-white/20 text-xs font-bold tracking-wider transition">
                             <span x-show="isMuted" class="flex items-center gap-1.5">
                                 <i data-lucide="volume-x" class="w-3.5 h-3.5 text-neutral-400"></i>
                                 <span>Ativar Som</span>
@@ -209,30 +209,30 @@
                     </div>
 
                     <!-- Center Headline & CTA -->
-                    <div class="my-auto max-w-4xl py-6">
-                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[#FF4D00] font-black uppercase text-xs tracking-[0.2em] mb-4 shadow-lg">
+                    <div class="my-auto max-w-4xl py-2 sm:py-3">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[#FF4D00] font-black uppercase text-xs tracking-[0.2em] mb-3 shadow-lg">
                             <span class="w-2 h-2 rounded-full bg-[#FF4D00] animate-pulse"></span>
                             <span>Alta Performance & Cenografia</span>
                         </div>
 
-                        <h2 class="font-syne font-black text-4xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tighter leading-[0.92] uppercase text-white mb-4 drop-shadow-[0_10px_35px_rgba(0,0,0,0.9)]">
+                        <h2 class="font-syne font-black text-3xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tighter leading-[0.95] uppercase text-white mb-3 drop-shadow-[0_10px_35px_rgba(0,0,0,0.9)]">
                             SINTA A ENERGIA<br>
                             <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#FF7A00] via-[#FF4D00] to-[#FF8C33]">
                                 DO MOVIMENTO.
                             </span>
                         </h2>
 
-                        <p class="text-sm sm:text-base md:text-lg text-white/90 max-w-2xl font-normal leading-relaxed mb-6 drop-shadow-md">
+                        <p class="text-xs sm:text-sm md:text-base text-white/90 max-w-2xl font-normal leading-relaxed mb-4 drop-shadow-md">
                             Música ao vivo, iluminação cênica, hidratação de elite e uma linha de chegada vibrante desenhada para transformar cada metro em memória inesquecível.
                         </p>
 
                         <!-- Primary CTA Button -->
-                        <div class="flex flex-wrap items-center gap-4">
+                        <div class="flex flex-wrap items-center gap-3 sm:gap-4">
                             <a href="https://inscricoes.onemoverun.com.br/etapa-brasilia-2027" 
                                target="_blank"
-                               class="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#FF7A00] to-[#FF4D00] hover:brightness-110 text-white font-syne font-black text-sm sm:text-base uppercase tracking-wider px-9 py-4 rounded-full shadow-[0_10px_30px_rgba(255,77,0,0.5)] hover:scale-105 active:scale-95 transition-all duration-300 group">
+                               class="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#FF7A00] to-[#FF4D00] hover:brightness-110 text-white font-syne font-black text-xs sm:text-sm uppercase tracking-wider px-7 sm:px-8 py-3 sm:py-3.5 rounded-full shadow-[0_10px_30px_rgba(255,77,0,0.5)] hover:scale-105 active:scale-95 transition-all duration-300 group">
                                 <span>INSCREVA-SE AGORA!</span>
-                                <svg class="w-5 h-5 text-white group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <svg class="w-4 h-4 text-white group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
                                 </svg>
                             </a>
@@ -240,14 +240,14 @@
                             <button 
                                 @click="toggleMute()" 
                                 type="button"
-                                class="inline-flex items-center justify-center gap-2 bg-black/40 hover:bg-white/15 backdrop-blur-md text-white border border-white/25 hover:border-white/50 font-syne font-bold text-xs sm:text-sm uppercase tracking-wider px-6 py-4 rounded-full transition-all duration-300">
+                                class="inline-flex items-center justify-center gap-2 bg-black/40 hover:bg-white/15 backdrop-blur-md text-white border border-white/25 hover:border-white/50 font-syne font-bold text-xs sm:text-sm uppercase tracking-wider px-5 py-3 sm:py-3.5 rounded-full transition-all duration-300">
                                 <span x-text="isMuted ? '🔊 Ativar Áudio do Vídeo' : '🔇 Silenciar Vídeo'"></span>
                             </button>
                         </div>
                     </div>
 
                     <!-- Bottom Info -->
-                    <div class="text-xs font-mono uppercase tracking-widest text-white/60">
+                    <div class="text-[11px] sm:text-xs font-mono uppercase tracking-widest text-white/60">
                         <span>AUDIOVISUAL OFICIAL • CIRCUITO ONE MOVE RUN</span>
                     </div>
 
@@ -259,8 +259,8 @@
                 @click="prevSlide()" 
                 type="button"
                 aria-label="Slide anterior"
-                class="absolute left-4 top-1/2 -translate-y-1/2 z-30 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-black/40 hover:bg-[#FF4D00] text-white/80 hover:text-white backdrop-blur-md border border-white/15 flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-lg">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                class="absolute left-4 top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-black/40 hover:bg-[#FF4D00] text-white/80 hover:text-white backdrop-blur-md border border-white/15 flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-lg">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7" />
                 </svg>
             </button>
@@ -269,21 +269,21 @@
                 @click="nextSlide()" 
                 type="button"
                 aria-label="Próximo slide"
-                class="absolute right-4 top-1/2 -translate-y-1/2 z-30 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-black/40 hover:bg-[#FF4D00] text-white/80 hover:text-white backdrop-blur-md border border-white/15 flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-lg">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                class="absolute right-4 top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-black/40 hover:bg-[#FF4D00] text-white/80 hover:text-white backdrop-blur-md border border-white/15 flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-lg">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" />
                 </svg>
             </button>
 
             <!-- BOTTOM CAROUSEL PROGRESS / SLIDE INDICATORS -->
-            <div class="absolute bottom-4 left-1/2 -translate-x-1/2 z-30 flex items-center gap-3 bg-black/60 backdrop-blur-md px-4 py-2 rounded-full border border-white/15 shadow-xl">
+            <div class="absolute bottom-3 sm:bottom-4 left-1/2 -translate-x-1/2 z-30 flex items-center gap-2.5 bg-black/60 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/15 shadow-xl">
                 <!-- Slide 0 Pill -->
                 <button 
                     @click="goToSlide(0)" 
                     type="button"
-                    class="relative flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold transition-all duration-300"
+                    class="relative flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold transition-all duration-300"
                     :class="activeSlide === 0 ? 'bg-[#FF4D00] text-white shadow-md' : 'text-neutral-400 hover:text-white'">
-                    <span class="w-2 h-2 rounded-full bg-white"></span>
+                    <span class="w-1.5 h-1.5 rounded-full bg-white"></span>
                     <span class="tracking-wider text-[11px] uppercase">01 Imagem</span>
                 </button>
 
@@ -291,9 +291,9 @@
                 <button 
                     @click="goToSlide(1)" 
                     type="button"
-                    class="relative flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold transition-all duration-300"
+                    class="relative flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold transition-all duration-300"
                     :class="activeSlide === 1 ? 'bg-[#FF4D00] text-white shadow-md' : 'text-neutral-400 hover:text-white'">
-                    <span class="w-2 h-2 rounded-full bg-white"></span>
+                    <span class="w-1.5 h-1.5 rounded-full bg-white"></span>
                     <span class="tracking-wider text-[11px] uppercase">02 Vídeo</span>
                 </button>
             </div>
