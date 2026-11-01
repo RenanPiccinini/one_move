@@ -326,7 +326,7 @@
                         status: 'open',
                         statusLabel: 'INSCREVER →',
                         link: 'https://inscricoes.onemoverun.com.br/etapa-brasilia-2027',
-                        image: '{{ asset('images/cities/brasilia.jpg') }}',
+                        image: '{{ asset('images/One Move_ Corrida em Brasília.png') }}',
                         tagline: 'A largada do circuito nacional sob a arquitetura monumental.'
                     },
                     'curitiba': {
