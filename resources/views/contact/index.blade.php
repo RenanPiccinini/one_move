@@ -29,31 +29,29 @@
                     </div>
 
                     <!-- WhatsApp Card -->
-                    <div class="glass-panel p-6 rounded-3xl border border-emerald-500/30 flex items-center justify-between">
-                        <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 rounded-2xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
+                    <div class="glass-panel p-5 sm:p-6 rounded-3xl border border-emerald-500/30 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4">
+                        <div class="flex items-center gap-3 sm:gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0">
                                 <i data-lucide="message-circle" class="w-6 h-6"></i>
                             </div>
-                            <div>
+                            <div class="min-w-0">
                                 <strong class="text-white block text-sm">WhatsApp Oficial</strong>
                                 <span class="text-xs text-slate-300">Atendimento ao Atleta & Dúvidas</span>
                             </div>
                         </div>
-                        <a href="https://wa.me/5561999999999" target="_blank" class="px-4 py-2 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white text-xs font-bold transition">
+                        <a href="https://wa.me/5561999999999" target="_blank" class="px-5 py-2.5 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white text-xs font-bold transition text-center shrink-0">
                             Conversar
                         </a>
                     </div>
 
                     <!-- Email Card -->
-                    <div class="glass-panel p-6 rounded-3xl border border-white/10 flex items-center justify-between">
-                        <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 rounded-2xl bg-[#FF4D00]/20 text-[#FF4D00] flex items-center justify-center">
-                                <i data-lucide="mail" class="w-6 h-6"></i>
-                            </div>
-                            <div>
-                                <strong class="text-white block text-sm">E-mail Geral</strong>
-                                <span class="text-xs text-slate-300">contato@onemoverun.com.br</span>
-                            </div>
+                    <div class="glass-panel p-5 sm:p-6 rounded-3xl border border-white/10 flex items-center gap-3 sm:gap-4">
+                        <div class="w-12 h-12 rounded-2xl bg-[#FF4D00]/20 text-[#FF4D00] flex items-center justify-center shrink-0">
+                            <i data-lucide="mail" class="w-6 h-6"></i>
+                        </div>
+                        <div class="min-w-0">
+                            <strong class="text-white block text-sm">E-mail Geral</strong>
+                            <span class="text-xs text-slate-300 break-all">contato@onemoverun.com.br</span>
                         </div>
                     </div>
 
@@ -72,7 +70,7 @@
 
                 <!-- Form Column -->
                 <div class="lg:col-span-7">
-                    <div class="glass-panel border-glow-orange rounded-3xl p-8 sm:p-10">
+                    <div class="glass-panel border-glow-orange rounded-3xl p-5 sm:p-8 md:p-10">
                         
                         @if(session('success'))
                             <div class="mb-6 p-4 rounded-2xl bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 text-xs font-bold flex items-center gap-3">

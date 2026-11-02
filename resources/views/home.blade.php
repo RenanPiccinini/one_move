@@ -21,6 +21,19 @@
                 isMuted: true,
                 progress: 0,
                 progressInterval: null,
+                touchStartX: 0,
+                touchEndX: 0,
+                handleTouchStart(e) {
+                    this.touchStartX = e.changedTouches[0].screenX;
+                },
+                handleTouchEnd(e) {
+                    this.touchEndX = e.changedTouches[0].screenX;
+                    if (this.touchStartX - this.touchEndX > 45) {
+                        this.nextSlide();
+                    } else if (this.touchEndX - this.touchStartX > 45) {
+                        this.prevSlide();
+                    }
+                },
                 startAutoPlay() {
                     this.clearTimers();
                     this.progress = 0;
@@ -73,7 +86,9 @@
             x-init="startAutoPlay()"
             @mouseenter="isHovered = true"
             @mouseleave="isHovered = false"
-            class="relative w-full h-[calc(100vh-7.25rem)] min-h-[520px] max-h-[720px] overflow-hidden bg-[#0A0A0C] text-white z-10 select-none">
+            @touchstart.passive="handleTouchStart($event)"
+            @touchend.passive="handleTouchEnd($event)"
+            class="relative w-full h-[calc(100vh-7.25rem)] min-h-[500px] sm:min-h-[520px] max-h-[720px] overflow-hidden bg-[#0A0A0C] text-white z-10 select-none">
 
             <!-- SLIDE 0: BANNER OFICIAL ONE MOVE RUN (IMAGEM) -->
             <div 
@@ -120,7 +135,7 @@
                             <span>A Marca da Experiência em Corrida</span>
                         </div>
 
-                        <h1 class="font-syne font-black text-3xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tighter leading-[0.95] uppercase text-white mb-3 drop-shadow-[0_10px_35px_rgba(0,0,0,0.9)]">
+                        <h1 class="font-syne font-black text-2xl xs:text-3xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tighter leading-[0.95] uppercase text-white mb-3 drop-shadow-[0_10px_35px_rgba(0,0,0,0.9)]">
                             ONE MOVE RUN.<br>
                             <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#FF7A00] via-[#FF4D00] to-[#FF8C33]">
                                 12 CIDADES. UM SÓ MOVIMENTO.
@@ -132,19 +147,19 @@
                         </p>
 
                         <!-- Primary CTA Button -->
-                        <div class="flex flex-wrap items-center gap-3 sm:gap-4">
+                        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-4">
                             <a href="https://inscricoes.onemoverun.com.br/etapa-brasilia-2027" 
                                target="_blank"
-                               class="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#FF7A00] to-[#FF4D00] hover:brightness-110 text-white font-syne font-black text-xs sm:text-sm uppercase tracking-wider px-7 sm:px-8 py-3 sm:py-3.5 rounded-full shadow-[0_10px_30px_rgba(255,77,0,0.5)] hover:scale-105 active:scale-95 transition-all duration-300 group">
+                               class="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#FF7A00] to-[#FF4D00] hover:brightness-110 text-white font-syne font-black text-xs sm:text-sm uppercase tracking-wider px-6 sm:px-8 py-3 sm:py-3.5 rounded-full shadow-[0_10px_30px_rgba(255,77,0,0.5)] hover:scale-105 active:scale-95 transition-all duration-300 group w-full sm:w-auto text-center">
                                 <span>INSCREVA-SE AGORA!</span>
-                                <svg class="w-4 h-4 text-white group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <svg class="w-4 h-4 text-white group-hover:translate-x-1 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
                                 </svg>
                             </a>
 
                             <a href="#calendario" 
-                               class="inline-flex items-center justify-center gap-2 bg-black/40 hover:bg-white/15 backdrop-blur-md text-white border border-white/25 hover:border-white/50 font-syne font-bold text-xs sm:text-sm uppercase tracking-wider px-5 py-3 sm:py-3.5 rounded-full transition-all duration-300">
-                                <i data-lucide="calendar" class="w-4 h-4 text-[#FF4D00]"></i>
+                               class="inline-flex items-center justify-center gap-2 bg-black/40 hover:bg-white/15 backdrop-blur-md text-white border border-white/25 hover:border-white/50 font-syne font-bold text-xs sm:text-sm uppercase tracking-wider px-5 py-3 sm:py-3.5 rounded-full transition-all duration-300 w-full sm:w-auto text-center">
+                                <i data-lucide="calendar" class="w-4 h-4 text-[#FF4D00] shrink-0"></i>
                                 <span>Ver Calendário 2027</span>
                             </a>
                         </div>
@@ -215,7 +230,7 @@
                             <span>Alta Performance & Cenografia</span>
                         </div>
 
-                        <h2 class="font-syne font-black text-3xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tighter leading-[0.95] uppercase text-white mb-3 drop-shadow-[0_10px_35px_rgba(0,0,0,0.9)]">
+                        <h2 class="font-syne font-black text-2xl xs:text-3xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tighter leading-[0.95] uppercase text-white mb-3 drop-shadow-[0_10px_35px_rgba(0,0,0,0.9)]">
                             SINTA A ENERGIA<br>
                             <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#FF7A00] via-[#FF4D00] to-[#FF8C33]">
                                 DO MOVIMENTO.
@@ -227,12 +242,12 @@
                         </p>
 
                         <!-- Primary CTA Button -->
-                        <div class="flex flex-wrap items-center gap-3 sm:gap-4">
+                        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-4">
                             <a href="https://inscricoes.onemoverun.com.br/etapa-brasilia-2027" 
                                target="_blank"
-                               class="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#FF7A00] to-[#FF4D00] hover:brightness-110 text-white font-syne font-black text-xs sm:text-sm uppercase tracking-wider px-7 sm:px-8 py-3 sm:py-3.5 rounded-full shadow-[0_10px_30px_rgba(255,77,0,0.5)] hover:scale-105 active:scale-95 transition-all duration-300 group">
+                               class="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#FF7A00] to-[#FF4D00] hover:brightness-110 text-white font-syne font-black text-xs sm:text-sm uppercase tracking-wider px-6 sm:px-8 py-3 sm:py-3.5 rounded-full shadow-[0_10px_30px_rgba(255,77,0,0.5)] hover:scale-105 active:scale-95 transition-all duration-300 group w-full sm:w-auto text-center">
                                 <span>INSCREVA-SE AGORA!</span>
-                                <svg class="w-4 h-4 text-white group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <svg class="w-4 h-4 text-white group-hover:translate-x-1 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
                                 </svg>
                             </a>
@@ -240,7 +255,7 @@
                             <button 
                                 @click="toggleMute()" 
                                 type="button"
-                                class="inline-flex items-center justify-center gap-2 bg-black/40 hover:bg-white/15 backdrop-blur-md text-white border border-white/25 hover:border-white/50 font-syne font-bold text-xs sm:text-sm uppercase tracking-wider px-5 py-3 sm:py-3.5 rounded-full transition-all duration-300">
+                                class="inline-flex items-center justify-center gap-2 bg-black/40 hover:bg-white/15 backdrop-blur-md text-white border border-white/25 hover:border-white/50 font-syne font-bold text-xs sm:text-sm uppercase tracking-wider px-5 py-3 sm:py-3.5 rounded-full transition-all duration-300 w-full sm:w-auto text-center">
                                 <span x-text="isMuted ? '🔊 Ativar Áudio do Vídeo' : '🔇 Silenciar Vídeo'"></span>
                             </button>
                         </div>
@@ -259,7 +274,7 @@
                 @click="prevSlide()" 
                 type="button"
                 aria-label="Slide anterior"
-                class="absolute left-4 top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-black/40 hover:bg-[#FF4D00] text-white/80 hover:text-white backdrop-blur-md border border-white/15 flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-lg">
+                class="hidden sm:flex absolute left-4 top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-black/40 hover:bg-[#FF4D00] text-white/80 hover:text-white backdrop-blur-md border border-white/15 items-center justify-center transition-all duration-300 hover:scale-110 shadow-lg">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7" />
                 </svg>
@@ -269,7 +284,7 @@
                 @click="nextSlide()" 
                 type="button"
                 aria-label="Próximo slide"
-                class="absolute right-4 top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-black/40 hover:bg-[#FF4D00] text-white/80 hover:text-white backdrop-blur-md border border-white/15 flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-lg">
+                class="hidden sm:flex absolute right-4 top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-black/40 hover:bg-[#FF4D00] text-white/80 hover:text-white backdrop-blur-md border border-white/15 items-center justify-center transition-all duration-300 hover:scale-110 shadow-lg">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" />
                 </svg>
@@ -554,32 +569,32 @@
                         <div :data-city="cityKey"
                              @mouseenter="activeCity = cityKey" 
                              @click="activeCity = cityKey"
-                             class="group py-4 sm:py-5 cursor-pointer flex items-center justify-between transition-all duration-300 select-none"
-                             :class="activeCity === cityKey ? 'pl-3 sm:pl-5 bg-neutral-50/90 -mx-3 sm:-mx-5 px-3 sm:px-5 rounded-2xl shadow-sm' : 'hover:pl-2'">
+                             class="group py-3.5 sm:py-5 cursor-pointer flex items-center justify-between transition-all duration-300 select-none px-2 sm:px-4 rounded-2xl"
+                             :class="activeCity === cityKey ? 'bg-neutral-50/90 shadow-sm' : 'hover:bg-neutral-50/50'">
                             
-                            <div class="flex items-baseline gap-3 sm:gap-5">
-                                <span class="font-mono text-xs font-bold text-neutral-400 group-hover:text-[#FF4D00] transition" 
+                            <div class="flex items-baseline gap-2.5 sm:gap-5 min-w-0">
+                                <span class="font-mono text-xs font-bold text-neutral-400 group-hover:text-[#FF4D00] transition shrink-0" 
                                       x-text="String(index + 1).padStart(2, '0')"></span>
                                 
-                                <div>
-                                    <h3 class="font-syne font-black text-xl sm:text-2xl md:text-3xl uppercase tracking-tight transition-all duration-300"
+                                <div class="min-w-0">
+                                    <h3 class="font-syne font-black text-lg xs:text-xl sm:text-2xl md:text-3xl uppercase tracking-tight transition-all duration-300 truncate"
                                         :class="activeCity === cityKey ? 'text-[#FF4D00] translate-x-1' : 'text-[#0A0A0C] group-hover:text-black'"
                                         x-text="citiesData[cityKey].name">
                                     </h3>
                                     
-                                    <div class="flex items-center gap-2 mt-0.5 text-xs font-bold uppercase tracking-wider text-neutral-500">
-                                        <span x-text="citiesData[cityKey].month" class="text-neutral-900 font-extrabold"></span>
+                                    <div class="flex items-center gap-1.5 sm:gap-2 mt-0.5 text-[11px] sm:text-xs font-bold uppercase tracking-wider text-neutral-500 min-w-0">
+                                        <span x-text="citiesData[cityKey].month" class="text-neutral-900 font-extrabold shrink-0"></span>
                                         <span>•</span>
-                                        <span x-text="citiesData[cityKey].venue" class="line-clamp-1 max-w-xs text-neutral-500"></span>
+                                        <span x-text="citiesData[cityKey].venue" class="truncate max-w-[130px] xs:max-w-[200px] sm:max-w-xs text-neutral-500"></span>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="flex items-center gap-3 shrink-0">
+                            <div class="flex items-center gap-2 sm:gap-3 shrink-0 ms-2">
                                 <a :href="citiesData[cityKey].link"
                                    @click.stop
                                    :target="citiesData[cityKey].status === 'open' ? '_blank' : '_self'"
-                                   class="px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider transition-all duration-300 inline-block"
+                                   class="px-2.5 sm:px-3 py-1 rounded-full text-[10px] sm:text-xs font-black uppercase tracking-wider transition-all duration-300 inline-block whitespace-nowrap"
                                    :class="citiesData[cityKey].status === 'open' 
                                          ? 'bg-[#FF4D00] text-white shadow-md hover:brightness-110' 
                                          : (activeCity === cityKey ? 'bg-neutral-900 text-white hover:bg-black' : 'bg-neutral-100 text-neutral-500 group-hover:bg-neutral-200')"
@@ -589,9 +604,9 @@
                                 <a :href="citiesData[cityKey].link"
                                    @click.stop
                                    :target="citiesData[cityKey].status === 'open' ? '_blank' : '_self'"
-                                   class="p-1 transition text-neutral-400 group-hover:text-black"
+                                   class="hidden xs:inline-flex p-1 transition text-neutral-400 group-hover:text-black"
                                    :aria-label="'Ver etapa ' + citiesData[cityKey].name">
-                                    <svg class="w-5 h-5 transition-transform duration-300"
+                                    <svg class="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-300"
                                          :class="activeCity === cityKey ? 'text-[#FF4D00] translate-x-1 -translate-y-1' : 'text-neutral-400 group-hover:text-black'"
                                          fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M7 17L17 7M17 7H7M17 7V17" />
@@ -603,9 +618,9 @@
                 </div>
 
                 <!-- Right Companion Viewport: Seamless City Photography Transition -->
-                <div class="lg:col-span-5 relative">
+                <div class="lg:col-span-5 relative mt-6 lg:mt-0">
                     <div class="lg:sticky lg:top-28">
-                        <div class="relative w-full aspect-[4/5] max-h-[560px] rounded-3xl overflow-hidden shadow-2xl bg-neutral-900 border border-black/5">
+                        <div class="relative w-full aspect-[4/3] xs:aspect-[4/5] max-h-[560px] rounded-3xl overflow-hidden shadow-2xl bg-neutral-900 border border-black/5">
                             
                             <!-- Reactive Image Element -->
                             <img :src="citiesData[activeCity].image" 

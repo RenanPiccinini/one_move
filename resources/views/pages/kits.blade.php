@@ -23,26 +23,26 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <!-- Kit Switcher Tabs -->
-            <div class="flex items-center justify-center gap-4 mb-12">
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-2.5 sm:gap-4 mb-8 sm:mb-12 max-w-xl mx-auto">
                 <button @click="selectedKit = 'basic'" 
                         :class="selectedKit === 'basic' ? 'bg-[#FF4D00] text-white shadow-glow-orange-sm' : 'bg-white/5 text-slate-300 hover:bg-white/10'"
-                        class="px-6 py-3 rounded-full text-xs font-black uppercase tracking-wider transition">
+                        class="px-5 sm:px-6 py-3 rounded-full text-xs font-black uppercase tracking-wider transition text-center justify-center">
                     KIT ONE MOVE (Básico)
                 </button>
                 <button @click="selectedKit = 'pro'" 
                         :class="selectedKit === 'pro' ? 'bg-[#FF4D00] text-white shadow-glow-orange-sm' : 'bg-white/5 text-slate-300 hover:bg-white/10'"
-                        class="px-6 py-3 rounded-full text-xs font-black uppercase tracking-wider transition flex items-center gap-2">
+                        class="px-5 sm:px-6 py-3 rounded-full text-xs font-black uppercase tracking-wider transition flex items-center justify-center gap-2">
                     <span>KIT ONE MOVE PRO (Com Corta-Vento)</span>
                     <span class="px-2 py-0.5 rounded text-[9px] bg-white text-black font-extrabold">VIP</span>
                 </button>
             </div>
 
             <!-- Big Kit Photo Presentation -->
-            <div class="glass-panel border-glow-orange rounded-3xl p-6 sm:p-10 mb-14">
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            <div class="glass-panel border-glow-orange rounded-3xl p-5 sm:p-10 mb-10 sm:mb-14">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
                     
                     <div class="lg:col-span-7">
-                        <img src="{{ asset('images/brand/kits-showcase.jpg') }}" alt="Kits ONE MOVE" class="w-full rounded-2xl shadow-2xl">
+                        <img src="{{ asset('images/brand/kits-showcase.jpg') }}" alt="Kits ONE MOVE" class="w-full rounded-2xl shadow-2xl object-cover">
                     </div>
 
                     <div class="lg:col-span-5 space-y-6">

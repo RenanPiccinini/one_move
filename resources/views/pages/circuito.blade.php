@@ -11,7 +11,7 @@
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
             <span class="text-xs uppercase font-extrabold tracking-widest text-[#FF7A00]">Manifesto Oficial</span>
-            <h1 class="font-syne font-black text-4xl sm:text-6xl text-white mt-2 mb-6">
+            <h1 class="font-syne font-black text-3xl xs:text-4xl sm:text-6xl text-white mt-2 mb-6">
                 NÃO É SÓ UMA CORRIDA. <br>
                 <span class="text-gradient-orange">É A MARCA DA EXPERIÊNCIA.</span>
             </h1>
@@ -96,13 +96,13 @@
                         </div>
                     </div>
 
-                    <a href="{{ route('stages.index') }}" class="btn-primary-onemove text-xs px-8 py-3.5 inline-flex">
+                    <a href="{{ route('stages.index') }}" class="btn-primary-onemove text-xs px-8 py-3.5 w-full sm:w-auto inline-flex justify-center text-center">
                         <span>Ver Calendário das 12 Cidades</span>
                     </a>
                 </div>
 
                 <div class="lg:col-span-6">
-                    <img src="{{ asset('images/brand/arrival-portico.jpg') }}" alt="Pórtico de Chegada ONE MOVE" class="w-full rounded-3xl border border-white/10 shadow-2xl">
+                    <img src="{{ asset('images/brand/arrival-portico.jpg') }}" alt="Pórtico de Chegada ONE MOVE" class="w-full rounded-3xl border border-white/10 shadow-2xl object-cover">
                 </div>
 
             </div>
@@ -119,9 +119,9 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <!-- Speed test -->
-                <div class="glass-panel p-8 rounded-3xl border border-white/10 space-y-4">
+                <div class="glass-panel p-6 sm:p-8 rounded-3xl border border-white/10 space-y-4">
                     <div class="w-full aspect-[16/9] overflow-hidden rounded-2xl bg-[#050608] flex items-center justify-center border border-white/10">
-                        <img src="{{ asset('images/brand/speed-test.jpg') }}" alt="Speed test" class="w-full h-full object-contain">
+                        <img src="{{ asset('images/brand/speed-test.jpg') }}" alt="Speed test" class="w-full h-full object-cover">
                     </div>
                     <span class="text-xs font-bold uppercase text-[#FF4D00]">Tecnologia & Aceleração</span>
                     <h3 class="font-syne font-black text-2xl text-white">ONE MOVE SPEED TEST</h3>
@@ -131,9 +131,9 @@
                 </div>
 
                 <!-- Recovery -->
-                <div class="glass-panel p-8 rounded-3xl border border-white/10 space-y-4">
+                <div class="glass-panel p-6 sm:p-8 rounded-3xl border border-white/10 space-y-4">
                     <div class="w-full aspect-[16/9] overflow-hidden rounded-2xl bg-[#050608] flex items-center justify-center border border-white/10">
-                        <img src="{{ asset('images/brand/recovery-zone.jpg') }}" alt="Recovery" class="w-full h-full object-contain">
+                        <img src="{{ asset('images/brand/recovery-zone.jpg') }}" alt="Recovery" class="w-full h-full object-cover">
                     </div>
                     <span class="text-xs font-bold uppercase text-[#FF7A00]">Nutrição & Cuidado</span>
                     <h3 class="font-syne font-black text-2xl text-white">ONE MOVE RECOVERY</h3>

@@ -46,18 +46,18 @@
                         @endif
                     </div>
 
-                    <h1 class="font-syne font-black text-4xl sm:text-6xl lg:text-7xl text-white uppercase tracking-tight">
+                    <h1 class="font-syne font-black text-3xl xs:text-4xl sm:text-6xl lg:text-7xl text-white uppercase tracking-tight">
                         ONE MOVE RUN <br>
                         <span class="text-gradient-orange">{{ $stage->city }}</span>
                     </h1>
 
-                    <p class="max-w-2xl text-slate-200 text-sm sm:text-base mt-4 leading-relaxed">
+                    <p class="max-w-2xl text-slate-200 text-xs sm:text-base mt-4 leading-relaxed">
                         {{ $stage->teaser }}
                     </p>
                 </div>
 
                 <!-- Registration Action Box -->
-                <div class="glass-panel p-6 rounded-3xl border-glow-orange min-w-[280px] sm:min-w-[320px] text-center shrink-0">
+                <div class="glass-panel p-5 sm:p-6 rounded-3xl border-glow-orange w-full lg:w-auto lg:min-w-[320px] text-center shrink-0">
                     <span class="text-[10px] uppercase font-bold tracking-wider text-slate-400 block mb-1">Data Oficial</span>
                     <span class="font-syne font-black text-xl text-white block">{{ $stage->date_display }}</span>
                     <span class="text-xs text-[#FF7A00] block mt-0.5">Largada às {{ $stage->start_time }}</span>
@@ -83,9 +83,9 @@
     </section>
 
     <!-- KEY STATS STRIP -->
-    <section class="py-4 bg-[#0B0D13] border-t border-b border-white/10 sticky top-20 z-30 backdrop-blur-md bg-opacity-95">
+    <section class="py-3 sm:py-4 bg-[#0B0D13] border-t border-b border-white/10 sticky top-16 sm:top-20 z-30 backdrop-blur-md bg-opacity-95">
         <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between gap-4 whitespace-nowrap overflow-x-auto">
+            <div class="flex items-center justify-between gap-4 overflow-x-auto no-scrollbar scroll-smooth">
                 
                 <div class="flex items-center gap-4 sm:gap-6 py-1 text-xs whitespace-nowrap shrink-0">
                     <a href="#visao-geral" class="font-bold text-white hover:text-[#FF4D00] transition whitespace-nowrap shrink-0">Visão Geral</a>
@@ -98,7 +98,7 @@
                     <a href="#faq" class="font-bold text-slate-400 hover:text-[#FF4D00] transition whitespace-nowrap shrink-0">FAQ</a>
                 </div>
 
-                <div class="shrink-0">
+                <div class="shrink-0 hidden md:block">
                     @if($stage->isOpen())
                         <button onclick="openRegistrationRedirect('{{ $stage->name }}', '{{ $stage->registration_link }}')" class="btn-primary-onemove text-[11px] px-5 py-2 whitespace-nowrap shrink-0">
                             <span>INSCREVA-SE</span>
@@ -128,18 +128,18 @@
                     <!-- Distances Grid -->
                     <div class="pt-4">
                         <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">Distâncias Disponíveis</h3>
-                        <div class="grid grid-cols-3 gap-4">
-                            <div class="glass-panel p-4 rounded-2xl text-center border-t-2 border-t-[#FF4D00]">
-                                <span class="font-syne font-black text-2xl text-white block">5 KM</span>
-                                <span class="text-[11px] text-slate-400 mt-1 block">Iniciantes & Velocidade</span>
+                        <div class="grid grid-cols-3 gap-2 sm:gap-4">
+                            <div class="glass-panel p-2.5 sm:p-4 rounded-xl sm:rounded-2xl text-center border-t-2 border-t-[#FF4D00]">
+                                <span class="font-syne font-black text-lg xs:text-xl sm:text-2xl text-white block">5 KM</span>
+                                <span class="text-[10px] sm:text-[11px] text-slate-400 mt-0.5 sm:mt-1 block">Iniciantes & Velocidade</span>
                             </div>
-                            <div class="glass-panel p-4 rounded-2xl text-center border-t-2 border-t-[#FF7A00]">
-                                <span class="font-syne font-black text-2xl text-white block">10 KM</span>
-                                <span class="text-[11px] text-slate-400 mt-1 block">Ritmo & Evolução</span>
+                            <div class="glass-panel p-2.5 sm:p-4 rounded-xl sm:rounded-2xl text-center border-t-2 border-t-[#FF7A00]">
+                                <span class="font-syne font-black text-lg xs:text-xl sm:text-2xl text-white block">10 KM</span>
+                                <span class="text-[10px] sm:text-[11px] text-slate-400 mt-0.5 sm:mt-1 block">Ritmo & Evolução</span>
                             </div>
-                            <div class="glass-panel p-4 rounded-2xl text-center border-t-2 border-t-[#FF4D00]">
-                                <span class="font-syne font-black text-2xl text-[#FF6A1A] block">21 KM</span>
-                                <span class="text-[11px] text-slate-400 mt-1 block">Meia Maratona Oficial</span>
+                            <div class="glass-panel p-2.5 sm:p-4 rounded-xl sm:rounded-2xl text-center border-t-2 border-t-[#FF4D00]">
+                                <span class="font-syne font-black text-lg xs:text-xl sm:text-2xl text-[#FF6A1A] block">21 KM</span>
+                                <span class="text-[10px] sm:text-[11px] text-slate-400 mt-0.5 sm:mt-1 block">Meia Maratona</span>
                             </div>
                         </div>
                     </div>
@@ -158,7 +158,7 @@
 
                 <!-- Fast Facts Sidebar -->
                 <div class="lg:col-span-5 space-y-4">
-                    <div class="glass-panel p-6 rounded-3xl border border-white/10 space-y-4">
+                    <div class="glass-panel p-5 sm:p-6 rounded-3xl border border-white/10 space-y-4">
                         <h3 class="font-syne font-bold text-lg text-white">INFORMAÇÕES ESSENCIAIS</h3>
                         
                         <div class="space-y-3 text-xs text-slate-300">
@@ -279,7 +279,7 @@
                     <!-- Right Course Photo from Slide 9 or 20 -->
                     <div class="lg:col-span-4 flex flex-col justify-center">
                         <div class="rounded-2xl overflow-hidden relative aspect-[16/9] bg-[#050608] flex items-center justify-center border border-white/10">
-                            <img src="{{ asset('images/brand/course-lighting.jpg') }}" alt="Percurso ONE MOVE Iluminado" class="w-full h-full object-contain">
+                            <img src="{{ asset('images/brand/course-lighting.jpg') }}" alt="Percurso ONE MOVE Iluminado" class="w-full h-full object-cover">
                         </div>
                         <div class="mt-3 text-center bg-white/5 border border-white/10 rounded-xl py-2 px-4">
                             <span class="text-xs font-bold text-white uppercase tracking-wider">Percurso Noturno / Crepúsculo</span>
@@ -412,8 +412,8 @@
             <div class="space-y-4">
                 @if(!empty($stage->schedule))
                     @foreach($stage->schedule as $item)
-                        <div class="glass-panel p-4 sm:p-5 rounded-2xl flex items-center gap-6 border border-white/5 hover:border-[#FF4D00]/40 transition">
-                            <span class="font-syne font-black text-xl sm:text-2xl text-[#FF4D00] w-20 shrink-0">
+                        <div class="glass-panel p-4 sm:p-5 rounded-2xl flex items-center gap-3 sm:gap-6 border border-white/5 hover:border-[#FF4D00]/40 transition">
+                            <span class="font-syne font-black text-lg sm:text-2xl text-[#FF4D00] w-16 sm:w-20 shrink-0">
                                 {{ $item['time'] }}
                             </span>
                             <div class="w-px h-8 bg-white/10 shrink-0"></div>
@@ -430,7 +430,7 @@
     <!-- SECTION 6: RETIRADA DE KITS -->
     <section id="entrega-kits" class="py-16 bg-[#090B10] border-t border-b border-white/5">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="glass-panel border-glow-orange rounded-3xl p-8 sm:p-10 space-y-6">
+            <div class="glass-panel border-glow-orange rounded-3xl p-5 sm:p-8 md:p-10 space-y-6">
                 <div>
                     <span class="text-xs uppercase font-extrabold tracking-widest text-[#FF7A00]">Informações Importantes</span>
                     <h2 class="font-syne font-black text-2xl sm:text-3xl text-white mt-1">RETIRADA DO KIT ATLETA</h2>
@@ -463,7 +463,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
                 
-                <div class="lg:col-span-6 glass-panel p-8 rounded-3xl border border-white/10 space-y-4">
+                <div class="lg:col-span-6 glass-panel p-5 sm:p-8 rounded-3xl border border-white/10 space-y-4">
                     <span class="text-xs font-bold uppercase text-[#FF4D00]">Conquista & Pódio</span>
                     <h3 class="font-syne font-black text-2xl text-white">PREMIAÇÃO OFICIAL</h3>
                     <p class="text-xs text-slate-300 leading-relaxed">
@@ -471,7 +471,7 @@
                     </p>
                 </div>
 
-                <div class="lg:col-span-6 glass-panel p-8 rounded-3xl border border-white/10 space-y-4">
+                <div class="lg:col-span-6 glass-panel p-5 sm:p-8 rounded-3xl border border-white/10 space-y-4">
                     <span class="text-xs font-bold uppercase text-[#FF7A00]">Termos Legais</span>
                     <h3 class="font-syne font-black text-2xl text-white">REGULAMENTO ESPECÍFICO</h3>
                     <p class="text-xs text-slate-300 leading-relaxed">
@@ -490,7 +490,7 @@
     </section>
 
     <!-- SECTION 8: FAQ & DÚVIDAS ESPECÍFICAS -->
-    <section id="faq" class="py-16 bg-[#090B10] border-t border-white/5">
+    <section id="faq" class="py-16 pb-28 sm:pb-24 bg-[#090B10] border-t border-white/5">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-10">
                 <span class="text-xs uppercase font-extrabold tracking-widest text-[#FF7A00]">Dúvidas Rápidas</span>
@@ -515,20 +515,20 @@
     </section>
 
     <!-- STICKY BOTTOM REGISTRATION ACTION BAR FOR MOBILE/DESKTOP -->
-    <div class="fixed bottom-0 left-0 right-0 z-40 bg-[#0B0D13]/95 backdrop-blur-md border-t border-white/10 py-3 px-4 sm:px-8 flex items-center justify-between">
-        <div class="flex items-center gap-3">
-            <span class="font-syne font-black text-sm text-white hidden sm:inline">{{ $stage->name }}</span>
-            <span class="text-xs text-[#FF7A00] font-bold">{{ $stage->date_display }}</span>
+    <div class="fixed bottom-0 left-0 right-0 z-40 bg-[#0B0D13]/95 backdrop-blur-md border-t border-white/10 py-3 px-3 sm:px-8 flex items-center justify-between gap-2 sm:gap-4">
+        <div class="flex items-center gap-2 sm:gap-3 min-w-0">
+            <span class="font-syne font-black text-xs sm:text-sm text-white truncate max-w-[120px] xs:max-w-[160px] sm:max-w-none">{{ $stage->name }}</span>
+            <span class="text-[11px] sm:text-xs text-[#FF7A00] font-bold shrink-0">{{ $stage->date_display }}</span>
         </div>
 
-        <div>
+        <div class="shrink-0">
             @if($stage->isOpen())
-                <button onclick="openRegistrationRedirect('{{ $stage->name }}', '{{ $stage->registration_link }}')" class="btn-primary-onemove text-xs px-6 py-2.5">
+                <button onclick="openRegistrationRedirect('{{ $stage->name }}', '{{ $stage->registration_link }}')" class="btn-primary-onemove text-xs px-4 sm:px-6 py-2.5 whitespace-nowrap">
                     <i data-lucide="flame" class="w-4 h-4"></i>
                     <span>INSCREVA-SE</span>
                 </button>
             @else
-                <button disabled class="px-5 py-2.5 rounded-full text-xs font-bold uppercase bg-white/10 text-slate-400 cursor-not-allowed">
+                <button disabled class="px-3 sm:px-5 py-2.5 rounded-full text-[11px] sm:text-xs font-bold uppercase bg-white/10 text-slate-400 cursor-not-allowed whitespace-nowrap">
                     Inscrições em Breve
                 </button>
             @endif

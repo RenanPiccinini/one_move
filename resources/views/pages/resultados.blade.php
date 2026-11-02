@@ -42,11 +42,11 @@
                     </button>
                 </div>
 
-                <div class="mt-4 flex items-center justify-center gap-2 text-[11px] text-slate-400">
-                    <span>💡 Números de demonstração para teste:</span>
-                    <button @click="bibNumber = '5327'; searchTriggered = true" class="text-[#FF7A00] font-bold hover:underline">5327</button>
+                <div class="mt-4 flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 text-[11px] text-slate-400">
+                    <span>💡 Números para teste:</span>
+                    <button @click="bibNumber = '5327'; searchTriggered = true" class="text-[#FF7A00] font-bold hover:underline">#5327</button>
                     <span>•</span>
-                    <button @click="bibNumber = '6420'; searchTriggered = true" class="text-[#FF7A00] font-bold hover:underline">6420</button>
+                    <button @click="bibNumber = '6420'; searchTriggered = true" class="text-[#FF7A00] font-bold hover:underline">#6420</button>
                 </div>
 
                 <!-- Search Results Grid Simulation -->
@@ -102,7 +102,7 @@
                         Reviva a energia épica das etapas realizadas. Drones noturnos, closes de emoção na chegada e o clima eletrizante da ONE MOVE Arena.
                     </p>
                     <div class="pt-2">
-                        <button onclick="alert('O Aftermovie completo estará disponível no YouTube Oficial!')" class="btn-primary-onemove text-xs px-6 py-3">
+                        <button onclick="alert('O Aftermovie completo estará disponível no YouTube Oficial!')" class="btn-primary-onemove text-xs px-6 py-3 w-full sm:w-auto justify-center text-center">
                             <i data-lucide="play" class="w-4 h-4"></i>
                             <span>Assistir Teaser do Circuito</span>
                         </button>
@@ -134,8 +134,8 @@
             </div>
 
             <div class="glass-panel rounded-3xl overflow-hidden border border-white/10 max-w-4xl mx-auto">
-                <div class="overflow-x-auto">
-                    <table class="w-full text-left text-xs">
+                <div class="overflow-x-auto no-scrollbar">
+                    <table class="w-full min-w-[520px] text-left text-xs">
                         <thead class="bg-white/5 border-b border-white/10 text-slate-300 uppercase font-bold text-[10px] tracking-wider">
                             <tr>
                                 <th class="p-4">Posição</th>

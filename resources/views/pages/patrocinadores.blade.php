@@ -26,15 +26,15 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
             
             <!-- Tier 1: Naming Rights -->
-            <div class="glass-panel border-glow-orange rounded-3xl p-8 sm:p-12 text-center relative overflow-hidden">
+            <div class="glass-panel border-glow-orange rounded-3xl p-6 sm:p-12 text-center relative overflow-hidden">
                 <span class="px-3.5 py-1.5 rounded-full bg-[#FF4D00] text-white text-[10px] font-black uppercase tracking-widest inline-block mb-4">
                     Cota Exclusiva Nacional
                 </span>
-                <h2 class="font-syne font-black text-3xl sm:text-4xl text-white mb-2">NAMING RIGHTS DO CIRCUITO</h2>
-                <p class="text-slate-300 text-sm max-w-2xl mx-auto leading-relaxed mb-6">
+                <h2 class="font-syne font-black text-2xl sm:text-4xl text-white mb-2">NAMING RIGHTS DO CIRCUITO</h2>
+                <p class="text-slate-300 text-xs sm:text-sm max-w-2xl mx-auto leading-relaxed mb-6">
                     Assinatura oficial em todas as 12 etapas, presença em todas as peças de comunicação, pórticos de largada/chegada, camisetas e campanhas nacionais de marketing.
                 </p>
-                <a href="{{ route('contact.index') }}?type=patrocinio" class="btn-primary-onemove text-xs px-8 py-3.5">
+                <a href="{{ route('contact.index') }}?type=patrocinio" class="btn-primary-onemove text-xs px-8 py-3.5 w-full sm:w-auto inline-flex justify-center text-center">
                     <span>Consultar Disponibilidade de Naming Rights</span>
                 </a>
             </div>
@@ -114,12 +114,12 @@
                 <p class="text-xs text-slate-400 max-w-lg mx-auto mb-6">
                     Apresentação detalhada com cotas disponíveis, perfil demográfico dos atletas e opções de ativação customizadas.
                 </p>
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a href="{{ route('contact.index') }}?type=patrocinio" class="btn-primary-onemove text-xs px-8 py-3.5">
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 max-w-md sm:max-w-none mx-auto">
+                    <a href="{{ route('contact.index') }}?type=patrocinio" class="btn-primary-onemove text-xs px-8 py-3.5 w-full sm:w-auto justify-center text-center">
                         <i data-lucide="mail" class="w-4 h-4"></i>
                         <span>Falar com o Diretor Comercial</span>
                     </a>
-                    <a href="https://wa.me/5561999999999?text=Ol%C3%A1!%20Gostaria%20de%20receber%20o%20M%C3%ADdia%20Kit%20de%20Patroc%C3%ADnio%20da%20ONE%20MOVE%20RUN." target="_blank" class="btn-secondary-onemove text-xs px-8 py-3.5">
+                    <a href="https://wa.me/5561999999999?text=Ol%C3%A1!%20Gostaria%20de%20receber%20o%20M%C3%ADdia%20Kit%20de%20Patroc%C3%ADnio%20da%20ONE%20MOVE%20RUN." target="_blank" class="btn-secondary-onemove text-xs px-8 py-3.5 w-full sm:w-auto justify-center text-center">
                         <i data-lucide="message-circle" class="w-4 h-4 text-emerald-400"></i>
                         <span>Conversar no WhatsApp</span>
                     </a>

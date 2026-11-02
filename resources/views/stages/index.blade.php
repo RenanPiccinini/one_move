@@ -85,7 +85,7 @@
                             <div class="relative aspect-[16/9] bg-[#050608] overflow-hidden flex items-center justify-center">
                                 <img src="{{ asset($stage->hero_image ?? 'images/brand/city-brasilia.jpg') }}" 
                                      alt="{{ $stage->name }}" 
-                                     class="w-full h-full object-contain transition-transform duration-700">
+                                     class="w-full h-full object-cover transition-transform duration-700">
                                 <div class="absolute inset-0 bg-gradient-to-t from-[#0F1117] via-transparent to-black/30 pointer-events-none"></div>
 
                                 <!-- Badge Top Left -->
@@ -118,22 +118,22 @@
                             </div>
 
                             <!-- Card Details Body -->
-                            <div class="p-6 space-y-4">
+                            <div class="p-5 sm:p-6 space-y-4">
                                 <p class="text-xs text-slate-300 line-clamp-2 leading-relaxed">
                                     {{ $stage->teaser }}
                                 </p>
 
                                 <div class="space-y-2 text-xs text-slate-300 pt-2 border-t border-white/5">
                                     <div class="flex items-center gap-2">
-                                        <i data-lucide="calendar" class="w-4 h-4 text-[#FF4D00]"></i>
+                                        <i data-lucide="calendar" class="w-4 h-4 text-[#FF4D00] shrink-0"></i>
                                         <span><strong>Data:</strong> {{ $stage->date_display }}</span>
                                     </div>
                                     <div class="flex items-center gap-2">
-                                        <i data-lucide="map-pin" class="w-4 h-4 text-[#FF7A00]"></i>
+                                        <i data-lucide="map-pin" class="w-4 h-4 text-[#FF7A00] shrink-0"></i>
                                         <span class="truncate"><strong>Local:</strong> {{ $stage->venue_name }}</span>
                                     </div>
                                     <div class="flex items-center gap-2">
-                                        <i data-lucide="activity" class="w-4 h-4 text-[#FF4D00]"></i>
+                                        <i data-lucide="activity" class="w-4 h-4 text-[#FF4D00] shrink-0"></i>
                                         <span><strong>Distâncias:</strong> 5K | 10K | 21K</span>
                                     </div>
                                 </div>
@@ -141,17 +141,17 @@
                         </div>
 
                         <!-- Card Action Buttons -->
-                        <div class="p-6 pt-0 flex items-center gap-3">
-                            <a href="{{ route('stages.show', $stage->slug) }}" class="btn-secondary-onemove text-xs px-4 py-3 flex-1 justify-center">
+                        <div class="p-5 sm:p-6 pt-0 flex items-center gap-2 sm:gap-3">
+                            <a href="{{ route('stages.show', $stage->slug) }}" class="btn-secondary-onemove text-[11px] sm:text-xs px-3 sm:px-4 py-2.5 sm:py-3 flex-1 justify-center text-center">
                                 <span>Ver Etapa</span>
                             </a>
                             
                             @if($stage->isOpen())
-                                <button onclick="openRegistrationRedirect('{{ $stage->name }}', '{{ $stage->registration_link }}')" class="btn-primary-onemove text-xs px-4 py-3 flex-1 justify-center">
+                                <button onclick="openRegistrationRedirect('{{ $stage->name }}', '{{ $stage->registration_link }}')" class="btn-primary-onemove text-[11px] sm:text-xs px-3 sm:px-4 py-2.5 sm:py-3 flex-1 justify-center text-center">
                                     <span>INSCREVA-SE</span>
                                 </button>
                             @else
-                                <button disabled class="px-4 py-3 rounded-full text-xs font-bold uppercase tracking-wider bg-white/5 text-slate-500 border border-white/5 flex-1 cursor-not-allowed">
+                                <button disabled class="px-3 sm:px-4 py-2.5 sm:py-3 rounded-full text-[11px] sm:text-xs font-bold uppercase tracking-wider bg-white/5 text-slate-500 border border-white/5 flex-1 cursor-not-allowed text-center">
                                     Em Breve
                                 </button>
                             @endif

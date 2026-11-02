@@ -21,14 +21,14 @@
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
             
             <!-- Regulamento Geral Banner -->
-            <div class="glass-panel border-glow-orange rounded-3xl p-8 sm:p-10 space-y-6">
+            <div class="glass-panel border-glow-orange rounded-3xl p-5 sm:p-10 space-y-6">
                 <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-xl bg-[#FF4D00]/20 text-[#FF4D00] flex items-center justify-center">
+                    <div class="w-10 h-10 rounded-xl bg-[#FF4D00]/20 text-[#FF4D00] flex items-center justify-center shrink-0">
                         <i data-lucide="file-text" class="w-5 h-5"></i>
                     </div>
                     <div>
                         <span class="text-xs font-bold uppercase text-[#FF7A00]">Documento Principal</span>
-                        <h2 class="font-syne font-black text-2xl text-white">REGULAMENTO GERAL ONE MOVE RUN 2027</h2>
+                        <h2 class="font-syne font-black text-xl sm:text-2xl text-white">REGULAMENTO GERAL ONE MOVE RUN 2027</h2>
                     </div>
                 </div>
 
@@ -50,8 +50,8 @@
                     </p>
                 </div>
 
-                <div class="pt-4 flex items-center gap-4">
-                    <button onclick="alert('O download do PDF completo do Regulamento Geral será disponibilizado em breve.')" class="btn-primary-onemove text-xs px-6 py-3">
+                <div class="pt-4 flex items-center">
+                    <button onclick="alert('O download do PDF completo do Regulamento Geral será disponibilizado em breve.')" class="btn-primary-onemove text-xs px-6 py-3 w-full sm:w-auto justify-center text-center">
                         <i data-lucide="download" class="w-4 h-4"></i>
                         <span>Baixar Regulamento Geral (PDF)</span>
                     </button>
@@ -70,13 +70,13 @@
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     @foreach($stages as $stg)
-                        <div class="glass-panel p-5 rounded-2xl border border-white/5 hover:border-[#FF4D00]/40 transition flex items-center justify-between">
-                            <div>
+                        <div class="glass-panel p-4 sm:p-5 rounded-2xl border border-white/5 hover:border-[#FF4D00]/40 transition flex items-center justify-between gap-3">
+                            <div class="min-w-0">
                                 <span class="text-[10px] font-bold uppercase text-[#FF6A1A]">Etapa {{ sprintf('%02d', $stg->stage_number) }}</span>
-                                <h4 class="font-syne font-bold text-base text-white">{{ $stg->city }} / {{ $stg->state }}</h4>
-                                <span class="text-xs text-slate-400 block mt-0.5">{{ $stg->date_display }}</span>
+                                <h4 class="font-syne font-bold text-base text-white truncate">{{ $stg->city }} / {{ $stg->state }}</h4>
+                                <span class="text-xs text-slate-400 block mt-0.5 truncate">{{ $stg->date_display }}</span>
                             </div>
-                            <a href="{{ route('stages.show', $stg->slug) }}#premiacao" class="btn-secondary-onemove text-[11px] px-3.5 py-1.5">
+                            <a href="{{ route('stages.show', $stg->slug) }}#premiacao" class="btn-secondary-onemove text-[11px] px-3.5 py-1.5 shrink-0 whitespace-nowrap">
                                 <span>Ver Termos</span>
                             </a>
                         </div>
