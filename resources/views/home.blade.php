@@ -77,11 +77,10 @@
                         state: 'DF',
                         month: 'JANEIRO',
                         date: '24 de Janeiro',
-                        venue: 'Catedral Metropolitana & Esplanada',
                         status: 'open',
                         statusLabel: 'INSCREVER →',
                         link: 'https://inscricoes.onemoverun.com.br/etapa-brasilia-2027',
-                        image: '{{ asset('images/One Move_ Corrida em Brasília.png') }}',
+                        image: '{{ asset('images/cities/brasilia.jpg') }}',
                         tagline: 'A largada do circuito nacional sob a arquitetura monumental.'
                     },
                     'curitiba': {
@@ -89,19 +88,28 @@
                         state: 'PR',
                         month: 'MARÇO',
                         date: '21 de Março',
-                        venue: 'Jardim Botânico & Museu Oscar Niemeyer',
                         status: 'soon',
                         statusLabel: 'EM BREVE',
                         link: '{{ route('stages.show', 'curitiba') }}',
                         image: '{{ asset('images/cities/curitiba.jpg') }}',
                         tagline: 'Clima europeu, precisão e o asfalto técnico do sul.'
                     },
+                    'anchieta': {
+                        name: 'Anchieta',
+                        state: 'ES',
+                        month: 'ABRIL',
+                        date: 'Abril',
+                        status: 'soon',
+                        statusLabel: 'EM BREVE',
+                        link: '{{ route('stages.show', 'anchieta') }}',
+                        image: '{{ asset('images/cities/anchieta.jpg') }}',
+                        tagline: 'História, litoral deslumbrante e energia única no Espírito Santo.'
+                    },
                     'porto-alegre': {
                         name: 'Porto Alegre',
                         state: 'RS',
                         month: 'MAIO',
                         date: '16 de Maio',
-                        venue: 'Usina do Gasômetro & Orla do Guaíba',
                         status: 'soon',
                         statusLabel: 'EM BREVE',
                         link: '{{ route('stages.show', 'porto-alegre') }}',
@@ -113,7 +121,6 @@
                         state: 'SC',
                         month: 'JULHO',
                         date: '18 de Julho',
-                        venue: 'Ponte Hercílio Luz & Beira-Mar Norte',
                         status: 'soon',
                         statusLabel: 'EM BREVE',
                         link: '{{ route('stages.show', 'florianopolis') }}',
@@ -125,19 +132,28 @@
                         state: 'AL',
                         month: 'SETEMBRO',
                         date: '19 de Setembro',
-                        venue: 'Farol da Ponta Verde & Orla de Pajuçara',
                         status: 'soon',
                         statusLabel: 'EM BREVE',
                         link: '{{ route('stages.show', 'maceio') }}',
                         image: '{{ asset('images/cities/maceio.jpg') }}',
                         tagline: 'Águas azul-turquesa, brisa constante e velocidade.'
                     },
+                    'recife': {
+                        name: 'Recife',
+                        state: 'PE',
+                        month: 'SETEMBRO',
+                        date: 'Setembro',
+                        status: 'soon',
+                        statusLabel: 'EM BREVE',
+                        link: '{{ route('stages.show', 'recife') }}',
+                        image: '{{ asset('images/cities/recife.jpg') }}',
+                        tagline: 'Pontes históricas, orla vibrante e a paixão da corrida no Nordeste.'
+                    },
                     'joao-pessoa': {
                         name: 'João Pessoa',
                         state: 'PB',
                         month: 'NOVEMBRO',
                         date: '07 de Novembro',
-                        venue: 'Farol do Cabo Branco & Ponta do Seixas',
                         status: 'soon',
                         statusLabel: 'EM BREVE',
                         link: '{{ route('stages.show', 'joao-pessoa') }}',
@@ -149,72 +165,11 @@
                         state: 'CE',
                         month: 'DEZEMBRO',
                         date: '12 de Dezembro',
-                        venue: 'Praia de Iracema & Espigão',
                         status: 'soon',
                         statusLabel: 'EM BREVE',
                         link: '{{ route('stages.show', 'fortaleza') }}',
                         image: '{{ asset('images/cities/fortaleza.jpg') }}',
                         tagline: 'A Terra da Luz recebendo a energia do circuito.'
-                    },
-                    'sao-paulo': {
-                        name: 'São Paulo',
-                        state: 'SP',
-                        month: 'EM BREVE',
-                        date: 'A Confirmar',
-                        venue: 'Ponte Estaiada & Ibirapuera',
-                        status: 'soon',
-                        statusLabel: 'EM BREVE',
-                        link: '{{ route('stages.show', 'sao-paulo') }}',
-                        image: '{{ asset('images/cities/sao-paulo.jpg') }}',
-                        tagline: 'A capital da velocidade e a pulsação da metrópole.'
-                    },
-                    'rio-de-janeiro': {
-                        name: 'Rio de Janeiro',
-                        state: 'RJ',
-                        month: 'EM BREVE',
-                        date: 'A Confirmar',
-                        venue: 'Cristo Redentor & Aterro do Flamengo',
-                        status: 'soon',
-                        statusLabel: 'EM BREVE',
-                        link: '{{ route('stages.show', 'rio-de-janeiro') }}',
-                        image: '{{ asset('images/cities/rio-de-janeiro.jpg') }}',
-                        tagline: 'O nascer do sol mais famoso do planeta aos pés do Cristo.'
-                    },
-                    'belo-horizonte': {
-                        name: 'Belo Horizonte',
-                        state: 'MG',
-                        month: 'EM BREVE',
-                        date: 'A Confirmar',
-                        venue: 'Igrejinha da Pampulha & Lagoa',
-                        status: 'soon',
-                        statusLabel: 'EM BREVE',
-                        link: '{{ route('stages.show', 'belo-horizonte') }}',
-                        image: '{{ asset('images/cities/belo-horizonte.jpg') }}',
-                        tagline: 'Arquitetura modernista e o clássico contorno da Pampulha.'
-                    },
-                    'goiania': {
-                        name: 'Goiânia',
-                        state: 'GO',
-                        month: 'EM BREVE',
-                        date: 'A Confirmar',
-                        venue: 'Parque Flamboyant & Praça Cívica',
-                        status: 'soon',
-                        statusLabel: 'EM BREVE',
-                        link: '{{ route('stages.show', 'goiania') }}',
-                        image: '{{ asset('images/cities/goiania.jpg') }}',
-                        tagline: 'Ruas amplas, altimetria plana e atmosfera vibrante.'
-                    },
-                    'salvador': {
-                        name: 'Salvador',
-                        state: 'BA',
-                        month: 'EM BREVE',
-                        date: 'A Confirmar',
-                        venue: 'Farol da Barra & Orla de Ondina',
-                        status: 'soon',
-                        statusLabel: 'EM BREVE',
-                        link: '{{ route('stages.show', 'salvador') }}',
-                        image: '{{ asset('images/cities/salvador.jpg') }}',
-                        tagline: 'Axé, calor, percussão e o oceano como testemunha.'
                     }
                 }
             }">
@@ -308,7 +263,7 @@
                         <div :data-city="cityKey"
                              @mouseenter="activeCity = cityKey" 
                              @click="activeCity = cityKey"
-                             class="group py-1 sm:py-1.5 lg:py-1.5 cursor-pointer flex items-center justify-between transition-all duration-200 select-none px-2 sm:px-3 rounded-xl"
+                             class="group py-1.5 sm:py-2 lg:py-2.5 cursor-pointer flex items-center justify-between transition-all duration-200 select-none px-2 sm:px-3 rounded-xl"
                              :class="activeCity === cityKey ? 'bg-neutral-50/90 shadow-sm' : 'hover:bg-neutral-50/50'">
                             
                             <div class="flex items-center gap-2 sm:gap-3.5 min-w-0">
@@ -321,10 +276,8 @@
                                         x-text="citiesData[cityKey].name">
                                     </h3>
                                     
-                                    <div class="flex items-center gap-1.5 text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-neutral-500 min-w-0 leading-tight">
-                                        <span x-text="citiesData[cityKey].month" class="text-neutral-900 font-extrabold shrink-0"></span>
-                                        <span>•</span>
-                                        <span x-text="citiesData[cityKey].venue" class="truncate max-w-[130px] xs:max-w-[200px] sm:max-w-xs text-neutral-500"></span>
+                                    <div class="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-neutral-500 min-w-0 leading-tight">
+                                        <span x-text="citiesData[cityKey].month" class="text-neutral-900 font-extrabold"></span>
                                     </div>
                                 </div>
                             </div>
