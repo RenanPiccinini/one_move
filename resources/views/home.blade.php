@@ -41,7 +41,7 @@
 
                 <!-- Bottom CTA Buttons & Stage Info -->
                 <div class="mt-auto">
-                    <!-- Primary CTA Buttons -->
+                    <!-- Primary CTA Button -->
                     <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-4 mb-3.5">
                         <a href="https://inscricoes.onemoverun.com.br/etapa-brasilia-2027" 
                            target="_blank"
@@ -50,12 +50,6 @@
                             <svg class="w-4 h-4 text-white group-hover:translate-x-1 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
                             </svg>
-                        </a>
-
-                        <a href="#calendario" 
-                           class="inline-flex items-center justify-center gap-2 bg-black/40 hover:bg-white/15 backdrop-blur-md text-white border border-white/25 hover:border-white/50 font-syne font-bold text-xs sm:text-sm uppercase tracking-wider px-5 py-3 sm:py-3.5 rounded-full transition-all duration-300 w-full sm:w-auto text-center">
-                            <i data-lucide="calendar" class="w-4 h-4 text-[#FF4D00] shrink-0"></i>
-                            <span>Ver Calendário 2027</span>
                         </a>
                     </div>
 

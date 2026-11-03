@@ -62,26 +62,37 @@
                          class="h-8 sm:h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
                 </a>
 
-                <!-- Desktop Navigation Links: Apenas Home, Calendário e Regulamento -->
-                <nav class="hidden md:flex items-center gap-6 lg:gap-10 text-sm font-bold text-neutral-800 tracking-wide">
-                    <a href="{{ route('home') }}" class="whitespace-nowrap shrink-0 hover:text-[#FF4D00] transition {{ request()->routeIs('home') ? 'text-[#FF4D00]' : '' }}">
-                        Home
-                    </a>
-                    <a href="{{ route('pages.calendario') }}" 
-                       @click="if (window.location.pathname === '/' || window.location.pathname === '') { const el = document.getElementById('calendario') || document.getElementById('cidades'); if (el) { $event.preventDefault(); el.scrollIntoView({ behavior: 'smooth' }); history.pushState(null, null, '#calendario'); } }"
-                       class="whitespace-nowrap shrink-0 hover:text-[#FF4D00] transition {{ request()->routeIs('pages.calendario') ? 'text-[#FF4D00]' : '' }}">
-                        Calendário
-                    </a>
-                    <a href="{{ route('pages.regulamentos') }}" class="whitespace-nowrap shrink-0 hover:text-[#FF4D00] transition {{ request()->routeIs('pages.regulamentos') ? 'text-[#FF4D00]' : '' }}">
-                        Regulamento
-                    </a>
-                </nav>
+                <!-- Desktop Navigation Links & Action CTA (Justified beside Inscreva-se) -->
+                <div class="hidden md:flex items-center gap-6 lg:gap-8 ml-auto">
+                    <nav class="flex items-center gap-6 lg:gap-8 text-sm font-bold text-neutral-800 tracking-wide">
+                        <a href="{{ route('home') }}" class="whitespace-nowrap shrink-0 hover:text-[#FF4D00] transition {{ request()->routeIs('home') ? 'text-[#FF4D00]' : '' }}">
+                            Home
+                        </a>
+                        <a href="{{ route('pages.calendario') }}" 
+                           @click="if (window.location.pathname === '/' || window.location.pathname === '') { const el = document.getElementById('calendario') || document.getElementById('cidades'); if (el) { $event.preventDefault(); el.scrollIntoView({ behavior: 'smooth' }); history.pushState(null, null, '#calendario'); } }"
+                           class="whitespace-nowrap shrink-0 hover:text-[#FF4D00] transition {{ request()->routeIs('pages.calendario') ? 'text-[#FF4D00]' : '' }}">
+                            Calendário
+                        </a>
+                        <a href="{{ route('pages.regulamentos') }}" class="whitespace-nowrap shrink-0 hover:text-[#FF4D00] transition {{ request()->routeIs('pages.regulamentos') ? 'text-[#FF4D00]' : '' }}">
+                            Regulamento
+                        </a>
+                    </nav>
 
-                <!-- Action CTA Button -->
-                <div class="hidden sm:flex items-center gap-3 shrink-0">
+                    <div class="flex items-center gap-3 shrink-0">
+                        <a href="https://inscricoes.onemoverun.com.br/etapa-brasilia-2027" 
+                           target="_blank"
+                           class="btn-editorial-orange text-xs px-4 sm:px-5 py-2 sm:py-2.5 whitespace-nowrap shrink-0 shadow-md hover:shadow-[#FF4D00]/30 transition-all flex items-center gap-1.5">
+                            <span>Inscreva-se agora!</span>
+                            <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Action CTA Button for Tablet (sm:flex md:hidden) -->
+                <div class="hidden sm:flex md:hidden items-center gap-3 shrink-0 ml-auto">
                     <a href="https://inscricoes.onemoverun.com.br/etapa-brasilia-2027" 
                        target="_blank"
-                       class="btn-editorial-orange text-xs px-4 sm:px-5 py-2 sm:py-2.5 whitespace-nowrap shrink-0 shadow-md hover:shadow-[#FF4D00]/30 transition-all flex items-center gap-1.5">
+                       class="btn-editorial-orange text-xs px-4 py-2 whitespace-nowrap shrink-0 shadow-md flex items-center gap-1.5">
                         <span>Inscreva-se agora!</span>
                         <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
                     </a>
