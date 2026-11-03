@@ -19,23 +19,17 @@
                 class="absolute inset-0 w-full h-full object-cover object-center scale-[1.01]">
 
             <!-- Cinematic Gradients & Shading -->
-            <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/55 to-black/25 pointer-events-none"></div>
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-black/40 pointer-events-none"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-black/20 pointer-events-none"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-black/30 pointer-events-none"></div>
 
             <!-- Subtle Ambient Tech Grid -->
             <div class="absolute inset-0 opacity-[0.04] bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)] bg-[size:4rem_4rem] pointer-events-none"></div>
 
             <!-- Hero Content -->
-            <div class="relative z-20 w-full h-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 flex flex-col justify-between pt-4 sm:pt-6 pb-10 sm:pb-12">
+            <div class="relative z-20 w-full h-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 flex flex-col justify-between pt-4 sm:pt-6 pb-8 sm:pb-10">
                 
                 <!-- Meta Header Tag -->
-                <div class="flex items-center justify-between text-xs font-bold tracking-widest uppercase border-b border-white/10 pb-2 text-white/80">
-                    <div class="flex items-center gap-2">
-                        <span class="w-2.5 h-2.5 rounded-full bg-[#FF4D00] shadow-[0_0_10px_#FF4D00] animate-pulse"></span>
-                        <span class="text-white font-extrabold tracking-wider">ONE MOVE RUN</span>
-                        <span class="text-white/40">•</span>
-                        <span class="text-white/90">CIRCUITO NACIONAL 2027</span>
-                    </div>
+                <div class="flex items-center justify-end text-xs font-bold tracking-widest uppercase border-b border-white/10 pb-2 text-white/80">
                     <div class="hidden sm:flex items-center gap-6 text-[11px] font-semibold tracking-wider text-white/70">
                         <span>12 CAPITAIS</span>
                         <span class="text-white/30">•</span>
@@ -45,26 +39,10 @@
                     </div>
                 </div>
 
-                <!-- Center Headline & CTA -->
-                <div class="my-auto max-w-2xl lg:max-w-3xl py-2 sm:py-3">
-                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[#FF4D00] font-black uppercase text-xs tracking-[0.2em] mb-3 shadow-lg">
-                        <span class="w-2 h-2 rounded-full bg-[#FF4D00]"></span>
-                        <span>A Marca da Experiência em Corrida</span>
-                    </div>
-
-                    <h1 class="font-syne font-black text-2xl xs:text-3xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tighter leading-[0.95] uppercase text-white mb-3 drop-shadow-[0_10px_35px_rgba(0,0,0,0.9)]">
-                        ONE MOVE RUN.<br>
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#FF7A00] via-[#FF4D00] to-[#FF8C33]">
-                            12 CIDADES. UM SÓ MOVIMENTO.
-                        </span>
-                    </h1>
-
-                    <p class="text-xs sm:text-sm md:text-base text-white/90 max-w-xl font-normal leading-relaxed mb-4 drop-shadow-md">
-                        A corrida é o produto. A experiência ONE MOVE é o diferencial. Escolha sua largada e sinta a energia de milhares de corredores conectados em 12 capitais brasileiras.
-                    </p>
-
-                    <!-- Primary CTA Button -->
-                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-4">
+                <!-- Bottom CTA Buttons & Stage Info -->
+                <div class="mt-auto">
+                    <!-- Primary CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-4 mb-3.5">
                         <a href="https://inscricoes.onemoverun.com.br/etapa-brasilia-2027" 
                            target="_blank"
                            class="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#FF7A00] to-[#FF4D00] hover:brightness-110 text-white font-syne font-black text-xs sm:text-sm uppercase tracking-wider px-6 sm:px-8 py-3 sm:py-3.5 rounded-full shadow-[0_10px_30px_rgba(255,77,0,0.5)] hover:scale-105 active:scale-95 transition-all duration-300 group w-full sm:w-auto text-center">
@@ -80,11 +58,11 @@
                             <span>Ver Calendário 2027</span>
                         </a>
                     </div>
-                </div>
 
-                <!-- Bottom Info -->
-                <div class="text-[11px] sm:text-xs font-mono uppercase tracking-widest text-white/60">
-                    <span>ETAPA 01 • BRASÍLIA / DF • 24 DE JANEIRO</span>
+                    <!-- Bottom Info -->
+                    <div class="text-[11px] sm:text-xs font-mono uppercase tracking-widest text-white/70">
+                        <span>ETAPA 01 • BRASÍLIA / DF • 24 DE JANEIRO</span>
+                    </div>
                 </div>
 
             </div>
