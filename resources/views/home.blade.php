@@ -16,14 +16,7 @@
             <img 
                 src="{{ asset('images/logo1.jpeg') }}" 
                 alt="Circuito ONE MOVE RUN" 
-                class="absolute inset-0 w-full h-full object-cover object-center scale-[1.01]">
-
-            <!-- Cinematic Gradients & Shading -->
-            <div class="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-black/20 pointer-events-none"></div>
-            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-black/30 pointer-events-none"></div>
-
-            <!-- Subtle Ambient Tech Grid -->
-            <div class="absolute inset-0 opacity-[0.04] bg-[linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)] bg-[size:4rem_4rem] pointer-events-none"></div>
+                class="absolute inset-0 w-full h-full object-cover object-center">
 
             <!-- Hero Content -->
             <div class="relative z-20 w-full h-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 flex flex-col justify-between pt-4 sm:pt-6 pb-8 sm:pb-10">
