@@ -27,7 +27,7 @@
 <body class="bg-white text-[#0E0F12] antialiased selection:bg-[#FF4D00] selection:text-white flex flex-col min-h-screen">
 
     <!-- Top Editorial Ticker Bar -->
-    <div class="bg-[#F8F9FA] border-b border-black/5 py-2 px-3 sm:px-4 overflow-hidden relative text-xs font-semibold text-neutral-600">
+    <div class="bg-[#F8F9FA] border-b border-black/5 py-1 sm:py-1.5 px-3 sm:px-4 overflow-hidden relative text-xs font-semibold text-neutral-600">
         <div class="max-w-[1600px] mx-auto flex items-center justify-between gap-2 sm:gap-4">
             <div class="flex items-center gap-2 sm:gap-3 shrink-0 min-w-0">
                 <span class="inline-flex items-center gap-1.5 px-2 sm:px-2.5 py-0.5 rounded-full bg-[#FF4D00]/10 text-[#FF4D00] border border-[#FF4D00]/25 font-bold uppercase tracking-wider text-[9px] sm:text-[10px] whitespace-nowrap">
@@ -53,17 +53,17 @@
     <!-- Main Navigation Bar -->
     <header class="sticky top-0 z-50 glass-header-light transition-all duration-300" x-data="{ mobileMenuOpen: false }">
         <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16 sm:h-20 gap-3 sm:gap-4">
+            <div class="flex items-center justify-between h-13 sm:h-16 gap-3 sm:gap-4">
                 
                 <!-- Logo -->
                 <a href="{{ route('home') }}" class="flex items-center gap-2 shrink-0 group focus:outline-none" aria-label="ONE MOVE RUN Home">
                     <img src="{{ asset('images/logo_cropped_dark.png') }}" 
                          alt="ONE MOVE RUN" 
-                         class="h-9 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+                         class="h-8 sm:h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
                 </a>
 
-                <!-- Desktop Navigation Links -->
-                <nav class="hidden md:flex items-center gap-5 lg:gap-8 text-sm font-bold text-neutral-800 tracking-wide">
+                <!-- Desktop Navigation Links: Apenas Home, Calendário e Regulamento -->
+                <nav class="hidden md:flex items-center gap-6 lg:gap-10 text-sm font-bold text-neutral-800 tracking-wide">
                     <a href="{{ route('home') }}" class="whitespace-nowrap shrink-0 hover:text-[#FF4D00] transition {{ request()->routeIs('home') ? 'text-[#FF4D00]' : '' }}">
                         Home
                     </a>
@@ -71,12 +71,6 @@
                        @click="if (window.location.pathname === '/' || window.location.pathname === '') { const el = document.getElementById('calendario') || document.getElementById('cidades'); if (el) { $event.preventDefault(); el.scrollIntoView({ behavior: 'smooth' }); history.pushState(null, null, '#calendario'); } }"
                        class="whitespace-nowrap shrink-0 hover:text-[#FF4D00] transition {{ request()->routeIs('pages.calendario') ? 'text-[#FF4D00]' : '' }}">
                         Calendário
-                    </a>
-                    <a href="{{ route('stages.index') }}" class="whitespace-nowrap shrink-0 hover:text-[#FF4D00] transition {{ request()->routeIs('stages.index') || request()->routeIs('stages.show') ? 'text-[#FF4D00]' : '' }}">
-                        As 12 Etapas
-                    </a>
-                    <a href="{{ route('pages.kits') }}" class="whitespace-nowrap shrink-0 hover:text-[#FF4D00] transition {{ request()->routeIs('pages.kits') ? 'text-[#FF4D00]' : '' }}">
-                        Kits
                     </a>
                     <a href="{{ route('pages.regulamentos') }}" class="whitespace-nowrap shrink-0 hover:text-[#FF4D00] transition {{ request()->routeIs('pages.regulamentos') ? 'text-[#FF4D00]' : '' }}">
                         Regulamento
@@ -87,17 +81,17 @@
                 <div class="hidden sm:flex items-center gap-3 shrink-0">
                     <a href="https://inscricoes.onemoverun.com.br/etapa-brasilia-2027" 
                        target="_blank"
-                       class="btn-editorial-orange text-xs sm:text-sm px-5 lg:px-6 py-2.5 sm:py-3 whitespace-nowrap shrink-0 shadow-lg hover:shadow-[#FF4D00]/30 transition-all flex items-center gap-2">
+                       class="btn-editorial-orange text-xs px-4 sm:px-5 py-2 sm:py-2.5 whitespace-nowrap shrink-0 shadow-md hover:shadow-[#FF4D00]/30 transition-all flex items-center gap-1.5">
                         <span>Inscreva-se agora!</span>
-                        <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                        <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
                     </a>
                 </div>
 
                 <!-- Mobile Hamburger Toggle -->
                 <div class="md:hidden flex items-center shrink-0">
                     <button @click="mobileMenuOpen = !mobileMenuOpen" type="button" class="p-2 rounded-xl text-neutral-800 hover:text-black hover:bg-neutral-100 focus:outline-none" aria-label="Abrir Menu">
-                        <i x-show="!mobileMenuOpen" data-lucide="menu" class="w-6 h-6"></i>
-                        <i x-show="mobileMenuOpen" data-lucide="x" class="w-6 h-6"></i>
+                        <i x-show="!mobileMenuOpen" data-lucide="menu" class="w-5 h-5"></i>
+                        <i x-show="mobileMenuOpen" data-lucide="x" class="w-5 h-5"></i>
                     </button>
                 </div>
             </div>
@@ -123,50 +117,32 @@
             <a @click="mobileMenuOpen = false; if (window.location.pathname === '/' || window.location.pathname === '') { const el = document.getElementById('calendario') || document.getElementById('cidades'); if (el) { $event.preventDefault(); el.scrollIntoView({ behavior: 'smooth' }); history.pushState(null, null, '#calendario'); } }" 
                href="{{ route('pages.calendario') }}" 
                class="flex items-center justify-between px-3 py-2.5 rounded-xl text-sm font-bold text-neutral-800 hover:text-[#FF4D00] hover:bg-neutral-50 {{ request()->routeIs('pages.calendario') ? 'text-[#FF4D00] bg-neutral-50' : '' }}">
-                <span>Calendário 2027</span>
-                <i data-lucide="chevron-right" class="w-4 h-4 text-neutral-400"></i>
-            </a>
-
-            <a @click="mobileMenuOpen = false" href="{{ route('stages.index') }}" class="flex items-center justify-between px-3 py-2.5 rounded-xl text-sm font-bold text-neutral-800 hover:text-[#FF4D00] hover:bg-neutral-50 {{ request()->routeIs('stages.index') ? 'text-[#FF4D00] bg-neutral-50' : '' }}">
-                <span>As 12 Etapas</span>
-                <span class="text-[10px] uppercase font-black bg-[#FF4D00]/10 text-[#FF4D00] px-2 py-0.5 rounded-full">12 Cidades</span>
-            </a>
-
-            <a @click="mobileMenuOpen = false" href="{{ route('pages.kits') }}" class="flex items-center justify-between px-3 py-2.5 rounded-xl text-sm font-bold text-neutral-800 hover:text-[#FF4D00] hover:bg-neutral-50 {{ request()->routeIs('pages.kits') ? 'text-[#FF4D00] bg-neutral-50' : '' }}">
-                <span>Kits & Categorias</span>
-                <i data-lucide="chevron-right" class="w-4 h-4 text-neutral-400"></i>
-            </a>
-
-            <a @click="mobileMenuOpen = false" href="{{ route('pages.percursos') }}" class="flex items-center justify-between px-3 py-2.5 rounded-xl text-sm font-bold text-neutral-800 hover:text-[#FF4D00] hover:bg-neutral-50 {{ request()->routeIs('pages.percursos') ? 'text-[#FF4D00] bg-neutral-50' : '' }}">
-                <span>Percursos & Altimetria</span>
-                <i data-lucide="chevron-right" class="w-4 h-4 text-neutral-400"></i>
-            </a>
-
-            <a @click="mobileMenuOpen = false" href="{{ route('pages.resultados') }}" class="flex items-center justify-between px-3 py-2.5 rounded-xl text-sm font-bold text-neutral-800 hover:text-[#FF4D00] hover:bg-neutral-50 {{ request()->routeIs('pages.resultados') ? 'text-[#FF4D00] bg-neutral-50' : '' }}">
-                <span>Resultados & Fotos</span>
+                <span>Calendário</span>
                 <i data-lucide="chevron-right" class="w-4 h-4 text-neutral-400"></i>
             </a>
 
             <a @click="mobileMenuOpen = false" href="{{ route('pages.regulamentos') }}" class="flex items-center justify-between px-3 py-2.5 rounded-xl text-sm font-bold text-neutral-800 hover:text-[#FF4D00] hover:bg-neutral-50 {{ request()->routeIs('pages.regulamentos') ? 'text-[#FF4D00] bg-neutral-50' : '' }}">
-                <span>Regulamentos</span>
+                <span>Regulamento</span>
                 <i data-lucide="chevron-right" class="w-4 h-4 text-neutral-400"></i>
             </a>
 
-            <a @click="mobileMenuOpen = false" href="{{ route('pages.faq') }}" class="flex items-center justify-between px-3 py-2.5 rounded-xl text-sm font-bold text-neutral-800 hover:text-[#FF4D00] hover:bg-neutral-50 {{ request()->routeIs('pages.faq') ? 'text-[#FF4D00] bg-neutral-50' : '' }}">
+            <div class="pt-2 border-t border-neutral-100 my-1"></div>
+
+            <a @click="mobileMenuOpen = false" href="{{ route('pages.faq') }}" class="flex items-center justify-between px-3 py-2 rounded-xl text-xs font-semibold text-neutral-600 hover:text-[#FF4D00] hover:bg-neutral-50">
                 <span>Dúvidas Frequentes (FAQ)</span>
-                <i data-lucide="chevron-right" class="w-4 h-4 text-neutral-400"></i>
+                <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-neutral-400"></i>
             </a>
 
-            <a @click="mobileMenuOpen = false" href="{{ route('contact.index') }}" class="flex items-center justify-between px-3 py-2.5 rounded-xl text-sm font-bold text-neutral-800 hover:text-[#FF4D00] hover:bg-neutral-50 {{ request()->routeIs('contact.index') ? 'text-[#FF4D00] bg-neutral-50' : '' }}">
+            <a @click="mobileMenuOpen = false" href="{{ route('contact.index') }}" class="flex items-center justify-between px-3 py-2 rounded-xl text-xs font-semibold text-neutral-600 hover:text-[#FF4D00] hover:bg-neutral-50">
                 <span>Atendimento & Contato</span>
-                <i data-lucide="chevron-right" class="w-4 h-4 text-neutral-400"></i>
+                <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-neutral-400"></i>
             </a>
             
             <div class="pt-3">
                 <a @click="mobileMenuOpen = false"
                    href="https://inscricoes.onemoverun.com.br/etapa-brasilia-2027" 
                    target="_blank"
-                   class="btn-editorial-orange w-full text-center text-sm py-3.5 justify-center shadow-lg flex items-center gap-2">
+                   class="btn-editorial-orange w-full text-center text-sm py-3 justify-center shadow-lg flex items-center gap-2">
                     <span>Inscreva-se agora!</span>
                     <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
                 </a>

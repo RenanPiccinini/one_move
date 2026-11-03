@@ -10,7 +10,7 @@
         <!-- 01. HERO SECTION: FOTOGRAFIA OFICIAL BANNER PRINCIPAL          -->
         <!-- Imagem Oficial Circuito ONE MOVE RUN (logo1.jpeg 1920x1080)    -->
         <!-- ============================================================== -->
-        <section class="relative w-full h-[calc(100vh-7.25rem)] min-h-[500px] sm:min-h-[520px] max-h-[720px] overflow-hidden bg-[#0A0A0C] text-white z-10 select-none">
+        <section class="relative w-full h-[calc(100vh-5.75rem)] min-h-[500px] sm:min-h-[520px] max-h-[720px] overflow-hidden bg-[#0A0A0C] text-white z-10 select-none">
 
             <!-- Background Image (Banner 1920x1080) -->
             <img 
