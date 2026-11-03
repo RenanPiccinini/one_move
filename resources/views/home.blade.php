@@ -324,11 +324,11 @@
 
         <!-- ============================================================== -->
         <!-- 03. O CALENDÁRIO DO CIRCUITO — "ONDE SERÁ SUA PRÓXIMA LARGADA?"  -->
-        <!-- Formato interativo com fonte refinada e LINHAS EM MOVIMENTO    -->
+        <!-- Formato interativo compacto para caber em uma única tela        -->
         <!-- ============================================================== -->
         <section 
             id="calendario" 
-            class="py-20 md:py-28 relative px-4 sm:px-6 lg:px-12 max-w-[1700px] mx-auto z-10 overflow-hidden" 
+            class="py-6 sm:py-8 lg:py-8 relative px-4 sm:px-6 lg:px-12 max-w-[1700px] mx-auto z-10 overflow-hidden" 
             x-data="{
                 activeCity: 'brasilia',
                 citiesData: {
@@ -544,16 +544,15 @@
                 </svg>
             </div>
 
-            <!-- Header Section (Refined Font Hierarchy) -->
-            <div class="mb-10 sm:mb-14">
-                <span class="inline-flex items-center gap-2 text-xs font-black uppercase tracking-[0.25em] text-[#FF4D00]">
-                    <span class="w-6 h-[2px] bg-[#FF4D00]"></span>
+            <!-- Header Section (Compact & Refined) -->
+            <div class="mb-3 sm:mb-4 lg:mb-5">
+                <span class="inline-flex items-center gap-2 text-[10px] sm:text-xs font-black uppercase tracking-[0.25em] text-[#FF4D00]">
+                    <span class="w-5 h-[2px] bg-[#FF4D00]"></span>
                     <span>03 / O Calendário do Circuito</span>
                 </span>
                 
-                <h2 class="font-syne font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-tight text-[#0A0A0C] uppercase leading-[0.98] mt-2">
-                    ONDE SERÁ<br>
-                    SUA PRÓXIMA<br>
+                <h2 class="font-syne font-black text-2xl sm:text-3xl lg:text-4xl tracking-tight text-[#0A0A0C] uppercase leading-[0.98] mt-1">
+                    ONDE SERÁ SUA PRÓXIMA 
                     <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#FF7A00] to-[#FF4D00]">
                         LARGADA?
                     </span>
@@ -561,28 +560,28 @@
             </div>
 
             <!-- Interactive Split Layout: Left List / Right Live Visual Companion -->
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-start">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-start">
                 
-                <!-- The 12 Cities List (Compact, Sophisticated Typography) -->
+                <!-- The 12 Cities List (Ultra-Compact to fit in one desktop screen) -->
                 <div class="lg:col-span-7 divide-y divide-black/10 border-t border-b border-black/10">
                     <template x-for="(cityKey, index) in Object.keys(citiesData)" :key="cityKey">
                         <div :data-city="cityKey"
                              @mouseenter="activeCity = cityKey" 
                              @click="activeCity = cityKey"
-                             class="group py-3.5 sm:py-5 cursor-pointer flex items-center justify-between transition-all duration-300 select-none px-2 sm:px-4 rounded-2xl"
+                             class="group py-1 sm:py-1.5 lg:py-1.5 cursor-pointer flex items-center justify-between transition-all duration-200 select-none px-2 sm:px-3 rounded-xl"
                              :class="activeCity === cityKey ? 'bg-neutral-50/90 shadow-sm' : 'hover:bg-neutral-50/50'">
                             
-                            <div class="flex items-baseline gap-2.5 sm:gap-5 min-w-0">
-                                <span class="font-mono text-xs font-bold text-neutral-400 group-hover:text-[#FF4D00] transition shrink-0" 
+                            <div class="flex items-center gap-2 sm:gap-3.5 min-w-0">
+                                <span class="font-mono text-[11px] font-bold text-neutral-400 group-hover:text-[#FF4D00] transition shrink-0" 
                                       x-text="String(index + 1).padStart(2, '0')"></span>
                                 
                                 <div class="min-w-0">
-                                    <h3 class="font-syne font-black text-lg xs:text-xl sm:text-2xl md:text-3xl uppercase tracking-tight transition-all duration-300 truncate"
-                                        :class="activeCity === cityKey ? 'text-[#FF4D00] translate-x-1' : 'text-[#0A0A0C] group-hover:text-black'"
+                                    <h3 class="font-syne font-black text-sm sm:text-base lg:text-lg uppercase tracking-tight transition-all duration-200 truncate leading-tight"
+                                        :class="activeCity === cityKey ? 'text-[#FF4D00] translate-x-0.5' : 'text-[#0A0A0C] group-hover:text-black'"
                                         x-text="citiesData[cityKey].name">
                                     </h3>
                                     
-                                    <div class="flex items-center gap-1.5 sm:gap-2 mt-0.5 text-[11px] sm:text-xs font-bold uppercase tracking-wider text-neutral-500 min-w-0">
+                                    <div class="flex items-center gap-1.5 text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-neutral-500 min-w-0 leading-tight">
                                         <span x-text="citiesData[cityKey].month" class="text-neutral-900 font-extrabold shrink-0"></span>
                                         <span>•</span>
                                         <span x-text="citiesData[cityKey].venue" class="truncate max-w-[130px] xs:max-w-[200px] sm:max-w-xs text-neutral-500"></span>
@@ -590,13 +589,13 @@
                                 </div>
                             </div>
 
-                            <div class="flex items-center gap-2 sm:gap-3 shrink-0 ms-2">
+                            <div class="flex items-center gap-1.5 sm:gap-2 shrink-0 ms-2">
                                 <a :href="citiesData[cityKey].link"
                                    @click.stop
                                    :target="citiesData[cityKey].status === 'open' ? '_blank' : '_self'"
-                                   class="px-2.5 sm:px-3 py-1 rounded-full text-[10px] sm:text-xs font-black uppercase tracking-wider transition-all duration-300 inline-block whitespace-nowrap"
+                                   class="px-2 sm:px-2.5 py-0.5 rounded-full text-[10px] sm:text-[11px] font-black uppercase tracking-wider transition-all duration-200 inline-block whitespace-nowrap"
                                    :class="citiesData[cityKey].status === 'open' 
-                                         ? 'bg-[#FF4D00] text-white shadow-md hover:brightness-110' 
+                                         ? 'bg-[#FF4D00] text-white shadow-sm hover:brightness-110' 
                                          : (activeCity === cityKey ? 'bg-neutral-900 text-white hover:bg-black' : 'bg-neutral-100 text-neutral-500 group-hover:bg-neutral-200')"
                                    x-text="citiesData[cityKey].statusLabel">
                                 </a>
@@ -604,10 +603,10 @@
                                 <a :href="citiesData[cityKey].link"
                                    @click.stop
                                    :target="citiesData[cityKey].status === 'open' ? '_blank' : '_self'"
-                                   class="hidden xs:inline-flex p-1 transition text-neutral-400 group-hover:text-black"
+                                   class="hidden xs:inline-flex p-0.5 transition text-neutral-400 group-hover:text-black"
                                    :aria-label="'Ver etapa ' + citiesData[cityKey].name">
-                                    <svg class="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-300"
-                                         :class="activeCity === cityKey ? 'text-[#FF4D00] translate-x-1 -translate-y-1' : 'text-neutral-400 group-hover:text-black'"
+                                    <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 transition-transform duration-200"
+                                         :class="activeCity === cityKey ? 'text-[#FF4D00] translate-x-0.5 -translate-y-0.5' : 'text-neutral-400 group-hover:text-black'"
                                          fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M7 17L17 7M17 7H7M17 7V17" />
                                     </svg>
@@ -618,9 +617,9 @@
                 </div>
 
                 <!-- Right Companion Viewport: Seamless City Photography Transition -->
-                <div class="lg:col-span-5 relative mt-6 lg:mt-0">
-                    <div class="lg:sticky lg:top-28">
-                        <div class="relative w-full aspect-[4/3] xs:aspect-[4/5] max-h-[560px] rounded-3xl overflow-hidden shadow-2xl bg-neutral-900 border border-black/5">
+                <div class="lg:col-span-5 relative mt-4 lg:mt-0">
+                    <div class="lg:sticky lg:top-24">
+                        <div class="relative w-full aspect-[4/3] xs:aspect-[4/5] lg:aspect-auto lg:h-[460px] max-h-[460px] rounded-3xl overflow-hidden shadow-2xl bg-neutral-900 border border-black/5">
                             
                             <!-- Reactive Image Element -->
                             <img :src="citiesData[activeCity].image" 
@@ -628,11 +627,11 @@
                                  class="w-full h-full object-cover object-center transition-all duration-700 ease-out">
                             
                             <!-- Atmospheric Overlay -->
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-transparent flex flex-col justify-between p-6 sm:p-8 text-white">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-transparent flex flex-col justify-between p-4 sm:p-6 text-white">
                                 
                                 <!-- Top Status Indicator -->
-                                <div class="flex items-center justify-between text-xs font-bold uppercase tracking-widest">
-                                    <span class="px-3.5 py-1 rounded-full backdrop-blur-md border border-white/20"
+                                <div class="flex items-center justify-between text-[11px] font-bold uppercase tracking-widest">
+                                    <span class="px-3 py-0.5 rounded-full backdrop-blur-md border border-white/20"
                                           :class="citiesData[activeCity].status === 'open' ? 'bg-[#FF4D00] text-white shadow-lg' : 'bg-white/20 text-white'"
                                           x-text="citiesData[activeCity].status === 'open' ? 'Inscrições Abertas' : 'Etapa Confirmada'">
                                     </span>
@@ -640,24 +639,24 @@
                                 </div>
 
                                 <!-- Bottom Stage Information -->
-                                <div class="space-y-4">
+                                <div class="space-y-2.5">
                                     <div>
-                                        <span class="text-xs uppercase font-extrabold tracking-widest text-[#FF7A00]" 
+                                        <span class="text-[11px] uppercase font-extrabold tracking-widest text-[#FF7A00]" 
                                               x-text="citiesData[activeCity].month"></span>
-                                        <h4 class="font-syne font-black text-2xl sm:text-3xl text-white uppercase tracking-tight mt-1" 
+                                        <h4 class="font-syne font-black text-xl sm:text-2xl text-white uppercase tracking-tight mt-0.5" 
                                             x-text="citiesData[activeCity].name + ', ' + citiesData[activeCity].state"></h4>
-                                        <p class="text-xs sm:text-sm text-neutral-300 mt-1.5 font-medium leading-relaxed" 
+                                        <p class="text-xs text-neutral-300 mt-1 font-medium leading-relaxed line-clamp-2" 
                                            x-text="citiesData[activeCity].tagline"></p>
                                     </div>
 
-                                    <div class="pt-3 border-t border-white/20 flex items-center justify-between">
-                                        <span class="text-xs font-bold tracking-widest text-neutral-300 uppercase">
+                                    <div class="pt-2.5 border-t border-white/20 flex items-center justify-between">
+                                        <span class="text-[11px] font-bold tracking-widest text-neutral-300 uppercase">
                                             5K • 10K • 15K
                                         </span>
                                         
                                         <a :href="citiesData[activeCity].link" 
                                            :target="citiesData[activeCity].status === 'open' ? '_blank' : '_self'"
-                                           class="btn-editorial-orange text-xs px-6 py-2.5 flex items-center gap-2">
+                                           class="btn-editorial-orange text-[11px] px-5 py-2 flex items-center gap-1.5">
                                             <span x-text="citiesData[activeCity].status === 'open' ? 'INSCREVA-SE AGORA!' : 'VER DETALHES'"></span>
                                             <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
                                         </a>
