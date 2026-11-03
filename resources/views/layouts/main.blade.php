@@ -167,73 +167,46 @@
     </main>
 
     <!-- Modern Architectural Dark Footer -->
-    <footer class="bg-[#0A0A0C] text-white pt-20 pb-12 relative overflow-hidden">
+    <footer class="bg-[#0A0A0C] text-white pt-14 sm:pt-16 pb-10 sm:pb-12 relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 items-center md:items-start mb-12">
                 
-                <!-- Col 1: Brand & Manifesto -->
-                <div class="lg:col-span-2 space-y-4">
-                    <div class="flex items-center gap-2">
+                <!-- Bloco 1: Lado Esquerdo (Somente a Logo) -->
+                <div class="flex flex-col items-center md:items-start">
+                    <a href="{{ route('home') }}" class="inline-block">
                         <img src="{{ asset('images/logo_cropped_white.png') }}" 
                              alt="ONE MOVE RUN" 
-                             class="h-10 w-auto object-contain">
+                             class="h-10 sm:h-12 w-auto object-contain">
+                    </a>
+                </div>
+
+                <!-- Bloco 2: Canais Oficiais & Instagram -->
+                <div class="flex flex-col items-center text-center space-y-3">
+                    <span class="text-xs uppercase tracking-widest text-neutral-400 font-bold">
+                        Fique atento aos nossos canais oficiais
+                    </span>
+                    <a href="https://www.instagram.com/onemoverun/" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="w-11 h-11 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-neutral-300 hover:text-white hover:bg-[#FF4D00] hover:border-[#FF4D00] hover:scale-110 active:scale-95 transition-all duration-300 group shadow-lg" 
+                       aria-label="Instagram @onemoverun"
+                       title="Siga @onemoverun no Instagram">
+                        <i data-lucide="instagram" class="w-5 h-5 group-hover:scale-110 transition-transform"></i>
+                    </a>
+                </div>
+
+                <!-- Bloco 3: Realização -->
+                <div class="flex flex-col items-center md:items-end text-center md:text-right space-y-3">
+                    <span class="text-xs uppercase tracking-widest text-neutral-400 font-bold">
+                        Realização
+                    </span>
+                    <div class="flex items-center justify-center md:justify-end">
+                        <img src="{{ asset('images/logo_cropped_white.png') }}" 
+                             alt="Realização ONE MOVE" 
+                             class="h-8 sm:h-9 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity">
                     </div>
-                    <p class="text-neutral-400 text-sm max-w-sm leading-relaxed">
-                        Não é só uma corrida. É a marca da experiência. 12 cidades conectadas pelo movimento, arquitetura, música e superação.
-                    </p>
-                    <div class="pt-2 text-xs font-bold text-neutral-400 space-y-1">
-                        <p class="text-white">MOVE TO LIVE. MOVE TO PERFORM. MOVE AGAIN.</p>
-                        <p class="text-[#FF4D00]">Circuito Nacional 2027 • 12 Cidades. Um Só Movimento.</p>
-                    </div>
-
-                    <!-- Social Icons -->
-                    <div class="flex items-center gap-3 pt-3">
-                        <a href="https://instagram.com" target="_blank" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-neutral-300 hover:text-white hover:bg-[#FF4D00] hover:border-[#FF4D00] transition" aria-label="Instagram">
-                            <i data-lucide="instagram" class="w-4 h-4"></i>
-                        </a>
-                        <a href="https://strava.com" target="_blank" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-neutral-300 hover:text-white hover:bg-[#FF4D00] hover:border-[#FF4D00] transition" aria-label="Strava">
-                            <i data-lucide="activity" class="w-4 h-4"></i>
-                        </a>
-                        <a href="https://youtube.com" target="_blank" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-neutral-300 hover:text-white hover:bg-[#FF4D00] hover:border-[#FF4D00] transition" aria-label="YouTube">
-                            <i data-lucide="youtube" class="w-4 h-4"></i>
-                        </a>
-                    </div>
                 </div>
 
-                <!-- Col 2: Circuito & Etapas -->
-                <div class="space-y-3">
-                    <h4 class="text-xs uppercase tracking-widest text-neutral-400 font-bold">O Circuito</h4>
-                    <ul class="space-y-2.5 text-sm text-neutral-300 font-medium">
-                        <li><a href="{{ route('pages.circuito') }}" class="hover:text-[#FF4D00] transition">Conceito ONE MOVE</a></li>
-                        <li><a href="{{ route('home') }}#cidades" class="hover:text-[#FF4D00] transition">As 12 Cidades</a></li>
-                        <li><a href="{{ route('pages.calendario') }}" class="hover:text-[#FF4D00] transition">Calendário 2027</a></li>
-                        <li><a href="{{ route('pages.kits') }}" class="hover:text-[#FF4D00] transition">Kits & Categorias</a></li>
-                        <li><a href="{{ route('pages.percursos') }}" class="hover:text-[#FF4D00] transition">Percursos</a></li>
-                    </ul>
-                </div>
-
-                <!-- Col 3: Atleta & Apoio -->
-                <div class="space-y-3">
-                    <h4 class="text-xs uppercase tracking-widest text-neutral-400 font-bold">Área do Atleta</h4>
-                    <ul class="space-y-2.5 text-sm text-neutral-300 font-medium">
-                        <li><a href="{{ route('pages.resultados') }}" class="hover:text-[#FF4D00] transition">Resultados</a></li>
-                        <li><a href="{{ route('pages.resultados') }}#fotos" class="hover:text-[#FF4D00] transition">Fotos Oficiais</a></li>
-                        <li><a href="{{ route('pages.regulamentos') }}" class="hover:text-[#FF4D00] transition">Regulamento</a></li>
-                        <li><a href="{{ route('pages.faq') }}" class="hover:text-[#FF4D00] transition">FAQ / Perguntas Frequentes</a></li>
-                        <li><a href="{{ route('contact.index') }}" class="hover:text-[#FF4D00] transition">Atendimento ao Atleta</a></li>
-                    </ul>
-                </div>
-
-                <!-- Col 4: Corporativo -->
-                <div class="space-y-3">
-                    <h4 class="text-xs uppercase tracking-widest text-neutral-400 font-bold">Corporativo</h4>
-                    <ul class="space-y-2.5 text-sm text-neutral-300 font-medium">
-                        <li><a href="{{ route('pages.patrocinadores') }}" class="hover:text-[#FF4D00] transition">Patrocínio</a></li>
-                        <li><a href="{{ route('contact.index') }}?type=imprensa" class="hover:text-[#FF4D00] transition">Assessoria de Imprensa</a></li>
-                        <li><a href="{{ route('contact.index') }}?type=assessoria" class="hover:text-[#FF4D00] transition">Grupos & Assessorias</a></li>
-                        <li><a href="{{ route('login') }}" class="text-neutral-500 hover:text-neutral-300 transition text-xs">Acesso Restrito</a></li>
-                    </ul>
-                </div>
             </div>
 
             <!-- Bottom Copyright -->
