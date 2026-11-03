@@ -548,7 +548,7 @@
             <div class="mb-3 sm:mb-4 lg:mb-5">
                 <span class="inline-flex items-center gap-2 text-[10px] sm:text-xs font-black uppercase tracking-[0.25em] text-[#FF4D00]">
                     <span class="w-5 h-[2px] bg-[#FF4D00]"></span>
-                    <span>03 / O Calendário do Circuito</span>
+                    <span>O Calendário do Circuito</span>
                 </span>
                 
                 <h2 class="font-syne font-black text-2xl sm:text-3xl lg:text-4xl tracking-tight text-[#0A0A0C] uppercase leading-[0.98] mt-1">
