@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('title', $stage->name . ' 2027 | Inscrições, Percurso e Kits')
-@section('meta_description', 'Tudo sobre ' . $stage->name . '. Data: ' . $stage->date_display . ', distâncias 5K, 10K e 21K, percurso, retirada de kits e inscrições.')
+@section('meta_description', 'Tudo sobre ' . $stage->name . '. Data: ' . $stage->date_display . ', distâncias 5K, 10K e 15K, percurso, retirada de kits e inscrições.')
 
 @section('content')
 
@@ -138,8 +138,8 @@
                                 <span class="text-[10px] sm:text-[11px] text-slate-400 mt-0.5 sm:mt-1 block">Ritmo & Evolução</span>
                             </div>
                             <div class="glass-panel p-2.5 sm:p-4 rounded-xl sm:rounded-2xl text-center border-t-2 border-t-[#FF4D00]">
-                                <span class="font-syne font-black text-lg xs:text-xl sm:text-2xl text-[#FF6A1A] block">21 KM</span>
-                                <span class="text-[10px] sm:text-[11px] text-slate-400 mt-0.5 sm:mt-1 block">Meia Maratona</span>
+                                <span class="font-syne font-black text-lg xs:text-xl sm:text-2xl text-[#FF6A1A] block">15 KM</span>
+                                <span class="text-[10px] sm:text-[11px] text-slate-400 mt-0.5 sm:mt-1 block">Superação & Ritmo</span>
                             </div>
                         </div>
                     </div>
@@ -151,7 +151,7 @@
                             <span class="px-3 py-1.5 rounded-xl bg-white/5 border border-white/5">Geral Masculino & Feminino</span>
                             <span class="px-3 py-1.5 rounded-xl bg-white/5 border border-white/5">Faixas Etárias (de 5 em 5 anos)</span>
                             <span class="px-3 py-1.5 rounded-xl bg-white/5 border border-white/5">Atletas PCD / Cadeirantes</span>
-                            <span class="px-3 py-1.5 rounded-xl bg-white/5 border border-white/5">Pelotão Elite (21K)</span>
+                            <span class="px-3 py-1.5 rounded-xl bg-white/5 border border-white/5">Pelotão Elite (15K)</span>
                         </div>
                     </div>
                 </div>
@@ -223,7 +223,7 @@
                             <div class="flex items-center justify-between mb-4">
                                 <span class="text-xs font-bold text-white uppercase flex items-center gap-2">
                                     <i data-lucide="trending-up" class="w-4 h-4 text-[#FF4D00]"></i>
-                                    Perfil Altimétrico Oficial (21K)
+                                    Perfil Altimétrico Oficial (15K)
                                 </span>
                                 <span class="text-xs text-[#FF7A00] font-bold">Ganho Total: 95m • Rápido</span>
                             </div>
@@ -253,8 +253,8 @@
                                     <span>KM 0 (Largada)</span>
                                     <span>KM 5 (Hidratação)</span>
                                     <span>KM 10 (Ponte JK)</span>
-                                    <span>KM 15 (DJ Point)</span>
-                                    <span>KM 21 (Pórtico)</span>
+                                    <span>KM 12 (DJ Point)</span>
+                                    <span>KM 15 (Pórtico)</span>
                                 </div>
                             </div>
                         </div>
@@ -467,7 +467,7 @@
                     <span class="text-xs font-bold uppercase text-[#FF4D00]">Conquista & Pódio</span>
                     <h3 class="font-syne font-black text-2xl text-white">PREMIAÇÃO OFICIAL</h3>
                     <p class="text-xs text-slate-300 leading-relaxed">
-                        Troféus especiais para os 5 primeiros colocados gerais no Masculino e Feminino nas distâncias de 21K, 10K e 5K. Troféus para os 3 primeiros de cada faixa etária no 21K. Medalha Finisher de metal para 100% dos concluintes.
+                        Troféus especiais para os 5 primeiros colocados gerais no Masculino e Feminino nas distâncias de 15K, 10K e 5K. Troféus para os 3 primeiros de cada faixa etária no 15K e premiação em dinheiro conforme regulamento. Medalha Finisher de metal para 100% dos concluintes.
                     </p>
                 </div>
 
@@ -504,7 +504,7 @@
                 </div>
                 <div class="glass-panel p-5 rounded-2xl">
                     <h4 class="font-bold text-white mb-1">Qual a idade mínima para participar?</h4>
-                    <p class="text-slate-300">5K: a partir de 14 anos (com autorização dos pais); 10K: a partir de 16 anos; 21K: a partir de 18 anos completos no ano da prova.</p>
+                    <p class="text-slate-300">5K: a partir de 14 anos (com autorização dos pais); 10K: a partir de 16 anos; 15K: a partir de 18 anos completos no ano da prova.</p>
                 </div>
                 <div class="glass-panel p-5 rounded-2xl">
                     <h4 class="font-bold text-white mb-1">Onde consulto o resultado e as fotos oficiais após a prova?</h4>

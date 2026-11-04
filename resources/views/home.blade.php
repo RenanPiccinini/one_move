@@ -24,7 +24,7 @@
                 <!-- Meta Header Tag -->
                 <div class="flex items-center justify-end text-xs font-bold tracking-widest uppercase border-b border-white/10 pb-2 text-white/80">
                     <div class="hidden sm:flex items-center gap-6 text-[11px] font-semibold tracking-wider text-white/70">
-                        <span>12 CAPITAIS</span>
+                        <span>CIRCUITO NACIONAL</span>
                         <span class="text-white/30">•</span>
                         <span>5K • 10K • 15K</span>
                         <span class="text-white/30">•</span>
@@ -79,8 +79,8 @@
                     'curitiba': {
                         name: 'Curitiba',
                         state: 'PR',
-                        month: 'MARÇO',
-                        date: '21 de Março',
+                        month: 'EM BREVE',
+                        date: 'EM BREVE',
                         status: 'soon',
                         statusLabel: 'EM BREVE',
                         link: '{{ route('stages.show', 'curitiba') }}',
@@ -90,8 +90,8 @@
                     'anchieta': {
                         name: 'Anchieta',
                         state: 'ES',
-                        month: 'ABRIL',
-                        date: 'Abril',
+                        month: 'EM BREVE',
+                        date: 'EM BREVE',
                         status: 'soon',
                         statusLabel: 'EM BREVE',
                         link: '{{ route('stages.show', 'anchieta') }}',
@@ -101,8 +101,8 @@
                     'porto-alegre': {
                         name: 'Porto Alegre',
                         state: 'RS',
-                        month: 'MAIO',
-                        date: '16 de Maio',
+                        month: 'EM BREVE',
+                        date: 'EM BREVE',
                         status: 'soon',
                         statusLabel: 'EM BREVE',
                         link: '{{ route('stages.show', 'porto-alegre') }}',
@@ -112,8 +112,8 @@
                     'florianopolis': {
                         name: 'Florianópolis',
                         state: 'SC',
-                        month: 'JULHO',
-                        date: '18 de Julho',
+                        month: 'EM BREVE',
+                        date: 'EM BREVE',
                         status: 'soon',
                         statusLabel: 'EM BREVE',
                         link: '{{ route('stages.show', 'florianopolis') }}',
@@ -123,8 +123,8 @@
                     'maceio': {
                         name: 'Maceió',
                         state: 'AL',
-                        month: 'SETEMBRO',
-                        date: '19 de Setembro',
+                        month: 'EM BREVE',
+                        date: 'EM BREVE',
                         status: 'soon',
                         statusLabel: 'EM BREVE',
                         link: '{{ route('stages.show', 'maceio') }}',
@@ -134,8 +134,8 @@
                     'recife': {
                         name: 'Recife',
                         state: 'PE',
-                        month: 'SETEMBRO',
-                        date: 'Setembro',
+                        month: 'EM BREVE',
+                        date: 'EM BREVE',
                         status: 'soon',
                         statusLabel: 'EM BREVE',
                         link: '{{ route('stages.show', 'recife') }}',
@@ -145,8 +145,8 @@
                     'joao-pessoa': {
                         name: 'João Pessoa',
                         state: 'PB',
-                        month: 'NOVEMBRO',
-                        date: '07 de Novembro',
+                        month: 'EM BREVE',
+                        date: 'EM BREVE',
                         status: 'soon',
                         statusLabel: 'EM BREVE',
                         link: '{{ route('stages.show', 'joao-pessoa') }}',
@@ -156,13 +156,57 @@
                     'fortaleza': {
                         name: 'Fortaleza',
                         state: 'CE',
-                        month: 'DEZEMBRO',
-                        date: '12 de Dezembro',
+                        month: 'EM BREVE',
+                        date: 'EM BREVE',
                         status: 'soon',
                         statusLabel: 'EM BREVE',
                         link: '{{ route('stages.show', 'fortaleza') }}',
                         image: '{{ asset('images/cities/fortaleza.jpg') }}',
                         tagline: 'A Terra da Luz recebendo a energia do circuito.'
+                    },
+                    'salvador': {
+                        name: 'Salvador',
+                        state: 'BA',
+                        month: 'EM BREVE',
+                        date: 'EM BREVE',
+                        status: 'soon',
+                        statusLabel: 'EM BREVE',
+                        link: '{{ route('stages.show', 'salvador') }}',
+                        image: '{{ asset('images/cities/salvador.jpg') }}',
+                        tagline: 'A energia do Farol da Barra com a brisa da Baía de Todos os Santos.'
+                    },
+                    'natal': {
+                        name: 'Natal',
+                        state: 'RN',
+                        month: 'EM BREVE',
+                        date: 'EM BREVE',
+                        status: 'soon',
+                        statusLabel: 'EM BREVE',
+                        link: '{{ route('stages.show', 'natal') }}',
+                        image: '{{ asset('images/cities/natal.jpg') }}',
+                        tagline: 'Dunas, mar cristalino e a brisa costeira na Cidade do Sol.'
+                    },
+                    'sao-paulo': {
+                        name: 'São Paulo',
+                        state: 'SP',
+                        month: 'EM BREVE',
+                        date: 'EM BREVE',
+                        status: 'soon',
+                        statusLabel: 'EM BREVE',
+                        link: '{{ route('stages.show', 'sao-paulo') }}',
+                        image: '{{ asset('images/cities/sao-paulo.jpg') }}',
+                        tagline: 'A metrópole que nunca para em um percurso rápido e vibrante.'
+                    },
+                    'rio-de-janeiro': {
+                        name: 'Rio de Janeiro',
+                        state: 'RJ',
+                        month: 'EM BREVE',
+                        date: 'EM BREVE',
+                        status: 'soon',
+                        statusLabel: 'EM BREVE',
+                        link: '{{ route('stages.show', 'rio-de-janeiro') }}',
+                        image: '{{ asset('images/cities/rio-de-janeiro.jpg') }}',
+                        tagline: 'A Cidade Maravilhosa com a vista espetacular da orla e do Pão de Açúcar.'
                     }
                 }
             }">

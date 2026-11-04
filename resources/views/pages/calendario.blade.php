@@ -12,7 +12,7 @@
                 CALENDÁRIO NACIONAL 2027
             </h1>
             <p class="max-w-xl mx-auto text-slate-300 text-sm">
-                12 meses de movimento, 12 cidades e um só propósito: viver a melhor corrida da sua vida.
+                Grandes capitais brasileiras reunidas em um circuito histórico com uma só missão: viver a melhor corrida da sua vida.
             </p>
         </div>
     </section>
@@ -45,7 +45,7 @@
                                     <div class="text-xs text-slate-300 mt-1.5 flex flex-wrap items-center gap-x-3 gap-y-1">
                                         <span class="inline-flex items-center gap-1">📅 {{ $stage->date_display }}</span>
                                         <span class="inline-flex items-center gap-1">📍 <span class="truncate max-w-[200px] sm:max-w-xs">{{ $stage->venue_name }}</span></span>
-                                        <span class="inline-flex items-center gap-1">🏃 5K | 10K | 21K</span>
+                                        <span class="inline-flex items-center gap-1">🏃 {{ implode(' | ', $stage->distances ?? ['5K', '10K', '15K']) }}</span>
                                     </div>
                                 </div>
 

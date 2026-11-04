@@ -70,84 +70,91 @@
             <circle cx="1257.1" cy="1081.4" r="16" fill="#FF4D00" stroke="#FFFFFF" stroke-width="3" filter="drop-shadow(0 0 12px #FF4D00)" />
             <text x="1257.1" y="1086.4" text-anchor="middle" font-family="Outfit, sans-serif" font-weight="900" font-size="12" fill="#FFFFFF">1</text>
             <text x="1279.1" y="1087.4" text-anchor="start" font-family="Plus Jakarta Sans, sans-serif" font-weight="800" font-size="18" fill="#FFFFFF" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.9))">Brasília <tspan fill="#FF7A00" font-size="14">(DF)</tspan></text>
-            <text x="1279.1" y="1103.4" text-anchor="start" font-family="Plus Jakarta Sans, sans-serif" font-weight="600" font-size="12" fill="#FF6A1A">★ ABERTO • 15 Mar</text>
+            <text x="1279.1" y="1103.4" text-anchor="start" font-family="Plus Jakarta Sans, sans-serif" font-weight="600" font-size="12" fill="#FF6A1A">★ ABERTO • 24 Jan</text>
         </g>
         <!-- Stage 02: Goiânia -->
         <g class="city-pin group cursor-pointer" onclick="window.location.href='/etapas/goiania'">
             <circle cx="1192.2" cy="1125.5" r="12" fill="#1E2330" stroke="#FF7A00" stroke-width="2" />
             <circle cx="1192.2" cy="1125.5" r="5" fill="#FF7A00" />
             <text x="1214.2" y="1131.5" text-anchor="start" font-family="Plus Jakarta Sans, sans-serif" font-weight="800" font-size="18" fill="#FFFFFF" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.9))">Goiânia <tspan fill="#FF7A00" font-size="14">(GO)</tspan></text>
-            <text x="1214.2" y="1147.5" text-anchor="start" font-family="Plus Jakarta Sans, sans-serif" font-weight="600" font-size="12" fill="#94A3B8">EM BREVE • 18 Abr</text>
+            <text x="1214.2" y="1147.5" text-anchor="start" font-family="Plus Jakarta Sans, sans-serif" font-weight="600" font-size="12" fill="#94A3B8">EM BREVE</text>
         </g>
         <!-- Stage 03: Belo Horizonte -->
         <g class="city-pin group cursor-pointer" onclick="window.location.href='/etapas/belo-horizonte'">
             <circle cx="1442.1" cy="1282.5" r="12" fill="#1E2330" stroke="#FF7A00" stroke-width="2" />
             <circle cx="1442.1" cy="1282.5" r="5" fill="#FF7A00" />
             <text x="1464.1" y="1288.5" text-anchor="start" font-family="Plus Jakarta Sans, sans-serif" font-weight="800" font-size="18" fill="#FFFFFF" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.9))">Belo Horizonte <tspan fill="#FF7A00" font-size="14">(MG)</tspan></text>
-            <text x="1464.1" y="1304.5" text-anchor="start" font-family="Plus Jakarta Sans, sans-serif" font-weight="600" font-size="12" fill="#94A3B8">EM BREVE • 23 Mai</text>
+            <text x="1464.1" y="1304.5" text-anchor="start" font-family="Plus Jakarta Sans, sans-serif" font-weight="600" font-size="12" fill="#94A3B8">EM BREVE</text>
         </g>
         <!-- Stage 04: Rio de Janeiro -->
         <g class="city-pin group cursor-pointer" onclick="window.location.href='/etapas/rio-de-janeiro'">
             <circle cx="1480.0" cy="1434.1" r="12" fill="#1E2330" stroke="#FF7A00" stroke-width="2" />
             <circle cx="1480.0" cy="1434.1" r="5" fill="#FF7A00" />
             <text x="1458.0" y="1440.1" text-anchor="end" font-family="Plus Jakarta Sans, sans-serif" font-weight="800" font-size="18" fill="#FFFFFF" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.9))">Rio de Janeiro <tspan fill="#FF7A00" font-size="14">(RJ)</tspan></text>
-            <text x="1458.0" y="1456.1" text-anchor="end" font-family="Plus Jakarta Sans, sans-serif" font-weight="600" font-size="12" fill="#94A3B8">EM BREVE • 20 Jun</text>
+            <text x="1458.0" y="1456.1" text-anchor="end" font-family="Plus Jakarta Sans, sans-serif" font-weight="600" font-size="12" fill="#94A3B8">EM BREVE</text>
         </g>
         <!-- Stage 05: São Paulo -->
         <g class="city-pin group cursor-pointer" onclick="window.location.href='/etapas/sao-paulo'">
             <circle cx="1316.5" cy="1466.0" r="12" fill="#1E2330" stroke="#FF7A00" stroke-width="2" />
             <circle cx="1316.5" cy="1466.0" r="5" fill="#FF7A00" />
             <text x="1338.5" y="1472.0" text-anchor="start" font-family="Plus Jakarta Sans, sans-serif" font-weight="800" font-size="18" fill="#FFFFFF" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.9))">São Paulo <tspan fill="#FF7A00" font-size="14">(SP)</tspan></text>
-            <text x="1338.5" y="1488.0" text-anchor="start" font-family="Plus Jakarta Sans, sans-serif" font-weight="600" font-size="12" fill="#94A3B8">EM BREVE • 18 Jul</text>
+            <text x="1338.5" y="1488.0" text-anchor="start" font-family="Plus Jakarta Sans, sans-serif" font-weight="600" font-size="12" fill="#94A3B8">EM BREVE</text>
         </g>
         <!-- Stage 06: Curitiba -->
         <g class="city-pin group cursor-pointer" onclick="window.location.href='/etapas/curitiba'">
             <circle cx="1191.8" cy="1559.2" r="12" fill="#1E2330" stroke="#FF7A00" stroke-width="2" />
             <circle cx="1191.8" cy="1559.2" r="5" fill="#FF7A00" />
             <text x="1213.8" y="1565.2" text-anchor="start" font-family="Plus Jakarta Sans, sans-serif" font-weight="800" font-size="18" fill="#FFFFFF" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.9))">Curitiba <tspan fill="#FF7A00" font-size="14">(PR)</tspan></text>
-            <text x="1213.8" y="1581.2" text-anchor="start" font-family="Plus Jakarta Sans, sans-serif" font-weight="600" font-size="12" fill="#94A3B8">EM BREVE • 15 Ago</text>
+            <text x="1213.8" y="1581.2" text-anchor="start" font-family="Plus Jakarta Sans, sans-serif" font-weight="600" font-size="12" fill="#94A3B8">EM BREVE</text>
         </g>
         <!-- Stage 07: Florianópolis -->
         <g class="city-pin group cursor-pointer" onclick="window.location.href='/etapas/florianopolis'">
             <circle cx="1226.1" cy="1666.7" r="12" fill="#1E2330" stroke="#FF7A00" stroke-width="2" />
             <circle cx="1226.1" cy="1666.7" r="5" fill="#FF7A00" />
             <text x="1248.1" y="1672.7" text-anchor="start" font-family="Plus Jakarta Sans, sans-serif" font-weight="800" font-size="18" fill="#FFFFFF" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.9))">Florianópolis <tspan fill="#FF7A00" font-size="14">(SC)</tspan></text>
-            <text x="1248.1" y="1688.7" text-anchor="start" font-family="Plus Jakarta Sans, sans-serif" font-weight="600" font-size="12" fill="#94A3B8">EM BREVE • 12 Set</text>
+            <text x="1248.1" y="1688.7" text-anchor="start" font-family="Plus Jakarta Sans, sans-serif" font-weight="600" font-size="12" fill="#94A3B8">EM BREVE</text>
         </g>
         <!-- Stage 08: Porto Alegre -->
         <g class="city-pin group cursor-pointer" onclick="window.location.href='/etapas/porto-alegre'">
             <circle cx="1100.0" cy="1787.7" r="12" fill="#1E2330" stroke="#FF7A00" stroke-width="2" />
             <circle cx="1100.0" cy="1787.7" r="5" fill="#FF7A00" />
             <text x="1122.0" y="1797.7" text-anchor="start" font-family="Plus Jakarta Sans, sans-serif" font-weight="800" font-size="18" fill="#FFFFFF" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.9))">Porto Alegre <tspan fill="#FF7A00" font-size="14">(RS)</tspan></text>
-            <text x="1122.0" y="1813.7" text-anchor="start" font-family="Plus Jakarta Sans, sans-serif" font-weight="600" font-size="12" fill="#94A3B8">EM BREVE • 17 Out</text>
+            <text x="1122.0" y="1813.7" text-anchor="start" font-family="Plus Jakarta Sans, sans-serif" font-weight="600" font-size="12" fill="#94A3B8">EM BREVE</text>
         </g>
         <!-- Stage 09: Salvador -->
         <g class="city-pin group cursor-pointer" onclick="window.location.href='/etapas/salvador'">
             <circle cx="1700.7" cy="941.5" r="12" fill="#1E2330" stroke="#FF7A00" stroke-width="2" />
             <circle cx="1700.7" cy="941.5" r="5" fill="#FF7A00" />
             <text x="1678.7" y="947.5" text-anchor="end" font-family="Plus Jakarta Sans, sans-serif" font-weight="800" font-size="18" fill="#FFFFFF" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.9))">Salvador <tspan fill="#FF7A00" font-size="14">(BA)</tspan></text>
-            <text x="1678.7" y="963.5" text-anchor="end" font-family="Plus Jakarta Sans, sans-serif" font-weight="600" font-size="12" fill="#94A3B8">EM BREVE • 07 Nov</text>
+            <text x="1678.7" y="963.5" text-anchor="end" font-family="Plus Jakarta Sans, sans-serif" font-weight="600" font-size="12" fill="#94A3B8">EM BREVE</text>
         </g>
         <!-- Stage 10: Recife -->
         <g class="city-pin group cursor-pointer" onclick="window.location.href='/etapas/recife'">
             <circle cx="1872.0" cy="696.9" r="12" fill="#1E2330" stroke="#FF7A00" stroke-width="2" />
             <circle cx="1872.0" cy="696.9" r="5" fill="#FF7A00" />
             <text x="1850.0" y="702.9" text-anchor="end" font-family="Plus Jakarta Sans, sans-serif" font-weight="800" font-size="18" fill="#FFFFFF" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.9))">Recife <tspan fill="#FF7A00" font-size="14">(PE)</tspan></text>
-            <text x="1850.0" y="718.9" text-anchor="end" font-family="Plus Jakarta Sans, sans-serif" font-weight="600" font-size="12" fill="#94A3B8">EM BREVE • 28 Nov</text>
+            <text x="1850.0" y="718.9" text-anchor="end" font-family="Plus Jakarta Sans, sans-serif" font-weight="600" font-size="12" fill="#94A3B8">EM BREVE</text>
         </g>
-        <!-- Stage 11: Fortaleza -->
+        <!-- Stage 11: Natal -->
+        <g class="city-pin group cursor-pointer" onclick="window.location.href='/etapas/natal'">
+            <circle cx="1835.0" cy="590.0" r="12" fill="#1E2330" stroke="#FF7A00" stroke-width="2" />
+            <circle cx="1835.0" cy="590.0" r="5" fill="#FF7A00" />
+            <text x="1813.0" y="596.0" text-anchor="end" font-family="Plus Jakarta Sans, sans-serif" font-weight="800" font-size="18" fill="#FFFFFF" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.9))">Natal <tspan fill="#FF7A00" font-size="14">(RN)</tspan></text>
+            <text x="1813.0" y="612.0" text-anchor="end" font-family="Plus Jakarta Sans, sans-serif" font-weight="600" font-size="12" fill="#94A3B8">EM BREVE</text>
+        </g>
+        <!-- Stage 12: Fortaleza -->
         <g class="city-pin group cursor-pointer" onclick="window.location.href='/etapas/fortaleza'">
             <circle cx="1699.5" cy="482.8" r="12" fill="#1E2330" stroke="#FF7A00" stroke-width="2" />
             <circle cx="1699.5" cy="482.8" r="5" fill="#FF7A00" />
             <text x="1677.5" y="488.8" text-anchor="end" font-family="Plus Jakarta Sans, sans-serif" font-weight="800" font-size="18" fill="#FFFFFF" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.9))">Fortaleza <tspan fill="#FF7A00" font-size="14">(CE)</tspan></text>
-            <text x="1677.5" y="504.8" text-anchor="end" font-family="Plus Jakarta Sans, sans-serif" font-weight="600" font-size="12" fill="#94A3B8">EM BREVE • 12 Dez</text>
+            <text x="1677.5" y="504.8" text-anchor="end" font-family="Plus Jakarta Sans, sans-serif" font-weight="600" font-size="12" fill="#94A3B8">EM BREVE</text>
         </g>
         <!-- Stage 12: Manaus -->
         <g class="city-pin group cursor-pointer" onclick="window.location.href='/etapas/manaus'">
             <circle cx="684.0" cy="452.4" r="12" fill="#1E2330" stroke="#FF7A00" stroke-width="2" />
             <circle cx="684.0" cy="452.4" r="5" fill="#FF7A00" />
             <text x="708.0" y="444.4" text-anchor="start" font-family="Plus Jakarta Sans, sans-serif" font-weight="800" font-size="18" fill="#FFFFFF" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.9))">Manaus <tspan fill="#FF7A00" font-size="14">(AM)</tspan></text>
-            <text x="708.0" y="460.4" text-anchor="start" font-family="Plus Jakarta Sans, sans-serif" font-weight="600" font-size="12" fill="#94A3B8">EM BREVE • 19 Dez</text>
+            <text x="708.0" y="460.4" text-anchor="start" font-family="Plus Jakarta Sans, sans-serif" font-weight="600" font-size="12" fill="#94A3B8">EM BREVE</text>
         </g>
     </svg>
 </div>

@@ -134,7 +134,7 @@
                                     </div>
                                     <div class="flex items-center gap-2">
                                         <i data-lucide="activity" class="w-4 h-4 text-[#FF4D00] shrink-0"></i>
-                                        <span><strong>Distâncias:</strong> 5K | 10K | 21K</span>
+                                        <span><strong>Distâncias:</strong> {{ implode(' | ', $stage->distances ?? ['5K', '10K', '15K']) }}</span>
                                     </div>
                                 </div>
                             </div>

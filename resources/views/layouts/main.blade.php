@@ -34,7 +34,7 @@
                     <span class="w-1.5 h-1.5 rounded-full bg-[#FF4D00] animate-ping"></span>
                     <span class="hidden xs:inline">Circuito Nacional</span> 2027
                 </span>
-                <span class="hidden sm:inline text-neutral-500 whitespace-nowrap">⚡ 12 Cidades • 12 Etapas • Um Só Movimento</span>
+                <span class="hidden sm:inline text-neutral-500 whitespace-nowrap">⚡ Circuito Nacional 2027 • Um Só Movimento</span>
             </div>
             <div class="flex items-center gap-3 sm:gap-6 shrink-0 whitespace-nowrap text-[11px] sm:text-xs">
                 <a href="{{ route('stages.show', 'brasilia') }}" class="text-[#FF4D00] hover:text-black transition flex items-center gap-1 whitespace-nowrap font-bold">
