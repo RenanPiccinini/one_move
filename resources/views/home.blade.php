@@ -48,7 +48,7 @@
 
                     <!-- Bottom Info -->
                     <div class="text-[11px] sm:text-xs font-mono uppercase tracking-widest text-white/70">
-                        <span>ETAPA 01 • BRASÍLIA / DF • 24 DE JANEIRO</span>
+                        <span>ETAPA 01 • BRASÍLIA / DF • 27 DE JANEIRO</span>
                     </div>
                 </div>
 
@@ -69,7 +69,7 @@
                         name: 'Brasília',
                         state: 'DF',
                         month: 'JANEIRO',
-                        date: '24 de Janeiro',
+                        date: '27 de Janeiro',
                         status: 'open',
                         statusLabel: 'INSCREVER →',
                         link: 'https://inscricoes.onemoverun.com.br/etapa-brasilia-2027',
