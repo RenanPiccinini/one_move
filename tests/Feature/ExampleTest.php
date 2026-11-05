@@ -34,6 +34,9 @@ class ExampleTest extends TestCase
         $response->assertDontSee('3.500 Atletas');
         $response->assertDontSee('Quórum mín');
         $response->assertDontSee('Íntegra dos Artigos e Capítulos Oficiais');
+        $response->assertSee('ONE_MOVE_RUN_BRASIL_2027_REGULAMENTO_CROWN_COMPANY_COM_CLAUSULA_RESPONSABILIDADES.pdf');
+        $response->assertDontSee('bg-[#07080B]', false);
+        $response->assertDontSee('bg-[#090B10]', false);
     }
 
     public function test_calendario_and_etapas_redirect_to_home_calendar_section(): void
