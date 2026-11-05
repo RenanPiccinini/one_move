@@ -37,7 +37,7 @@
                 <span class="hidden sm:inline text-neutral-500 whitespace-nowrap">⚡ Circuito Nacional 2027 • Um Só Movimento</span>
             </div>
             <div class="flex items-center gap-3 sm:gap-6 shrink-0 whitespace-nowrap text-[11px] sm:text-xs">
-                <a href="{{ route('stages.show', 'brasilia') }}" class="text-[#FF4D00] hover:text-black transition flex items-center gap-1 whitespace-nowrap font-bold">
+                <a href="{{ url('/#calendario') }}" class="text-[#FF4D00] hover:text-black transition flex items-center gap-1 whitespace-nowrap font-bold">
                     <span><span class="hidden sm:inline">Próxima Largada: </span><strong>Brasília / DF</strong> <span class="hidden xs:inline">(24 Jan)</span></span>
                     <i data-lucide="arrow-right" class="w-3.5 h-3.5 shrink-0"></i>
                 </a>
@@ -71,9 +71,9 @@
                         <a href="{{ route('home') }}" class="whitespace-nowrap shrink-0 hover:text-[#FF4D00] transition {{ request()->routeIs('home') ? 'text-[#FF4D00]' : '' }}">
                             Home
                         </a>
-                        <a href="{{ route('pages.calendario') }}" 
+                        <a href="{{ url('/#calendario') }}" 
                            @click="if (window.location.pathname === '/' || window.location.pathname === '') { const el = document.getElementById('calendario') || document.getElementById('cidades'); if (el) { $event.preventDefault(); el.scrollIntoView({ behavior: 'smooth' }); history.pushState(null, null, '#calendario'); } }"
-                           class="whitespace-nowrap shrink-0 hover:text-[#FF4D00] transition {{ request()->routeIs('pages.calendario') ? 'text-[#FF4D00]' : '' }}">
+                           class="whitespace-nowrap shrink-0 hover:text-[#FF4D00] transition">
                             Calendário
                         </a>
                         <a href="{{ route('pages.regulamentos') }}" class="whitespace-nowrap shrink-0 hover:text-[#FF4D00] transition {{ request()->routeIs('pages.regulamentos') ? 'text-[#FF4D00]' : '' }}">
@@ -129,8 +129,8 @@
             </a>
             
             <a @click="mobileMenuOpen = false; if (window.location.pathname === '/' || window.location.pathname === '') { const el = document.getElementById('calendario') || document.getElementById('cidades'); if (el) { $event.preventDefault(); el.scrollIntoView({ behavior: 'smooth' }); history.pushState(null, null, '#calendario'); } }" 
-               href="{{ route('pages.calendario') }}" 
-               class="flex items-center justify-between px-3 py-2.5 rounded-xl text-sm font-bold text-neutral-800 hover:text-[#FF4D00] hover:bg-neutral-50 {{ request()->routeIs('pages.calendario') ? 'text-[#FF4D00] bg-neutral-50' : '' }}">
+               href="{{ url('/#calendario') }}" 
+               class="flex items-center justify-between px-3 py-2.5 rounded-xl text-sm font-bold text-neutral-800 hover:text-[#FF4D00] hover:bg-neutral-50">
                 <span>Calendário</span>
                 <i data-lucide="chevron-right" class="w-4 h-4 text-neutral-400"></i>
             </a>

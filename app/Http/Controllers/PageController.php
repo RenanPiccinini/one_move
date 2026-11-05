@@ -10,18 +10,18 @@ class PageController extends Controller
     public function circuito()
     {
         $stages = Stage::orderBy('stage_number')->get();
+
         return view('pages.circuito', compact('stages'));
     }
 
     public function calendario()
     {
-        $stages = Stage::orderBy('stage_number')->get();
-        return view('pages.calendario', compact('stages'));
+        return redirect()->to(url('/#calendario'));
     }
 
     public function kits()
     {
-        return view('pages.kits');
+        return redirect()->to(url('/#calendario'));
     }
 
     public function percursos(Request $request)
@@ -45,6 +45,7 @@ class PageController extends Controller
     public function regulamentos()
     {
         $stages = Stage::orderBy('stage_number')->get();
+
         return view('pages.regulamentos', compact('stages'));
     }
 
