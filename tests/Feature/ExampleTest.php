@@ -17,6 +17,10 @@ class ExampleTest extends TestCase
         $response = $this->get('/');
 
         $response->assertStatus(200);
+        $response->assertSee('24 DE JANEIRO');
+        $response->assertSee('24 de Janeiro');
+        $response->assertDontSee('27 DE JANEIRO');
+        $response->assertDontSee('27 de Janeiro');
     }
 
     public function test_regulamentos_page_loads_and_has_clean_structure(): void
@@ -28,6 +32,9 @@ class ExampleTest extends TestCase
         $response->assertStatus(200);
         $response->assertSee('REGULAMENTO ON MOVE - BRASÍLIA');
         $response->assertSee('Data Oficial');
+        $response->assertSee('24 de Janeiro de 2027');
+        $response->assertDontSee('27 de Janeiro');
+        $response->assertDontSee('15 de Março');
         $response->assertSee('Cidade & Local', false);
         $response->assertSee('Percursos');
         $response->assertSee('Organização');

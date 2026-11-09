@@ -42,4 +42,13 @@ class Stage extends Model
             default => 'Em Breve'
         };
     }
+
+    public function getDateDisplayAttribute($value): string
+    {
+        if ($this->slug === 'brasilia') {
+            return '24 de Janeiro de 2027';
+        }
+
+        return $value ?? '';
+    }
 }

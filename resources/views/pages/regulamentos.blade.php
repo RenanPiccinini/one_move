@@ -63,7 +63,7 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 text-xs">
                     <div class="bg-[#F8F9FA] p-4 sm:p-5 rounded-2xl border border-neutral-200/70 hover:border-neutral-300 transition">
                         <span class="text-[10px] uppercase font-bold text-neutral-400 block mb-1 tracking-wider">Data Oficial</span>
-                        <strong class="text-[#0A0A0C] text-xs sm:text-sm font-bold block">27 de Janeiro de 2027</strong>
+                        <strong class="text-[#0A0A0C] text-xs sm:text-sm font-bold block">24 de Janeiro de 2027</strong>
                         <span class="text-[11px] text-[#FF4D00] font-semibold mt-0.5 block">Largada às 07h00</span>
                     </div>
                     <div class="bg-[#F8F9FA] p-4 sm:p-5 rounded-2xl border border-neutral-200/70 hover:border-neutral-300 transition">
