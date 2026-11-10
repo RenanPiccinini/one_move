@@ -5,13 +5,13 @@
 
 @section('content')
 
-    <section class="py-16 relative bg-[#07080B] border-b border-white/5 text-center">
+    <section class="py-12 sm:py-16 relative bg-[#07080B] border-b border-white/5 text-center overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <span class="text-xs uppercase font-extrabold tracking-widest text-[#FF7A00]">Canais de Atendimento</span>
-            <h1 class="font-syne font-black text-3xl sm:text-5xl text-white mt-1 mb-4">
+            <h1 class="font-syne font-black text-2xl sm:text-4xl lg:text-5xl text-white mt-1 mb-4">
                 FALE COM A ONE MOVE
             </h1>
-            <p class="max-w-xl mx-auto text-slate-300 text-sm">
+            <p class="max-w-xl mx-auto text-slate-300 text-xs sm:text-sm">
                 Estamos prontos para atender atletas, assessorias esportivas, marcas e profissionais de imprensa.
             </p>
         </div>

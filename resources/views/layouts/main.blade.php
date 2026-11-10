@@ -27,21 +27,21 @@
 <body class="bg-white text-[#0E0F12] antialiased selection:bg-[#FF4D00] selection:text-white flex flex-col min-h-screen">
 
     <!-- Top Editorial Ticker Bar -->
-    <div class="bg-[#F8F9FA] border-b border-black/5 py-1 sm:py-1.5 px-3 sm:px-4 overflow-hidden relative text-xs font-semibold text-neutral-600">
-        <div class="max-w-[1600px] mx-auto flex items-center justify-between gap-2 sm:gap-4">
-            <div class="flex items-center gap-2 sm:gap-3 shrink-0 min-w-0">
+    <div class="bg-[#F8F9FA] border-b border-black/5 py-1.5 px-3 sm:px-4 relative text-[11px] sm:text-xs font-semibold text-neutral-600">
+        <div class="max-w-[1600px] mx-auto flex flex-wrap items-center justify-between gap-x-4 gap-y-1.5">
+            <div class="flex flex-wrap items-center gap-x-2.5 gap-y-1 min-w-0">
                 <span class="inline-flex items-center gap-1.5 px-2 sm:px-2.5 py-0.5 rounded-full bg-[#FF4D00]/10 text-[#FF4D00] border border-[#FF4D00]/25 font-bold uppercase tracking-wider text-[9px] sm:text-[10px] whitespace-nowrap">
                     <span class="w-1.5 h-1.5 rounded-full bg-[#FF4D00] animate-ping"></span>
-                    <span class="hidden xs:inline">Circuito Nacional</span> 2027
+                    <span>Circuito Nacional 2027</span>
                 </span>
-                <span class="hidden sm:inline text-neutral-500 whitespace-nowrap">⚡ Circuito Nacional 2027 • Um Só Movimento</span>
+                <span class="text-neutral-500 text-[10px] sm:text-xs">⚡ Circuito Nacional 2027 • Um Só Movimento</span>
             </div>
-            <div class="flex items-center gap-3 sm:gap-6 shrink-0 whitespace-nowrap text-[11px] sm:text-xs">
-                <a href="{{ url('/#calendario') }}" class="text-[#FF4D00] hover:text-black transition flex items-center gap-1 whitespace-nowrap font-bold">
-                    <span><span class="hidden sm:inline">Próxima Largada: </span><strong>Brasília / DF</strong> <span class="hidden xs:inline">(24 Jan)</span></span>
-                    <i data-lucide="arrow-right" class="w-3.5 h-3.5 shrink-0"></i>
+            <div class="flex flex-wrap items-center gap-x-3 sm:gap-x-6 gap-y-1 text-[10px] sm:text-xs">
+                <a href="{{ url('/#calendario') }}" class="text-[#FF4D00] hover:text-black transition inline-flex items-center gap-1 whitespace-nowrap font-bold">
+                    <span>Próxima Largada: <strong>Brasília / DF</strong> (24 Jan)</span>
+                    <i data-lucide="arrow-right" class="w-3 h-3 sm:w-3.5 sm:h-3.5 shrink-0"></i>
                 </a>
-                <div class="hidden md:flex items-center gap-3 text-neutral-400 whitespace-nowrap">
+                <div class="flex items-center gap-2.5 sm:gap-3 text-neutral-500 whitespace-nowrap">
                     <span class="w-1 h-1 rounded-full bg-neutral-300"></span>
                     <a href="{{ route('pages.faq') }}" class="hover:text-black transition whitespace-nowrap">Dúvidas?</a>
                     <a href="https://wa.me/5561999999999?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20Circuito%20ONE%20MOVE%20RUN." 
@@ -54,9 +54,9 @@
     </div>
 
     <!-- Main Navigation Bar -->
-    <header class="sticky top-0 z-50 glass-header-light transition-all duration-300" x-data="{ mobileMenuOpen: false }">
-        <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-13 sm:h-16 gap-3 sm:gap-4">
+    <header class="sticky top-0 z-50 glass-header-light transition-all duration-300">
+        <div class="max-w-[1600px] mx-auto px-3 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-14 sm:h-16 gap-2 sm:gap-4">
                 
                 <!-- Logo -->
                 <a href="{{ route('home') }}" class="flex items-center gap-2 shrink-0 group focus:outline-none" aria-label="ONE MOVE RUN Home">
@@ -65,9 +65,9 @@
                          class="h-8 sm:h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
                 </a>
 
-                <!-- Desktop Navigation Links & Action CTA (Justified beside Inscreva-se) -->
-                <div class="hidden md:flex items-center gap-6 lg:gap-8 ml-auto">
-                    <nav class="flex items-center gap-6 lg:gap-8 text-sm font-bold text-neutral-800 tracking-wide">
+                <!-- Desktop & Tablet Navigation Links & Action CTA (Justified beside Inscreva-se) -->
+                <div class="hidden sm:flex items-center gap-4 md:gap-6 lg:gap-8 ml-auto">
+                    <nav class="flex items-center gap-4 md:gap-6 lg:gap-8 text-xs md:text-sm font-bold text-neutral-800 tracking-wide">
                         <a href="{{ route('home') }}" class="whitespace-nowrap shrink-0 hover:text-[#FF4D00] transition {{ request()->routeIs('home') ? 'text-[#FF4D00]' : '' }}">
                             Home
                         </a>
@@ -91,80 +91,31 @@
                     </div>
                 </div>
 
-                <!-- Action CTA Button for Tablet (sm:flex md:hidden) -->
-                <div class="hidden sm:flex md:hidden items-center gap-3 shrink-0 ml-auto">
+                <!-- Mobile Action CTA Button (< sm) -->
+                <div class="flex sm:hidden items-center shrink-0 ml-auto">
                     <a href="https://inscricoes.onemoverun.com.br/etapa-brasilia-2027" 
                        target="_blank"
-                       class="btn-editorial-orange text-xs px-4 py-2 whitespace-nowrap shrink-0 shadow-md flex items-center gap-1.5">
+                       class="btn-editorial-orange !text-[10px] !px-3.5 !py-2 whitespace-nowrap shrink-0 shadow-md flex items-center gap-1">
                         <span>Inscreva-se agora!</span>
-                        <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+                        <i data-lucide="arrow-up-right" class="w-3 h-3 shrink-0"></i>
                     </a>
                 </div>
-
-                <!-- Mobile Hamburger Toggle -->
-                <div class="md:hidden flex items-center shrink-0">
-                    <button @click="mobileMenuOpen = !mobileMenuOpen" type="button" class="p-2 rounded-xl text-neutral-800 hover:text-black hover:bg-neutral-100 focus:outline-none" aria-label="Abrir Menu">
-                        <i x-show="!mobileMenuOpen" data-lucide="menu" class="w-5 h-5"></i>
-                        <i x-show="mobileMenuOpen" data-lucide="x" class="w-5 h-5"></i>
-                    </button>
-                </div>
             </div>
-        </div>
 
-        <!-- Mobile Dropdown Menu -->
-        <div x-show="mobileMenuOpen" 
-             @click.outside="mobileMenuOpen = false"
-             x-transition:enter="transition ease-out duration-200"
-             x-transition:enter-start="opacity-0 -translate-y-4"
-             x-transition:enter-end="opacity-100 translate-y-0"
-             x-transition:leave="transition ease-in duration-150"
-             x-transition:leave-start="opacity-100 translate-y-0"
-             x-transition:leave-end="opacity-0 -translate-y-4"
-             class="md:hidden bg-white/95 backdrop-blur-xl border-b border-neutral-200 px-5 pt-3 pb-6 space-y-1 shadow-2xl max-h-[calc(100vh-5rem)] overflow-y-auto"
-             style="display: none;">
-            
-            <a @click="mobileMenuOpen = false" href="{{ route('home') }}" class="flex items-center justify-between px-3 py-2.5 rounded-xl text-sm font-bold text-neutral-800 hover:text-[#FF4D00] hover:bg-neutral-50 {{ request()->routeIs('home') ? 'text-[#FF4D00] bg-neutral-50' : '' }}">
-                <span>Home</span>
-                <i data-lucide="chevron-right" class="w-4 h-4 text-neutral-400"></i>
-            </a>
-            
-            <a @click="mobileMenuOpen = false; if (window.location.pathname === '/' || window.location.pathname === '') { const el = document.getElementById('calendario') || document.getElementById('cidades'); if (el) { $event.preventDefault(); el.scrollIntoView({ behavior: 'smooth' }); history.pushState(null, null, '#calendario'); } }" 
-               href="{{ url('/#calendario') }}" 
-               class="flex items-center justify-between px-3 py-2.5 rounded-xl text-sm font-bold text-neutral-800 hover:text-[#FF4D00] hover:bg-neutral-50">
-                <span>Calendário</span>
-                <i data-lucide="chevron-right" class="w-4 h-4 text-neutral-400"></i>
-            </a>
-
-            <a @click="mobileMenuOpen = false" href="{{ route('pages.regulamentos') }}" class="flex items-center justify-between px-3 py-2.5 rounded-xl text-sm font-bold text-neutral-800 hover:text-[#FF4D00] hover:bg-neutral-50 {{ request()->routeIs('pages.regulamentos') ? 'text-[#FF4D00] bg-neutral-50' : '' }}">
-                <span>Regulamento</span>
-                <i data-lucide="chevron-right" class="w-4 h-4 text-neutral-400"></i>
-            </a>
-
-            <div class="pt-2 border-t border-neutral-100 my-1"></div>
-
-            <a @click="mobileMenuOpen = false" href="{{ route('pages.faq') }}" class="flex items-center justify-between px-3 py-2 rounded-xl text-xs font-semibold text-neutral-600 hover:text-[#FF4D00] hover:bg-neutral-50">
-                <span>Dúvidas Frequentes (FAQ)</span>
-                <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-neutral-400"></i>
-            </a>
-
-            <a @click="mobileMenuOpen = false" 
-               href="https://wa.me/5561999999999?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20Circuito%20ONE%20MOVE%20RUN." 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               class="flex items-center justify-between px-3 py-2 rounded-xl text-xs font-semibold text-neutral-600 hover:text-[#FF4D00] hover:bg-neutral-50">
-                <span>Atendimento & Contato</span>
-                <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-neutral-400"></i>
-            </a>
-            
-            <div class="pt-3">
-                <a @click="mobileMenuOpen = false"
-                   href="https://inscricoes.onemoverun.com.br/etapa-brasilia-2027" 
-                   target="_blank"
-                   class="btn-editorial-orange w-full text-center text-sm py-3 justify-center shadow-lg flex items-center gap-2">
-                    <span>Inscreva-se agora!</span>
-                    <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+            <!-- Mobile Inline Navigation Bar (Always visible, matching desktop menu) -->
+            <nav class="sm:hidden border-t border-black/5 py-2 flex items-center justify-around text-xs font-bold text-neutral-800 tracking-wide">
+                <a href="{{ route('home') }}" class="px-2 py-1 hover:text-[#FF4D00] transition {{ request()->routeIs('home') ? 'text-[#FF4D00]' : '' }}">
+                    Home
                 </a>
-            </div>
+                <a href="{{ url('/#calendario') }}" 
+                   @click="if (window.location.pathname === '/' || window.location.pathname === '') { const el = document.getElementById('calendario') || document.getElementById('cidades'); if (el) { $event.preventDefault(); el.scrollIntoView({ behavior: 'smooth' }); history.pushState(null, null, '#calendario'); } }"
+                   class="px-2 py-1 hover:text-[#FF4D00] transition">
+                    Calendário
+                </a>
+                <a href="{{ route('pages.regulamentos') }}" class="px-2 py-1 hover:text-[#FF4D00] transition {{ request()->routeIs('pages.regulamentos') ? 'text-[#FF4D00]' : '' }}">
+                    Regulamento
+                </a>
+            </nav>
         </div>
     </header>
 
@@ -174,7 +125,7 @@
     </main>
 
     <!-- Modern Architectural Dark Footer -->
-    <footer class="bg-[#0A0A0C] text-white pt-14 sm:pt-16 pb-10 sm:pb-12 relative overflow-hidden">
+    <footer class="bg-[#0A0A0C] text-white pt-12 sm:pt-16 pb-20 sm:pb-12 relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 items-center md:items-start mb-12">
                 

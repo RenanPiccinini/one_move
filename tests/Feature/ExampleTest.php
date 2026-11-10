@@ -19,8 +19,22 @@ class ExampleTest extends TestCase
         $response->assertStatus(200);
         $response->assertSee('24 DE JANEIRO');
         $response->assertSee('24 de Janeiro');
+        $response->assertSee('CIRCUITO NACIONAL');
+        $response->assertSee('LARGADA: JANEIRO');
+        $response->assertSee('aspect-video', false);
+        $response->assertSee('Dúvidas?');
+        $response->assertSee('Contato');
         $response->assertDontSee('27 DE JANEIRO');
         $response->assertDontSee('27 de Janeiro');
+        $response->assertDontSee('hidden xs:inline', false);
+    }
+
+    public function test_secondary_public_pages_load_successfully(): void
+    {
+        $this->seed();
+
+        $this->get('/faq')->assertStatus(200)->assertSee('PERGUNTAS FREQUENTES');
+        $this->get('/contato')->assertStatus(200)->assertSee('FALE COM A ONE MOVE');
     }
 
     public function test_regulamentos_page_loads_and_has_clean_structure(): void

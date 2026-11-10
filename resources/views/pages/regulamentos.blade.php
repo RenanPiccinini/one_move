@@ -6,10 +6,10 @@
 @section('content')
 
     <!-- Hero Header (Light Theme) -->
-    <section class="py-14 sm:py-16 relative bg-[#F8F9FA] border-b border-neutral-200/70 text-center">
+    <section class="py-10 sm:py-16 relative bg-[#F8F9FA] border-b border-neutral-200/70 text-center overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <span class="text-xs uppercase font-extrabold tracking-widest text-[#FF4D00]">Normas e Diretrizes Oficiais</span>
-            <h1 class="font-syne font-black text-3xl sm:text-5xl text-[#0A0A0C] mt-2 mb-3 uppercase tracking-tight">
+            <h1 class="font-syne font-black text-2xl sm:text-4xl lg:text-5xl text-[#0A0A0C] mt-2 mb-3 uppercase tracking-tight">
                 REGULAMENTOS DO CIRCUITO
             </h1>
             <p class="max-w-2xl mx-auto text-neutral-600 text-xs sm:text-sm leading-relaxed">
@@ -19,15 +19,15 @@
     </section>
 
     <!-- Main Content (White Background) -->
-    <section class="py-12 sm:py-16 bg-white min-h-[60vh]">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 sm:space-y-16">
+    <section class="py-8 sm:py-16 bg-white min-h-[60vh]">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 sm:space-y-16">
             
             <!-- REGULAMENTO ON MOVE - BRASÍLIA -->
-            <div id="regulamento-brasilia" class="bg-white rounded-3xl p-6 sm:p-10 space-y-8 border border-neutral-200/80 shadow-[0_4px_30px_rgba(0,0,0,0.04)]">
+            <div id="regulamento-brasilia" class="bg-white rounded-3xl p-4 sm:p-8 lg:p-10 space-y-6 sm:space-y-8 border border-neutral-200/80 shadow-[0_4px_30px_rgba(0,0,0,0.04)]">
                 
                 <!-- Header Card -->
-                <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 border-b border-neutral-200/80 pb-6">
-                    <div class="space-y-2.5">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-5 sm:gap-6 border-b border-neutral-200/80 pb-5 sm:pb-6">
+                    <div class="space-y-2.5 min-w-0">
                         <div class="flex flex-wrap items-center gap-2">
                             <span class="px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider bg-[#FF4D00] text-white shadow-sm">
                                 Etapa 01 • Oficial
@@ -39,7 +39,7 @@
                                 Inscrições Abertas
                             </span>
                         </div>
-                        <h2 class="font-syne font-black text-2xl sm:text-3xl lg:text-4xl text-[#0A0A0C] uppercase tracking-tight">
+                        <h2 class="font-syne font-black text-xl sm:text-3xl lg:text-4xl text-[#0A0A0C] uppercase tracking-tight">
                             REGULAMENTO ON MOVE - BRASÍLIA
                         </h2>
                         <p class="text-xs sm:text-sm text-neutral-500 font-medium">
@@ -52,8 +52,8 @@
                         <a href="{{ asset('ONE_MOVE_RUN_BRASIL_2027_REGULAMENTO_CROWN_COMPANY_COM_CLAUSULA_RESPONSABILIDADES.pdf') }}" 
                            target="_blank" 
                            download 
-                           class="btn-editorial-orange text-xs px-6 py-3 justify-center text-center shadow-lg hover:shadow-[#FF4D00]/25 transition flex items-center gap-2">
-                            <i data-lucide="download" class="w-4 h-4"></i>
+                           class="btn-editorial-orange text-xs px-5 sm:px-6 py-3 justify-center text-center shadow-lg hover:shadow-[#FF4D00]/25 transition flex items-center gap-2 w-full md:w-auto">
+                            <i data-lucide="download" class="w-4 h-4 shrink-0"></i>
                             <span>Baixar Regulamento (PDF)</span>
                         </a>
                     </div>
@@ -86,10 +86,10 @@
             </div>
 
             <!-- REGULAMENTOS ESPECÍFICOS POR ETAPA (MUNICIPAIS) -->
-            <div class="space-y-6">
+            <div class="space-y-5 sm:space-y-6">
                 <div>
                     <span class="text-xs uppercase font-extrabold tracking-widest text-[#FF4D00]">Particularidades Locais</span>
-                    <h3 class="font-syne font-black text-2xl sm:text-3xl text-[#0A0A0C] mt-1 uppercase tracking-tight">
+                    <h3 class="font-syne font-black text-xl sm:text-3xl text-[#0A0A0C] mt-1 uppercase tracking-tight">
                         REGULAMENTOS ESPECÍFICOS POR ETAPA
                     </h3>
                     <p class="text-xs sm:text-sm text-neutral-500 mt-1">

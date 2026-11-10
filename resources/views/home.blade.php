@@ -10,20 +10,18 @@
         <!-- 01. HERO SECTION: FOTOGRAFIA OFICIAL BANNER PRINCIPAL          -->
         <!-- Imagem Oficial Circuito ONE MOVE RUN (logo1.jpeg 1920x1080)    -->
         <!-- ============================================================== -->
-        <section class="relative w-full h-[calc(100vh-5.75rem)] min-h-[500px] sm:min-h-[520px] max-h-[720px] overflow-hidden bg-[#0A0A0C] text-white z-10 select-none">
+        <section class="relative w-full lg:h-[calc(100vh-5.75rem)] lg:min-h-[520px] lg:max-h-[720px] overflow-hidden bg-gradient-to-b from-[#02122B] via-[#04142D] to-[#0E121B] lg:bg-[#0A0A0C] text-white z-10 select-none flex flex-col justify-between">
 
-            <!-- Background Image (Banner 1920x1080) -->
+            <!-- Background Image Desktop (Banner 1920x1080) -->
             <img 
                 src="{{ asset('images/logo1.jpeg') }}" 
                 alt="Circuito ONE MOVE RUN" 
-                class="absolute inset-0 w-full h-full object-cover object-center">
+                class="hidden lg:block absolute inset-0 w-full h-full object-cover object-center">
 
-            <!-- Hero Content -->
-            <div class="relative z-20 w-full h-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 flex flex-col justify-between pt-4 sm:pt-6 pb-8 sm:pb-10">
-                
-                <!-- Meta Header Tag -->
-                <div class="flex items-center justify-end text-xs font-bold tracking-widest uppercase border-b border-white/10 pb-2 text-white/80">
-                    <div class="hidden sm:flex items-center gap-6 text-[11px] font-semibold tracking-wider text-white/70">
+            <!-- Top Meta Header Tag (Visible on ALL devices) -->
+            <div class="relative z-20 w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 pt-3 sm:pt-5 lg:pt-6">
+                <div class="flex items-center justify-center lg:justify-end text-xs font-bold tracking-widest uppercase border-b border-white/10 pb-2 text-white/80">
+                    <div class="flex flex-wrap items-center justify-center gap-x-2.5 sm:gap-x-6 gap-y-1 text-[10px] sm:text-[11px] font-semibold tracking-wider text-white/80">
                         <span>CIRCUITO NACIONAL</span>
                         <span class="text-white/30">•</span>
                         <span>5K • 10K • 15K</span>
@@ -31,27 +29,38 @@
                         <span class="text-[#FF4D00] font-black">LARGADA: JANEIRO</span>
                     </div>
                 </div>
+            </div>
 
-                <!-- Bottom CTA Buttons & Stage Info -->
-                <div class="mt-auto">
-                    <!-- Primary CTA Button -->
-                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-4 mb-3.5">
-                        <a href="https://inscricoes.onemoverun.com.br/etapa-brasilia-2027" 
-                           target="_blank"
-                           class="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#FF7A00] to-[#FF4D00] hover:brightness-110 text-white font-syne font-black text-xs sm:text-sm uppercase tracking-wider px-6 sm:px-8 py-3 sm:py-3.5 rounded-full shadow-[0_10px_30px_rgba(255,77,0,0.5)] hover:scale-105 active:scale-95 transition-all duration-300 group w-full sm:w-auto text-center">
-                            <span>INSCREVA-SE AGORA!</span>
-                            <svg class="w-4 h-4 text-white group-hover:translate-x-1 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
-                            </svg>
-                        </a>
-                    </div>
+            <!-- Mobile/Tablet Banner Image (Full 16:9 composition: Catedral + ONE MOVE + Congresso without cropping) -->
+            <div class="relative z-10 w-full lg:hidden my-1">
+                <div class="relative w-full aspect-video overflow-hidden">
+                    <img 
+                        src="{{ asset('images/logo1.jpeg') }}" 
+                        alt="Circuito ONE MOVE RUN" 
+                        class="w-full h-full object-contain">
+                    <div class="pointer-events-none absolute inset-x-0 top-0 h-5 bg-gradient-to-b from-[#02122B] to-transparent"></div>
+                    <div class="pointer-events-none absolute inset-x-0 bottom-0 h-6 bg-gradient-to-t from-[#0E121B] to-transparent"></div>
+                </div>
+            </div>
 
-                    <!-- Bottom Info -->
-                    <div class="text-[11px] sm:text-xs font-mono uppercase tracking-widest text-white/70">
-                        <span>ETAPA 01 • BRASÍLIA / DF • 24 DE JANEIRO</span>
-                    </div>
+            <!-- Bottom CTA Buttons & Stage Info -->
+            <div class="relative z-20 w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 pb-6 sm:pb-8 lg:pb-10 mt-auto pt-2 lg:pt-0">
+                <!-- Primary CTA Button -->
+                <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-4 mb-3">
+                    <a href="https://inscricoes.onemoverun.com.br/etapa-brasilia-2027" 
+                       target="_blank"
+                       class="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#FF7A00] to-[#FF4D00] hover:brightness-110 text-white font-syne font-black text-xs sm:text-sm uppercase tracking-wider px-6 sm:px-8 py-3 sm:py-3.5 rounded-full shadow-[0_10px_30px_rgba(255,77,0,0.5)] hover:scale-105 active:scale-95 transition-all duration-300 group w-full sm:w-auto text-center">
+                        <span>INSCREVA-SE AGORA!</span>
+                        <svg class="w-4 h-4 text-white group-hover:translate-x-1 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
+                        </svg>
+                    </a>
                 </div>
 
+                <!-- Bottom Info -->
+                <div class="text-[11px] sm:text-xs font-mono uppercase tracking-widest text-white/80 text-center sm:text-left">
+                    <span>ETAPA 01 • BRASÍLIA / DF • 24 DE JANEIRO</span>
+                </div>
             </div>
         </section>
 
@@ -333,7 +342,7 @@
                                 <a :href="citiesData[cityKey].link"
                                    @click.stop
                                    :target="citiesData[cityKey].status === 'open' ? '_blank' : '_self'"
-                                   class="hidden xs:inline-flex p-0.5 transition text-neutral-400 group-hover:text-black"
+                                   class="inline-flex p-0.5 transition text-neutral-400 group-hover:text-black"
                                    :aria-label="'Ver etapa ' + citiesData[cityKey].name">
                                     <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 transition-transform duration-200"
                                          :class="activeCity === cityKey ? 'text-[#FF4D00] translate-x-0.5 -translate-y-0.5' : 'text-neutral-400 group-hover:text-black'"
@@ -349,7 +358,7 @@
                 <!-- Right Companion Viewport: Seamless City Photography Transition -->
                 <div class="lg:col-span-5 relative mt-4 lg:mt-0">
                     <div class="lg:sticky lg:top-24">
-                        <div class="relative w-full aspect-[4/3] xs:aspect-[4/5] lg:aspect-auto lg:h-[460px] max-h-[460px] rounded-3xl overflow-hidden shadow-2xl bg-neutral-900 border border-black/5">
+                        <div class="relative w-full aspect-[4/5] sm:aspect-[4/4] lg:aspect-auto min-h-[380px] sm:min-h-[420px] lg:h-[460px] max-h-[480px] rounded-3xl overflow-hidden shadow-2xl bg-neutral-900 border border-black/5">
                             
                             <!-- Reactive Image Element -->
                             <img :src="citiesData[activeCity].image" 
@@ -360,12 +369,12 @@
                             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-transparent flex flex-col justify-between p-4 sm:p-6 text-white">
                                 
                                 <!-- Top Status Indicator -->
-                                <div class="flex items-center justify-between text-[11px] font-bold uppercase tracking-widest">
+                                <div class="flex flex-wrap items-center justify-between gap-2 text-[10px] sm:text-[11px] font-bold uppercase tracking-widest">
                                     <span class="px-3 py-0.5 rounded-full backdrop-blur-md border border-white/20"
                                           :class="citiesData[activeCity].status === 'open' ? 'bg-[#FF4D00] text-white shadow-lg' : 'bg-white/20 text-white'"
                                           x-text="citiesData[activeCity].status === 'open' ? 'Inscrições Abertas' : 'Etapa Confirmada'">
                                     </span>
-                                    <span class="text-white/80 font-mono" x-text="citiesData[activeCity].date"></span>
+                                    <span class="text-white/90 font-mono" x-text="citiesData[activeCity].date"></span>
                                 </div>
 
                                 <!-- Bottom Stage Information -->
@@ -379,14 +388,14 @@
                                            x-text="citiesData[activeCity].tagline"></p>
                                     </div>
 
-                                    <div class="pt-2.5 border-t border-white/20 flex items-center justify-between">
-                                        <span class="text-[11px] font-bold tracking-widest text-neutral-300 uppercase">
+                                    <div class="pt-2.5 border-t border-white/20 flex flex-wrap items-center justify-between gap-2">
+                                        <span class="text-[11px] font-bold tracking-widest text-neutral-300 uppercase whitespace-nowrap">
                                             5K • 10K • 15K
                                         </span>
                                         
                                         <a :href="citiesData[activeCity].link" 
                                            :target="citiesData[activeCity].status === 'open' ? '_blank' : '_self'"
-                                           class="btn-editorial-orange text-[11px] px-5 py-2 flex items-center gap-1.5">
+                                           class="btn-editorial-orange !text-[10px] sm:!text-[11px] !px-4 sm:!px-5 !py-2 flex items-center gap-1.5 shrink-0">
                                             <span x-text="citiesData[activeCity].status === 'open' ? 'INSCREVA-SE AGORA!' : 'VER DETALHES'"></span>
                                             <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
                                         </a>
