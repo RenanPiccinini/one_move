@@ -82,13 +82,11 @@ class PageController extends Controller
      *     image: string,
      *     surface_hex: string,
      *     is_dark_surface: bool,
-     *     image_class: string
+     *     crop_vertical_padding: bool
      * }>
      */
     private function officialPartners(): array
     {
-        $defaultImageClass = 'max-h-full max-w-full w-auto h-auto object-contain';
-
         return [
             [
                 'name' => 'Pátio Brasil Shopping',
@@ -99,7 +97,7 @@ class PageController extends Controller
                 'image' => 'images/parceiros/patio_brasil.jpeg',
                 'surface_hex' => '#FFFFFF',
                 'is_dark_surface' => false,
-                'image_class' => $defaultImageClass,
+                'crop_vertical_padding' => false,
             ],
             [
                 'name' => 'FAtDF',
@@ -110,7 +108,7 @@ class PageController extends Controller
                 'image' => 'images/parceiros/Fat_DF.png',
                 'surface_hex' => '#FFFFFF',
                 'is_dark_surface' => false,
-                'image_class' => 'w-[90%] max-w-none h-auto',
+                'crop_vertical_padding' => true,
             ],
             [
                 'name' => 'Greenfisio',
@@ -121,7 +119,7 @@ class PageController extends Controller
                 'image' => 'images/parceiros/greenfisio.png',
                 'surface_hex' => '#436E54',
                 'is_dark_surface' => true,
-                'image_class' => $defaultImageClass,
+                'crop_vertical_padding' => false,
             ],
             [
                 'name' => 'Chipower',
@@ -132,7 +130,7 @@ class PageController extends Controller
                 'image' => 'images/parceiros/chip_power.jpeg',
                 'surface_hex' => '#FFFFFF',
                 'is_dark_surface' => false,
-                'image_class' => $defaultImageClass,
+                'crop_vertical_padding' => false,
             ],
             [
                 'name' => 'Apex Group',
@@ -143,7 +141,7 @@ class PageController extends Controller
                 'image' => 'images/parceiros/apex_group.jpeg',
                 'surface_hex' => '#000000',
                 'is_dark_surface' => true,
-                'image_class' => $defaultImageClass,
+                'crop_vertical_padding' => false,
             ],
             [
                 'name' => 'Ultra Academia',
@@ -154,7 +152,7 @@ class PageController extends Controller
                 'image' => 'images/parceiros/ultra_academia.jpeg',
                 'surface_hex' => '#F7F7F7',
                 'is_dark_surface' => false,
-                'image_class' => $defaultImageClass,
+                'crop_vertical_padding' => false,
             ],
             [
                 'name' => 'Sport Life',
@@ -165,7 +163,7 @@ class PageController extends Controller
                 'image' => 'images/parceiros/sport_life.jpeg',
                 'surface_hex' => '#FFFFFF',
                 'is_dark_surface' => false,
-                'image_class' => $defaultImageClass,
+                'crop_vertical_padding' => false,
             ],
             [
                 'name' => 'PDS Digital Solutions',
@@ -176,7 +174,7 @@ class PageController extends Controller
                 'image' => 'images/parceiros/pds.jpeg',
                 'surface_hex' => '#F7F7F7',
                 'is_dark_surface' => false,
-                'image_class' => $defaultImageClass,
+                'crop_vertical_padding' => false,
             ],
         ];
     }

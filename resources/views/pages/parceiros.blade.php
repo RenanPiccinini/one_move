@@ -127,7 +127,7 @@
 
                             <!-- Seamless Logo Viewport -->
                             <div
-                                class="relative my-2.5 h-28 sm:h-32 rounded-xl overflow-hidden flex items-center justify-center p-4 border {{ $partner['is_dark_surface'] ? 'border-white/10' : 'border-black/5' }} shadow-inner"
+                                class="relative my-2.5 h-36 sm:h-40 rounded-xl overflow-hidden flex items-center justify-center p-2.5 sm:p-3 border {{ $partner['is_dark_surface'] ? 'border-white/10' : 'border-neutral-200/70' }}"
                                 style="background-color: {{ $partner['surface_hex'] }};"
                             >
                                 <!-- Subtle Tech Corner Reticles -->
@@ -136,18 +136,27 @@
                                 <span class="pointer-events-none absolute bottom-2 left-2 w-2 h-2 border-b border-l {{ $partner['is_dark_surface'] ? 'border-white/25' : 'border-black/15' }} group-hover:border-[#FF4D00] transition-colors"></span>
                                 <span class="pointer-events-none absolute bottom-2 right-2 w-2 h-2 border-b border-r {{ $partner['is_dark_surface'] ? 'border-white/25' : 'border-black/15' }} group-hover:border-[#FF4D00] transition-colors"></span>
 
-                                <img
-                                    src="{{ asset($partner['image']) }}"
-                                    alt="{{ $partner['name'] }}"
-                                    loading="lazy"
-                                    class="{{ $partner['image_class'] }} transition-transform duration-500 ease-out group-hover:scale-105 select-none"
-                                >
+                                @if($partner['crop_vertical_padding'])
+                                    <img
+                                        src="{{ asset($partner['image']) }}"
+                                        alt="{{ $partner['name'] }}"
+                                        loading="lazy"
+                                        class="w-11/12 max-w-full h-auto transition-transform duration-500 ease-out group-hover:scale-105 select-none"
+                                    >
+                                @else
+                                    <img
+                                        src="{{ asset($partner['image']) }}"
+                                        alt="{{ $partner['name'] }}"
+                                        loading="lazy"
+                                        class="max-h-full max-w-full w-auto h-auto object-contain transition-transform duration-500 ease-out group-hover:scale-105 select-none"
+                                    >
+                                @endif
                             </div>
                         </div>
 
                         <!-- Compact Card Metadata -->
                         <div class="pt-0.5">
-                            <h3 class="font-syne font-black text-sm sm:text-base text-[#0A0A0C] uppercase tracking-tight leading-tight group-hover:text-[#FF4D00] transition truncate">
+                            <h3 class="font-syne font-black text-[13px] sm:text-sm text-[#0A0A0C] uppercase tracking-tight leading-snug group-hover:text-[#FF4D00] transition">
                                 {{ $partner['name'] }}
                             </h3>
                             <p class="text-[11px] text-neutral-500 leading-snug mt-1 line-clamp-2">
