@@ -24,6 +24,7 @@ class ExampleTest extends TestCase
         $response->assertSee('aspect-video', false);
         $response->assertSee('Dúvidas?');
         $response->assertSee('Contato');
+        $response->assertSee('Parceiros Oficiais');
         $response->assertDontSee('27 DE JANEIRO');
         $response->assertDontSee('27 de Janeiro');
         $response->assertDontSee('hidden xs:inline', false);
@@ -67,5 +68,33 @@ class ExampleTest extends TestCase
 
         $responseEtapas = $this->get('/etapas');
         $responseEtapas->assertRedirect(url('/#calendario'));
+    }
+
+    public function test_parceiros_oficiais_page_loads_with_all_partners_and_navigation(): void
+    {
+        $response = $this->get('/parceiros-oficiais');
+
+        $response->assertStatus(200);
+        $response->assertSee('Parceiros Oficiais');
+        $response->assertSee('PARCEIROS');
+        $response->assertSee('OFICIAIS');
+        $response->assertSee('Pátio Brasil Shopping');
+        $response->assertSee('FAtDF');
+        $response->assertSee('Greenfisio');
+        $response->assertSee('Chipower');
+        $response->assertSee('Apex Group');
+        $response->assertSee('Ultra Academia');
+        $response->assertSee('Sport Life');
+        $response->assertSee('PDS Digital Solutions');
+        $response->assertSee('images/parceiros/patio_brasil.jpeg');
+        $response->assertSee('images/parceiros/Fat_DF.png');
+        $response->assertSee('images/parceiros/greenfisio.png');
+        $response->assertSee('images/parceiros/chip_power.jpeg');
+        $response->assertSee('images/parceiros/apex_group.jpeg');
+        $response->assertSee('images/parceiros/ultra_academia.jpeg');
+        $response->assertSee('images/parceiros/sport_life.jpeg');
+        $response->assertSee('images/parceiros/pds.jpeg');
+        $response->assertDontSee('bg-[#07080B]', false);
+        $response->assertDontSee('bg-[#090B10]', false);
     }
 }

@@ -79,6 +79,9 @@
                         <a href="{{ route('pages.regulamentos') }}" class="whitespace-nowrap shrink-0 hover:text-[#FF4D00] transition {{ request()->routeIs('pages.regulamentos') ? 'text-[#FF4D00]' : '' }}">
                             Regulamento
                         </a>
+                        <a href="{{ route('pages.parceiros') }}" class="whitespace-nowrap shrink-0 hover:text-[#FF4D00] transition {{ request()->routeIs('pages.parceiros') ? 'text-[#FF4D00]' : '' }}">
+                            Parceiros Oficiais
+                        </a>
                     </nav>
 
                     <div class="flex items-center gap-3 shrink-0">
@@ -103,17 +106,20 @@
             </div>
 
             <!-- Mobile Inline Navigation Bar (Always visible, matching desktop menu) -->
-            <nav class="sm:hidden border-t border-black/5 py-2 flex items-center justify-around text-xs font-bold text-neutral-800 tracking-wide">
-                <a href="{{ route('home') }}" class="px-2 py-1 hover:text-[#FF4D00] transition {{ request()->routeIs('home') ? 'text-[#FF4D00]' : '' }}">
+            <nav class="sm:hidden border-t border-black/5 py-2 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-[11px] font-bold text-neutral-800 tracking-wide">
+                <a href="{{ route('home') }}" class="px-1.5 py-1 whitespace-nowrap hover:text-[#FF4D00] transition {{ request()->routeIs('home') ? 'text-[#FF4D00]' : '' }}">
                     Home
                 </a>
                 <a href="{{ url('/#calendario') }}" 
                    @click="if (window.location.pathname === '/' || window.location.pathname === '') { const el = document.getElementById('calendario') || document.getElementById('cidades'); if (el) { $event.preventDefault(); el.scrollIntoView({ behavior: 'smooth' }); history.pushState(null, null, '#calendario'); } }"
-                   class="px-2 py-1 hover:text-[#FF4D00] transition">
+                   class="px-1.5 py-1 whitespace-nowrap hover:text-[#FF4D00] transition">
                     Calendário
                 </a>
-                <a href="{{ route('pages.regulamentos') }}" class="px-2 py-1 hover:text-[#FF4D00] transition {{ request()->routeIs('pages.regulamentos') ? 'text-[#FF4D00]' : '' }}">
+                <a href="{{ route('pages.regulamentos') }}" class="px-1.5 py-1 whitespace-nowrap hover:text-[#FF4D00] transition {{ request()->routeIs('pages.regulamentos') ? 'text-[#FF4D00]' : '' }}">
                     Regulamento
+                </a>
+                <a href="{{ route('pages.parceiros') }}" class="px-1.5 py-1 whitespace-nowrap hover:text-[#FF4D00] transition {{ request()->routeIs('pages.parceiros') ? 'text-[#FF4D00]' : '' }}">
+                    Parceiros Oficiais
                 </a>
             </nav>
         </div>
@@ -174,6 +180,8 @@
                 <p>© {{ date('Y') }} ONE MOVE RUN. Todos os direitos reservados. Uma corrida desenhada para ser vivida.</p>
                 <div class="flex items-center gap-4 sm:gap-6 flex-wrap justify-center">
                     <a href="{{ route('pages.regulamentos') }}" class="hover:text-white transition">Regulamento Geral</a>
+                    <span>•</span>
+                    <a href="{{ route('pages.parceiros') }}" class="hover:text-white transition">Parceiros Oficiais</a>
                     <span>•</span>
                     <a href="{{ route('pages.faq') }}" class="hover:text-white transition">Política de Privacidade</a>
                 </div>
