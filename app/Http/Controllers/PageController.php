@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Stage;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use Illuminate\View\View;
 
 class PageController extends Controller
@@ -87,14 +88,25 @@ class PageController extends Controller
      */
     private function officialPartners(): array
     {
-        return [
+        $partners = [
             [
-                'name' => 'Pátio Brasil Shopping',
-                'category' => 'experiencia-lifestyle',
-                'category_label' => 'Experiência & Lifestyle',
-                'badge' => 'Shopping Oficial',
-                'description' => 'Ponto de encontro, experiências e conexão com os atletas no centro de Brasília.',
-                'image' => 'images/parceiros/patio_brasil.jpeg',
+                'name' => 'Apex Group',
+                'category' => 'tecnologia-gestao',
+                'category_label' => 'Tecnologia & Gestão',
+                'badge' => 'Soluções Financeiras',
+                'description' => 'Soluções financeiras estratégicas para impulsionar empresas e grandes projetos.',
+                'image' => 'images/parceiros/apex_group.jpeg',
+                'surface_hex' => '#000000',
+                'is_dark_surface' => true,
+                'crop_vertical_padding' => false,
+            ],
+            [
+                'name' => 'Chipower',
+                'category' => 'tecnologia-gestao',
+                'category_label' => 'Tecnologia & Gestão',
+                'badge' => 'Cronometragem',
+                'description' => 'Sistema de cronometragem esportiva de alta precisão para resultados oficiais.',
+                'image' => 'images/parceiros/chip_power.jpeg',
                 'surface_hex' => '#FFFFFF',
                 'is_dark_surface' => false,
                 'crop_vertical_padding' => false,
@@ -122,34 +134,23 @@ class PageController extends Controller
                 'crop_vertical_padding' => false,
             ],
             [
-                'name' => 'Chipower',
-                'category' => 'tecnologia-gestao',
-                'category_label' => 'Tecnologia & Gestão',
-                'badge' => 'Cronometragem',
-                'description' => 'Sistema de cronometragem esportiva de alta precisão para resultados oficiais.',
-                'image' => 'images/parceiros/chip_power.jpeg',
+                'name' => 'Pátio Brasil Shopping',
+                'category' => 'experiencia-lifestyle',
+                'category_label' => 'Experiência & Lifestyle',
+                'badge' => 'Shopping Oficial',
+                'description' => 'Ponto de encontro, experiências e conexão com os atletas no centro de Brasília.',
+                'image' => 'images/parceiros/patio_brasil.jpeg',
                 'surface_hex' => '#FFFFFF',
                 'is_dark_surface' => false,
                 'crop_vertical_padding' => false,
             ],
             [
-                'name' => 'Apex Group',
+                'name' => 'PDS Digital Solutions',
                 'category' => 'tecnologia-gestao',
                 'category_label' => 'Tecnologia & Gestão',
-                'badge' => 'Soluções Financeiras',
-                'description' => 'Soluções financeiras estratégicas para impulsionar empresas e grandes projetos.',
-                'image' => 'images/parceiros/apex_group.jpeg',
-                'surface_hex' => '#000000',
-                'is_dark_surface' => true,
-                'crop_vertical_padding' => false,
-            ],
-            [
-                'name' => 'Ultra Academia',
-                'category' => 'esporte-saude',
-                'category_label' => 'Esporte & Saúde',
-                'badge' => 'Academia Oficial',
-                'description' => 'Preparação física, condicionamento e rotina de treino integrada ao movimento.',
-                'image' => 'images/parceiros/ultra_academia.jpeg',
+                'badge' => 'Tecnologia & Web',
+                'description' => 'Piccinini Digital Solutions — criação de landing pages, sites e sistemas personalizados.',
+                'image' => 'images/parceiros/pds.jpeg',
                 'surface_hex' => '#F7F7F7',
                 'is_dark_surface' => false,
                 'crop_vertical_padding' => false,
@@ -166,16 +167,26 @@ class PageController extends Controller
                 'crop_vertical_padding' => false,
             ],
             [
-                'name' => 'PDS Digital Solutions',
-                'category' => 'tecnologia-gestao',
-                'category_label' => 'Tecnologia & Gestão',
-                'badge' => 'Tecnologia & Web',
-                'description' => 'Piccinini Digital Solutions — criação de landing pages, sites e sistemas personalizados.',
-                'image' => 'images/parceiros/pds.jpeg',
+                'name' => 'Ultra Academia',
+                'category' => 'esporte-saude',
+                'category_label' => 'Esporte & Saúde',
+                'badge' => 'Academia Oficial',
+                'description' => 'Preparação física, condicionamento e rotina de treino integrada ao movimento.',
+                'image' => 'images/parceiros/ultra_academia.jpeg',
                 'surface_hex' => '#F7F7F7',
                 'is_dark_surface' => false,
                 'crop_vertical_padding' => false,
             ],
         ];
+
+        usort(
+            $partners,
+            static fn (array $first, array $second): int => strcmp(
+                Str::lower(Str::ascii($first['name'])),
+                Str::lower(Str::ascii($second['name']))
+            )
+        );
+
+        return $partners;
     }
 }

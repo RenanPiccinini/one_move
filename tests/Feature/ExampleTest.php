@@ -78,14 +78,16 @@ class ExampleTest extends TestCase
         $response->assertSee('Parceiros Oficiais');
         $response->assertSee('PARCEIROS');
         $response->assertSee('OFICIAIS');
-        $response->assertSee('Pátio Brasil Shopping');
-        $response->assertSee('FAtDF');
-        $response->assertSee('Greenfisio');
-        $response->assertSee('Chipower');
-        $response->assertSee('Apex Group');
-        $response->assertSee('Ultra Academia');
-        $response->assertSee('Sport Life');
-        $response->assertSee('PDS Digital Solutions');
+        $response->assertSeeInOrder([
+            'Apex Group',
+            'Chipower',
+            'FAtDF',
+            'Greenfisio',
+            'Pátio Brasil Shopping',
+            'PDS Digital Solutions',
+            'Sport Life',
+            'Ultra Academia',
+        ]);
         $response->assertSee('images/parceiros/patio_brasil.jpeg');
         $response->assertSee('images/parceiros/Fat_DF.png');
         $response->assertSee('images/parceiros/greenfisio.png');
