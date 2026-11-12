@@ -47,8 +47,7 @@
             <div class="relative z-20 w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 pb-6 sm:pb-8 lg:pb-10 mt-auto pt-2 lg:pt-0">
                 <!-- Primary CTA Button -->
                 <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-4 mb-3">
-                    <a href="https://inscricoes.onemoverun.com.br/etapa-brasilia-2027" 
-                       target="_blank"
+                    <a href="{{ route('pages.inscricoes-breve') }}" 
                        class="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#FF7A00] to-[#FF4D00] hover:brightness-110 text-white font-syne font-black text-xs sm:text-sm uppercase tracking-wider px-6 sm:px-8 py-3 sm:py-3.5 rounded-full shadow-[0_10px_30px_rgba(255,77,0,0.5)] hover:scale-105 active:scale-95 transition-all duration-300 group w-full sm:w-auto text-center">
                         <span>INSCREVA-SE AGORA!</span>
                         <svg class="w-4 h-4 text-white group-hover:translate-x-1 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -81,7 +80,7 @@
                         date: '24 de Janeiro',
                         status: 'open',
                         statusLabel: 'INSCREVER →',
-                        link: 'https://inscricoes.onemoverun.com.br/etapa-brasilia-2027',
+                        link: '{{ route('pages.inscricoes-breve') }}',
                         image: '{{ asset('images/cities/brasilia.jpg') }}',
                         tagline: 'A largada do circuito nacional sob a arquitetura monumental.'
                     },
@@ -331,7 +330,6 @@
                             <div class="flex items-center gap-1.5 sm:gap-2 shrink-0 ms-2">
                                 <a :href="citiesData[cityKey].link"
                                    @click.stop
-                                   :target="citiesData[cityKey].status === 'open' ? '_blank' : '_self'"
                                    class="px-2 sm:px-2.5 py-0.5 rounded-full text-[10px] sm:text-[11px] font-black uppercase tracking-wider transition-all duration-200 inline-block whitespace-nowrap"
                                    :class="citiesData[cityKey].status === 'open' 
                                          ? 'bg-[#FF4D00] text-white shadow-sm hover:brightness-110' 
@@ -341,7 +339,6 @@
                                 
                                 <a :href="citiesData[cityKey].link"
                                    @click.stop
-                                   :target="citiesData[cityKey].status === 'open' ? '_blank' : '_self'"
                                    class="inline-flex p-0.5 transition text-neutral-400 group-hover:text-black"
                                    :aria-label="'Ver etapa ' + citiesData[cityKey].name">
                                     <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 transition-transform duration-200"
@@ -394,7 +391,6 @@
                                         </span>
                                         
                                         <a :href="citiesData[activeCity].link" 
-                                           :target="citiesData[activeCity].status === 'open' ? '_blank' : '_self'"
                                            class="btn-editorial-orange !text-[10px] sm:!text-[11px] !px-4 sm:!px-5 !py-2 flex items-center gap-1.5 shrink-0">
                                             <span x-text="citiesData[activeCity].status === 'open' ? 'INSCREVA-SE AGORA!' : 'VER DETALHES'"></span>
                                             <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>

@@ -62,6 +62,14 @@ class PageController extends Controller
     }
 
     /**
+     * Render the upcoming registrations announcement page.
+     */
+    public function inscricoesEmBreve(): View
+    {
+        return view('pages.inscricoes-breve');
+    }
+
+    /**
      * Render the official partners showcase page.
      */
     public function parceirosOficiais(): View

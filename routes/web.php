@@ -19,6 +19,7 @@ Route::get('/resultados', [PageController::class, 'resultados'])->name('pages.re
 Route::get('/regulamentos', [PageController::class, 'regulamentos'])->name('pages.regulamentos');
 Route::get('/faq', [PageController::class, 'faq'])->name('pages.faq');
 Route::get('/parceiros-oficiais', [PageController::class, 'parceirosOficiais'])->name('pages.parceiros');
+Route::get('/inscricoes-em-breve', [PageController::class, 'inscricoesEmBreve'])->name('pages.inscricoes-breve');
 Route::get('/contato', [ContactController::class, 'index'])->name('contact.index');
 Route::post('/contato', [ContactController::class, 'store'])->name('contact.store');
 Route::get('/patrocinadores', [PageController::class, 'patrocinadores'])->name('pages.patrocinadores');

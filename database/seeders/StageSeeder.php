@@ -23,7 +23,7 @@ class StageSeeder extends Seeder
                 'date' => '2027-01-24',
                 'date_display' => '24 de Janeiro de 2027',
                 'status' => 'open',
-                'registration_link' => 'https://inscricoes.onemoverun.com.br/etapa-brasilia-2027',
+                'registration_link' => '/inscricoes-em-breve',
                 'venue_name' => 'Praça do Buriti & Eixo Monumental',
                 'venue_address' => 'Praça do Buriti – Zona Cívico-Administrativa, Eixo Monumental, entre as vias N1 e S1, Brasília/DF, CEP 70075-900',
                 'distances' => ['5K', '10K', '15K'],

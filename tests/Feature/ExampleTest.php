@@ -25,9 +25,26 @@ class ExampleTest extends TestCase
         $response->assertSee('Dúvidas?');
         $response->assertSee('Contato');
         $response->assertSee('Parceiros Oficiais');
+        $response->assertSee(route('pages.inscricoes-breve'), false);
+        $response->assertDontSee('inscricoes.onemoverun.com.br', false);
         $response->assertDontSee('27 DE JANEIRO');
         $response->assertDontSee('27 de Janeiro');
         $response->assertDontSee('hidden xs:inline', false);
+    }
+
+    public function test_inscricoes_em_breve_page_loads_with_site_layout(): void
+    {
+        $response = $this->get('/inscricoes-em-breve');
+
+        $response->assertStatus(200);
+        $response->assertSee('INSCRIÇÕES');
+        $response->assertSee('EM BREVE');
+        $response->assertSee('24 de Janeiro de 2027');
+        $response->assertSee('Brasília – DF');
+        $response->assertSee('5 km, 10 km e 15 km');
+        $response->assertSee('Ver Regulamento');
+        $response->assertSee('Voltar ao Calendário');
+        $response->assertDontSee('inscricoes.onemoverun.com.br', false);
     }
 
     public function test_secondary_public_pages_load_successfully(): void

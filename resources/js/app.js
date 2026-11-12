@@ -178,47 +178,9 @@ window.startCountdown = function (targetDateString, containerPrefix = 'cd') {
     setInterval(update, 1000);
 };
 
-// Registration Redirect Modal Handler
-window.openRegistrationRedirect = function (stageName, targetUrl) {
-    const modal = document.getElementById('registration-redirect-modal');
-    if (!modal) {
-        if (targetUrl) window.open(targetUrl, '_blank');
-        return;
-    }
-
-    const titleEl = document.getElementById('redirect-stage-name');
-    if (titleEl) titleEl.textContent = stageName || 'Etapa ONE MOVE RUN';
-
-    modal.classList.remove('hidden');
-    modal.classList.add('flex');
-
-    let counter = 3;
-    const countEl = document.getElementById('redirect-timer');
-    if (countEl) countEl.textContent = counter;
-
-    const interval = setInterval(() => {
-        counter--;
-        if (countEl) countEl.textContent = counter;
-        if (counter <= 0) {
-            clearInterval(interval);
-            modal.classList.add('hidden');
-            modal.classList.remove('flex');
-            if (targetUrl) {
-                window.open(targetUrl, '_blank');
-            } else {
-                alert('O link oficial de inscrições será ativado nesta etapa em breve!');
-            }
-        }
-    }, 1000);
-
-    const cancelBtn = document.getElementById('redirect-cancel-btn');
-    if (cancelBtn) {
-        cancelBtn.onclick = () => {
-            clearInterval(interval);
-            modal.classList.add('hidden');
-            modal.classList.remove('flex');
-        };
-    }
+// Registration Redirect Handler
+window.openRegistrationRedirect = function () {
+    window.location.href = '/inscricoes-em-breve';
 };
 
 document.addEventListener('DOMContentLoaded', () => {
