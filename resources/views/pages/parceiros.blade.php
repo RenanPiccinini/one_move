@@ -178,30 +178,23 @@
                             <span class="w-1.5 h-1.5 rounded-full bg-[#FF4D00]"></span>
                             <span>Parcerias Estratégicas 2027</span>
                         </span>
-                        <h3 class="font-syne font-black text-lg sm:text-2xl uppercase tracking-tight leading-tight">
-                            CONECTE SUA MARCA À <span class="text-gradient-orange">ONE MOVE RUN</span>
+                        <h3 class="font-syne font-black text-lg sm:text-xl lg:text-2xl uppercase tracking-tight leading-tight whitespace-normal sm:whitespace-nowrap">
+                            CONECTE SUA MARCA À <span class="text-gradient-orange whitespace-nowrap">ONE MOVE RUN</span>
                         </h3>
                         <p class="text-xs sm:text-sm text-neutral-400 max-w-2xl leading-relaxed">
                             Integre seu negócio ao circuito com ativações na arena, entrega de kits, mídia digital e experiências de marca.
                         </p>
                     </div>
 
-                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 shrink-0">
+                    <div class="flex items-center shrink-0">
                         <a
                             href="https://wa.me/5561999999999?text=Ol%C3%A1!%20Gostaria%20de%20saber%20como%20ser%20um%20Parceiro%20Oficial%20da%20ONE%20MOVE%20RUN."
                             target="_blank"
                             rel="noopener noreferrer"
-                            class="btn-editorial-orange !text-xs !px-5 !py-3 justify-center shadow-lg"
+                            class="btn-editorial-orange !text-xs !px-6 !py-3 justify-center shadow-lg"
                         >
                             <i data-lucide="message-circle" class="w-4 h-4 shrink-0"></i>
                             <span>Quero Ser Parceiro</span>
-                        </a>
-                        <a
-                            href="{{ route('pages.patrocinadores') }}"
-                            class="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/5 hover:bg-white/15 text-white font-syne font-bold text-xs uppercase tracking-wider px-5 py-3 transition whitespace-nowrap"
-                        >
-                            <span>Ver Cotas</span>
-                            <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 shrink-0"></i>
                         </a>
                     </div>
                 </div>

@@ -115,5 +115,8 @@ class ExampleTest extends TestCase
         $response->assertSee('images/parceiros/pds.jpeg');
         $response->assertDontSee('bg-[#07080B]', false);
         $response->assertDontSee('bg-[#090B10]', false);
+        $response->assertSee('CONECTE SUA MARCA À <span class="text-gradient-orange whitespace-nowrap">ONE MOVE RUN</span>', false);
+        $response->assertSee('Quero Ser Parceiro');
+        $response->assertDontSee('Ver Cotas');
     }
 }
