@@ -44,10 +44,10 @@
                 <div class="flex items-center gap-2.5 sm:gap-3 text-neutral-500 whitespace-nowrap">
                     <span class="w-1 h-1 rounded-full bg-neutral-300"></span>
                     <a href="{{ route('pages.faq') }}" class="hover:text-black transition whitespace-nowrap">Dúvidas?</a>
-                    <a href="https://wa.me/5561999999999?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20Circuito%20ONE%20MOVE%20RUN." 
+                    <a href="https://wa.me/5561992451300?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20Circuito%20ONE%20MOVE%20RUN." 
                        target="_blank" 
                        rel="noopener noreferrer" 
-                       class="hover:text-black transition whitespace-nowrap">Contato</a>
+                       class="hover:text-black transition whitespace-nowrap">Contato / SAC</a>
                 </div>
             </div>
         </div>
@@ -131,14 +131,17 @@
     <!-- Modern Architectural Dark Footer -->
     <footer class="bg-[#0A0A0C] text-white pt-12 sm:pt-16 pb-20 sm:pb-12 relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 items-center md:items-start mb-12">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 items-center justify-between mb-12">
                 
-                <!-- Bloco 1: Lado Esquerdo (Somente a Logo) -->
-                <div class="flex flex-col items-center md:items-start">
-                    <a href="{{ route('home') }}" class="inline-block">
+                <!-- Bloco 1: Realização (Lado Esquerdo) -->
+                <div class="flex flex-col items-center lg:items-start text-center lg:text-left space-y-3">
+                    <span class="text-xs uppercase tracking-widest text-neutral-400 font-bold">
+                        Realização
+                    </span>
+                    <a href="{{ route('home') }}" class="inline-block" aria-label="ONE MOVE RUN Home">
                         <img src="{{ asset('images/logo_cropped_white.png') }}" 
-                             alt="ONE MOVE RUN" 
-                             class="h-10 sm:h-12 w-auto object-contain">
+                             alt="Realização ONE MOVE" 
+                             class="h-8 sm:h-10 w-auto object-contain opacity-95 hover:opacity-100 transition-opacity">
                     </a>
                 </div>
 
@@ -159,15 +162,29 @@
                     </a>
                 </div>
 
-                <!-- Bloco 3: Realização -->
-                <div class="flex flex-col items-center md:items-end text-center md:text-right space-y-3">
+                <!-- Bloco 3: Cobertura Oficial (Tô no Flash) -->
+                <div class="flex flex-col items-center text-center space-y-2">
+                    <a href="{{ route('pages.parceiros') }}" class="inline-flex items-center justify-center group" title="Tô no Flash - Cobertura Oficial">
+                        <img src="{{ asset('images/parceiros/To_no_Flash-01.png') }}" 
+                             alt="Tô no Flash" 
+                             class="h-9 sm:h-11 w-auto object-contain opacity-95 group-hover:opacity-100 group-hover:scale-105 transition-all">
+                    </a>
                     <span class="text-xs uppercase tracking-widest text-neutral-400 font-bold">
-                        Realização
+                        Cobertura Oficial
                     </span>
-                    <div class="flex items-center justify-center md:justify-end">
-                        <img src="{{ asset('images/logo_cropped_white.png') }}" 
-                             alt="Realização ONE MOVE" 
-                             class="h-8 sm:h-9 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity">
+                </div>
+
+                <!-- Bloco 4: Produção (Arenna Run) -->
+                <div class="flex flex-col items-center lg:items-end text-center lg:text-right space-y-3">
+                    <span class="text-xs uppercase tracking-widest text-neutral-400 font-bold">
+                        Produção
+                    </span>
+                    <div class="flex items-center justify-center lg:justify-end">
+                        <div class="bg-white px-3 py-1.5 rounded-xl shadow-md flex items-center justify-center hover:opacity-100 transition-opacity">
+                            <img src="{{ asset('images/arenna_run.png') }}" 
+                                 alt="Produção Arenna Run" 
+                                 class="h-6 sm:h-7 w-auto object-contain">
+                        </div>
                     </div>
                 </div>
 
@@ -188,11 +205,11 @@
     </footer>
 
     <!-- Floating WhatsApp -->
-    <a href="https://wa.me/5561999999999?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20Circuito%20ONE%20MOVE%20RUN." 
+    <a href="https://wa.me/5561992451300?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20Circuito%20ONE%20MOVE%20RUN." 
        target="_blank" 
        rel="noopener noreferrer"
        class="fixed {{ request()->routeIs('stages.show') ? 'bottom-20 sm:bottom-20 right-4 sm:right-6' : 'bottom-4 sm:bottom-6 right-4 sm:right-6' }} z-40 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-xl hover:scale-110 active:scale-95 transition-all duration-300 group"
-       title="Fale no WhatsApp Oficial">
+       title="Fale no WhatsApp Oficial: +55 61 99245-1300">
         <span class="absolute -top-1 -right-1 w-3 sm:w-3.5 h-3 sm:h-3.5 bg-[#FF4D00] rounded-full animate-ping"></span>
         <svg class="w-6 h-6 sm:w-7 sm:h-7 fill-current" viewBox="0 0 24 24">
             <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.288.043.088.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.174.086.275.072.376-.043.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.043.073.043.419-.101.824z"/>

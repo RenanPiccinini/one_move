@@ -25,6 +25,13 @@ class ExampleTest extends TestCase
         $response->assertSee('Dúvidas?');
         $response->assertSee('Contato');
         $response->assertSee('Parceiros Oficiais');
+        $response->assertSee('Realização');
+        $response->assertSee('Produção');
+        $response->assertSee('Cobertura Oficial');
+        $response->assertSee('images/arenna_run.png');
+        $response->assertSee('images/parceiros/To_no_Flash-01.png');
+        $response->assertSee('5561992451300');
+        $response->assertDontSee('5561999999999');
         $response->assertSee(route('pages.inscricoes-breve'), false);
         $response->assertDontSee('inscricoes.onemoverun.com.br', false);
         $response->assertDontSee('27 DE JANEIRO');
@@ -51,8 +58,16 @@ class ExampleTest extends TestCase
     {
         $this->seed();
 
-        $this->get('/faq')->assertStatus(200)->assertSee('PERGUNTAS FREQUENTES');
-        $this->get('/contato')->assertStatus(200)->assertSee('FALE COM A ONE MOVE');
+        $this->get('/faq')
+            ->assertStatus(200)
+            ->assertSee('PERGUNTAS FREQUENTES')
+            ->assertSee('99245-1300');
+
+        $this->get('/contato')
+            ->assertStatus(200)
+            ->assertSee('FALE COM A ONE MOVE')
+            ->assertSee('+55 (61) 99245-1300')
+            ->assertSee('5561992451300');
     }
 
     public function test_regulamentos_page_loads_and_has_clean_structure(): void
@@ -98,11 +113,13 @@ class ExampleTest extends TestCase
         $response->assertSeeInOrder([
             'Apex Group',
             'Chipower',
+            'Eurobike',
             'FAtDF',
             'Greenfisio',
             'Pátio Brasil Shopping',
             'PDS Digital Solutions',
             'Sport Life',
+            'Tô no Flash',
             'Ultra Academia',
         ]);
         $response->assertSee('images/parceiros/patio_brasil.jpeg');
@@ -113,10 +130,13 @@ class ExampleTest extends TestCase
         $response->assertSee('images/parceiros/ultra_academia.jpeg');
         $response->assertSee('images/parceiros/sport_life.jpeg');
         $response->assertSee('images/parceiros/pds.jpeg');
+        $response->assertSee('images/parceiros/eurobike.png');
+        $response->assertSee('images/parceiros/To_no_Flash-01.png');
         $response->assertDontSee('bg-[#07080B]', false);
         $response->assertDontSee('bg-[#090B10]', false);
         $response->assertSee('CONECTE SUA MARCA À <span class="text-gradient-orange whitespace-nowrap">ONE MOVE RUN</span>', false);
         $response->assertSee('Quero Ser Parceiro');
         $response->assertDontSee('Ver Cotas');
+        $response->assertSee('5561992451300');
     }
 }

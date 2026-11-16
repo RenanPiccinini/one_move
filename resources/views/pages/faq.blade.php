@@ -130,6 +130,19 @@
                 </div>
             </div>
 
+            <!-- SAC / Direct Help Banner -->
+            <div class="mt-8 glass-panel rounded-3xl p-6 sm:p-8 border border-white/10 flex flex-col sm:flex-row items-center justify-between gap-5 text-center sm:text-left">
+                <div class="space-y-1">
+                    <span class="text-[10px] font-mono font-bold uppercase tracking-widest text-[#FF7A00]">Atendimento ao Atleta</span>
+                    <h3 class="font-syne font-black text-lg text-white">Ainda precisa de ajuda?</h3>
+                    <p class="text-xs text-slate-300">Fale com nosso SAC oficial pelo WhatsApp: <strong class="text-white">+55 61 99245-1300</strong>.</p>
+                </div>
+                <a href="https://wa.me/5561992451300?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20o%20Circuito%20ONE%20MOVE%20RUN." target="_blank" rel="noopener noreferrer" class="btn-editorial-orange !text-xs !px-5 !py-3 shrink-0">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    <span>Falar com o SAC</span>
+                </a>
+            </div>
+
         </div>
     </section>
 

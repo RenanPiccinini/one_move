@@ -188,7 +188,7 @@
 
                     <div class="flex items-center shrink-0">
                         <a
-                            href="https://wa.me/5561999999999?text=Ol%C3%A1!%20Gostaria%20de%20saber%20como%20ser%20um%20Parceiro%20Oficial%20da%20ONE%20MOVE%20RUN."
+                            href="https://wa.me/5561992451300?text=Ol%C3%A1!%20Gostaria%20de%20saber%20como%20ser%20um%20Parceiro%20Oficial%20da%20ONE%20MOVE%20RUN."
                             target="_blank"
                             rel="noopener noreferrer"
                             class="btn-editorial-orange !text-xs !px-6 !py-3 justify-center shadow-lg"

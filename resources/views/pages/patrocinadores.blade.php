@@ -119,7 +119,7 @@
                         <i data-lucide="mail" class="w-4 h-4"></i>
                         <span>Falar com o Diretor Comercial</span>
                     </a>
-                    <a href="https://wa.me/5561999999999?text=Ol%C3%A1!%20Gostaria%20de%20receber%20o%20M%C3%ADdia%20Kit%20de%20Patroc%C3%ADnio%20da%20ONE%20MOVE%20RUN." target="_blank" class="btn-secondary-onemove text-xs px-8 py-3.5 w-full sm:w-auto justify-center text-center">
+                    <a href="https://wa.me/5561992451300?text=Ol%C3%A1!%20Gostaria%20de%20receber%20o%20M%C3%ADdia%20Kit%20de%20Patroc%C3%ADnio%20da%20ONE%20MOVE%20RUN." target="_blank" class="btn-secondary-onemove text-xs px-8 py-3.5 w-full sm:w-auto justify-center text-center">
                         <i data-lucide="message-circle" class="w-4 h-4 text-emerald-400"></i>
                         <span>Conversar no WhatsApp</span>
                     </a>

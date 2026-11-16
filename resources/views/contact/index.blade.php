@@ -35,11 +35,11 @@
                                 <i data-lucide="message-circle" class="w-6 h-6"></i>
                             </div>
                             <div class="min-w-0">
-                                <strong class="text-white block text-sm">WhatsApp Oficial</strong>
-                                <span class="text-xs text-slate-300">Atendimento ao Atleta & Dúvidas</span>
+                                <strong class="text-white block text-sm">WhatsApp Oficial &amp; SAC</strong>
+                                <span class="text-xs text-slate-300">+55 (61) 99245-1300</span>
                             </div>
                         </div>
-                        <a href="https://wa.me/5561999999999" target="_blank" class="px-5 py-2.5 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white text-xs font-bold transition text-center shrink-0">
+                        <a href="https://wa.me/5561992451300" target="_blank" class="px-5 py-2.5 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white text-xs font-bold transition text-center shrink-0">
                             Conversar
                         </a>
                     </div>
@@ -110,7 +110,7 @@
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 <div>
                                     <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1">WhatsApp / Telefone</label>
-                                    <input type="text" name="phone" class="w-full bg-[#151821] border border-white/10 rounded-2xl px-4 py-3 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-[#FF4D00]" placeholder="(61) 99999-9999">
+                                    <input type="text" name="phone" class="w-full bg-[#151821] border border-white/10 rounded-2xl px-4 py-3 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-[#FF4D00]" placeholder="(61) 99245-1300">
                                 </div>
                                 <div>
                                     <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1">Cidade de Interesse</label>
