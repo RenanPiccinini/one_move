@@ -162,15 +162,15 @@
                     </a>
                 </div>
 
-                <!-- Bloco 3: Cobertura Oficial (Tô no Flash) -->
+                <!-- Bloco 3: Cobertura Exclusiva (Tô no Flash) -->
                 <div class="flex flex-col items-center text-center space-y-2">
-                    <a href="{{ route('pages.parceiros') }}" class="inline-flex items-center justify-center group" title="Tô no Flash - Cobertura Oficial">
+                    <a href="{{ route('pages.parceiros') }}" class="inline-flex items-center justify-center group" title="Tô no Flash - Cobertura Exclusiva">
                         <img src="{{ asset('images/parceiros/To_no_Flash-01.png') }}" 
                              alt="Tô no Flash" 
                              class="h-9 sm:h-11 w-auto object-contain opacity-95 group-hover:opacity-100 group-hover:scale-105 transition-all">
                     </a>
                     <span class="text-xs uppercase tracking-widest text-neutral-400 font-bold">
-                        Cobertura Oficial
+                        Cobertura Exclusiva
                     </span>
                 </div>
 

@@ -27,7 +27,7 @@ class ExampleTest extends TestCase
         $response->assertSee('Parceiros Oficiais');
         $response->assertSee('Realização');
         $response->assertSee('Produção');
-        $response->assertSee('Cobertura Oficial');
+        $response->assertSee('Cobertura Exclusiva');
         $response->assertSee('images/arenna_run.png');
         $response->assertSee('images/parceiros/To_no_Flash-01.png');
         $response->assertSee('5561992451300');
@@ -112,6 +112,7 @@ class ExampleTest extends TestCase
         $response->assertSee('OFICIAIS');
         $response->assertSeeInOrder([
             'Apex Group',
+            'Arena Run',
             'Chipower',
             'Eurobike',
             'FAtDF',
@@ -131,7 +132,9 @@ class ExampleTest extends TestCase
         $response->assertSee('images/parceiros/sport_life.jpeg');
         $response->assertSee('images/parceiros/pds.jpeg');
         $response->assertSee('images/parceiros/eurobike.png');
+        $response->assertSee('images/parceiros/arenna_run.png');
         $response->assertSee('images/parceiros/To_no_Flash-01.png');
+        $response->assertSee('Cobertura Exclusiva');
         $response->assertDontSee('bg-[#07080B]', false);
         $response->assertDontSee('bg-[#090B10]', false);
         $response->assertSee('CONECTE SUA MARCA À <span class="text-gradient-orange whitespace-nowrap">ONE MOVE RUN</span>', false);
