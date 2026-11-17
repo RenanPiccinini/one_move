@@ -180,11 +180,9 @@
                         Produção
                     </span>
                     <div class="flex items-center justify-center lg:justify-end">
-                        <div class="bg-white px-3 py-1.5 rounded-xl shadow-md flex items-center justify-center hover:opacity-100 transition-opacity">
-                            <img src="{{ asset('images/arenna_run.png') }}" 
-                                 alt="Produção Arenna Run" 
-                                 class="h-6 sm:h-7 w-auto object-contain">
-                        </div>
+                        <img src="{{ asset('images/parceiros/arenna_run_sem_fundo.png') }}" 
+                             alt="Produção Arenna Run" 
+                             class="h-8 sm:h-10 w-auto object-contain opacity-95 hover:opacity-100 transition-opacity">
                     </div>
                 </div>
 

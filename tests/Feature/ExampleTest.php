@@ -28,7 +28,7 @@ class ExampleTest extends TestCase
         $response->assertSee('Realização');
         $response->assertSee('Produção');
         $response->assertSee('Cobertura Exclusiva');
-        $response->assertSee('images/arenna_run.png');
+        $response->assertSee('images/parceiros/arenna_run_sem_fundo.png');
         $response->assertSee('images/parceiros/To_no_Flash-01.png');
         $response->assertSee('5561992451300');
         $response->assertDontSee('5561999999999');
