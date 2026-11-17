@@ -130,6 +130,8 @@ class PageController extends Controller
                 'is_dark_surface' => false,
                 'crop_vertical_padding' => false,
             ],
+            // Temporariamente comentado a pedido
+            /*
             [
                 'name' => 'Eurobike',
                 'category' => 'experiencia-lifestyle',
@@ -141,6 +143,7 @@ class PageController extends Controller
                 'is_dark_surface' => false,
                 'crop_vertical_padding' => false,
             ],
+            */
             [
                 'name' => 'FAtDF',
                 'category' => 'esporte-saude',

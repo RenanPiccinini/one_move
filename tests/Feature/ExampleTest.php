@@ -114,7 +114,6 @@ class ExampleTest extends TestCase
             'Apex Group',
             'Arena Run',
             'Chipower',
-            'Eurobike',
             'FAtDF',
             'Greenfisio',
             'Pátio Brasil Shopping',
@@ -123,6 +122,7 @@ class ExampleTest extends TestCase
             'Tô no Flash',
             'Ultra Academia',
         ]);
+        $response->assertDontSee('Eurobike');
         $response->assertSee('images/parceiros/patio_brasil.jpeg');
         $response->assertSee('images/parceiros/Fat_DF.png');
         $response->assertSee('images/parceiros/greenfisio.png');
@@ -131,7 +131,6 @@ class ExampleTest extends TestCase
         $response->assertSee('images/parceiros/ultra_academia.jpeg');
         $response->assertSee('images/parceiros/sport_life.jpeg');
         $response->assertSee('images/parceiros/pds.jpeg');
-        $response->assertSee('images/parceiros/eurobike.png');
         $response->assertSee('images/parceiros/arenna_run.png');
         $response->assertSee('images/parceiros/To_no_Flash-01.png');
         $response->assertSee('Cobertura Exclusiva');
