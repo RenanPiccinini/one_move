@@ -183,6 +183,45 @@ window.openRegistrationRedirect = function () {
     window.location.href = '/inscricoes-em-breve';
 };
 
+// Alpine Data Component for Pre-Sale Countdown (19/11/2026 07:00 BRT)
+Alpine.data('countdownPreVenda', (targetDateString = '2026-11-19T07:00:00-03:00') => ({
+    targetDate: new Date(targetDateString).getTime(),
+    days: '00',
+    hours: '00',
+    minutes: '00',
+    seconds: '00',
+    isExpired: false,
+    timer: null,
+    init() {
+        this.tick();
+        this.timer = setInterval(() => this.tick(), 1000);
+    },
+    tick() {
+        const now = new Date().getTime();
+        const diff = this.targetDate - now;
+
+        if (diff <= 0) {
+            this.days = '00';
+            this.hours = '00';
+            this.minutes = '00';
+            this.seconds = '00';
+            this.isExpired = true;
+            if (this.timer) clearInterval(this.timer);
+            return;
+        }
+
+        const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const s = Math.floor((diff % (1000 * 60)) / 1000);
+
+        this.days = String(d).padStart(2, '0');
+        this.hours = String(h).padStart(2, '0');
+        this.minutes = String(m).padStart(2, '0');
+        this.seconds = String(s).padStart(2, '0');
+    }
+}));
+
 document.addEventListener('DOMContentLoaded', () => {
     window.init3DTilt();
     if (document.getElementById('hero-canvas')) {

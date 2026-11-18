@@ -51,6 +51,18 @@ class ExampleTest extends TestCase
         $response->assertSee('5 km, 10 km e 15 km');
         $response->assertSee('Ver Regulamento');
         $response->assertSee('Voltar ao Calendário');
+        $response->assertSee('PRÉ-VENDA');
+        $response->assertSee('19/11/2026');
+        $response->assertSee('07h00');
+        $response->assertSee('Horário de Brasília');
+        $response->assertSee('20% OFF');
+        $response->assertSee('VAGAS LIMITADAS');
+        $response->assertSee('pre-venda-brasilia.jpg');
+        $response->assertSee('countdownPreVenda');
+        $response->assertSee('Dias');
+        $response->assertSee('Horas');
+        $response->assertSee('Minutos');
+        $response->assertSee('Segundos');
         $response->assertDontSee('inscricoes.onemoverun.com.br', false);
     }
 
