@@ -63,6 +63,10 @@ class ExampleTest extends TestCase
         $response->assertSee('Horas');
         $response->assertSee('Minutos');
         $response->assertSee('Segundos');
+        $response->assertSee('Acompanhar @onemoverun');
+        $response->assertDontSee('Não perca o lote inicial');
+        $response->assertDontSee('Ativar Alerta no WhatsApp');
+        $response->assertDontSee('Cadastre seu alerta diretamente');
         $response->assertDontSee('inscricoes.onemoverun.com.br', false);
     }
 

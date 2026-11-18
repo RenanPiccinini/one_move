@@ -203,32 +203,15 @@
                         </div>
                     </div>
 
-                    <!-- Direct Reminder Call to Action -->
-                    <div class="pt-4 border-t border-white/10 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4">
-                        <div class="space-y-1">
-                            <span class="text-xs uppercase font-extrabold tracking-wider text-[#FF7A00] block">Não perca o lote inicial</span>
-                            <p class="text-xs text-slate-300">
-                                Cadastre seu alerta diretamente com nossa equipe ou acompanhe o lançamento no Instagram oficial.
-                            </p>
-                        </div>
-
-                        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 shrink-0">
-                            <a href="https://wa.me/5561992451300?text=Ol%C3%A1!%20Quero%20receber%20o%20link%20da%20Pr%C3%A9-Venda%20com%2020%25%20OFF%20da%20ONE%20MOVE%20RUN%20Bras%C3%ADlia%20assim%20que%20abrir%20dia%2019%20%C3%A0s%207h!"
-                               target="_blank"
-                               rel="noopener noreferrer"
-                               class="btn-primary-onemove !text-xs !px-6 !py-3.5 justify-center text-center shadow-[0_0_25px_rgba(255,77,0,0.5)] flex items-center gap-2 hover:scale-[1.02] transition-transform">
-                                <i data-lucide="bell" class="w-4 h-4 shrink-0"></i>
-                                <span>Ativar Alerta no WhatsApp</span>
-                            </a>
-
-                            <a href="https://www.instagram.com/onemoverun/"
-                               target="_blank"
-                               rel="noopener noreferrer"
-                               class="btn-secondary-onemove !text-xs !px-5 !py-3.5 justify-center text-center flex items-center gap-2 !bg-white/10 !text-white !border-white/15 hover:!bg-white/20 transition">
-                                <i data-lucide="instagram" class="w-4 h-4 shrink-0"></i>
-                                <span>Acompanhar @onemoverun</span>
-                            </a>
-                        </div>
+                    <!-- Canal Oficial Instagram -->
+                    <div class="pt-4 border-t border-white/10 flex items-center justify-center">
+                        <a href="https://www.instagram.com/onemoverun/"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="btn-secondary-onemove !text-xs !px-6 !py-3 justify-center text-center flex items-center gap-2 !bg-white/10 !text-white !border-white/15 hover:!bg-white/20 transition">
+                            <i data-lucide="instagram" class="w-4 h-4 shrink-0 text-[#FF4D00]"></i>
+                            <span>Acompanhar @onemoverun</span>
+                        </a>
                     </div>
 
                 </div>
