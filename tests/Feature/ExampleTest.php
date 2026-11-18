@@ -2,6 +2,8 @@
 
 namespace Tests\Feature;
 
+use App\Providers\AppServiceProvider;
+use Carbon\Carbon;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
@@ -41,6 +43,8 @@ class ExampleTest extends TestCase
 
     public function test_inscricoes_em_breve_page_loads_with_site_layout(): void
     {
+        Carbon::setTestNow(Carbon::create(2026, 11, 17, 22, 0, 0, 'America/Sao_Paulo'));
+
         $response = $this->get('/inscricoes-em-breve');
 
         $response->assertStatus(200);
@@ -53,7 +57,8 @@ class ExampleTest extends TestCase
         $response->assertSee('Voltar ao Calendário');
         $response->assertSee('PRÉ-VENDA');
         $response->assertSee('19/11/2026');
-        $response->assertSee('07h00');
+        $response->assertSee('00h00');
+        $response->assertSee('Meia-noite');
         $response->assertSee('Horário de Brasília');
         $response->assertSee('20% OFF');
         $response->assertSee('VAGAS LIMITADAS');
@@ -68,6 +73,30 @@ class ExampleTest extends TestCase
         $response->assertDontSee('Ativar Alerta no WhatsApp');
         $response->assertDontSee('Cadastre seu alerta diretamente');
         $response->assertDontSee('inscricoes.onemoverun.com.br', false);
+
+        Carbon::setTestNow();
+    }
+
+    public function test_automatic_redirect_to_chippower_when_registration_opens_at_midnight(): void
+    {
+        // 19 de Novembro de 2026 às 00:00:01 (Meia-noite em diante)
+        Carbon::setTestNow(Carbon::create(2026, 11, 19, 0, 0, 1, 'America/Sao_Paulo'));
+
+        $this->assertTrue(AppServiceProvider::isRegistrationOpen());
+        $this->assertSame(
+            'https://www.chippower.com.br/evento.php?slug=one-move-run-brasil',
+            AppServiceProvider::getRegistrationUrl()
+        );
+
+        // Acesso à rota de inscrições redireciona diretamente para o Chippower
+        $response = $this->get('/inscricoes-em-breve');
+        $response->assertRedirect('https://www.chippower.com.br/evento.php?slug=one-move-run-brasil');
+
+        // Na home, o botão agora aponta diretamente para o Chippower
+        $responseHome = $this->get('/');
+        $responseHome->assertSee('https://www.chippower.com.br/evento.php?slug=one-move-run-brasil', false);
+
+        Carbon::setTestNow();
     }
 
     public function test_secondary_public_pages_load_successfully(): void

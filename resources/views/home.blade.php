@@ -47,7 +47,8 @@
             <div class="relative z-20 w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12 pb-6 sm:pb-8 lg:pb-10 mt-auto pt-2 lg:pt-0">
                 <!-- Primary CTA Button -->
                 <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-4 mb-3">
-                    <a href="{{ route('pages.inscricoes-breve') }}" 
+                    <a href="{{ $registrationUrl ?? route('pages.inscricoes-breve') }}" 
+                       @if(!empty($isRegistrationOpen)) target="_blank" rel="noopener noreferrer" @endif
                        class="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#FF7A00] to-[#FF4D00] hover:brightness-110 text-white font-syne font-black text-xs sm:text-sm uppercase tracking-wider px-6 sm:px-8 py-3 sm:py-3.5 rounded-full shadow-[0_10px_30px_rgba(255,77,0,0.5)] hover:scale-105 active:scale-95 transition-all duration-300 group w-full sm:w-auto text-center">
                         <span>INSCREVA-SE AGORA!</span>
                         <svg class="w-4 h-4 text-white group-hover:translate-x-1 transition-transform shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -80,7 +81,7 @@
                         date: '24 de Janeiro',
                         status: 'open',
                         statusLabel: 'INSCREVER →',
-                        link: '{{ route('pages.inscricoes-breve') }}',
+                        link: '{{ $registrationUrl ?? route('pages.inscricoes-breve') }}',
                         image: '{{ asset('images/cities/brasilia.jpg') }}',
                         tagline: 'A largada do circuito nacional sob a arquitetura monumental.'
                     },

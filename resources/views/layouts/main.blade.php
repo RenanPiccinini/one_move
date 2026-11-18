@@ -85,8 +85,9 @@
                     </nav>
 
                     <div class="flex items-center gap-3 shrink-0">
-                        <a href="{{ route('pages.inscricoes-breve') }}" 
-                           class="btn-editorial-orange text-xs px-4 sm:px-5 py-2 sm:py-2.5 whitespace-nowrap shrink-0 shadow-md hover:shadow-[#FF4D00]/30 transition-all flex items-center gap-1.5">
+                        <a href="{{ $registrationUrl ?? route('pages.inscricoes-breve') }}" 
+                           class="btn-editorial-orange text-xs px-4 sm:px-5 py-2 sm:py-2.5 whitespace-nowrap shrink-0 shadow-md hover:shadow-[#FF4D00]/30 transition-all flex items-center gap-1.5"
+                           @if(!empty($isRegistrationOpen)) target="_blank" rel="noopener noreferrer" @endif>
                             <span>Inscreva-se agora!</span>
                             <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
                         </a>
@@ -95,8 +96,9 @@
 
                 <!-- Mobile Action CTA Button (< sm) -->
                 <div class="flex sm:hidden items-center shrink-0 ml-auto">
-                    <a href="{{ route('pages.inscricoes-breve') }}" 
-                       class="btn-editorial-orange !text-[10px] !px-3.5 !py-2 whitespace-nowrap shrink-0 shadow-md flex items-center gap-1">
+                    <a href="{{ $registrationUrl ?? route('pages.inscricoes-breve') }}" 
+                       class="btn-editorial-orange !text-[10px] !px-3.5 !py-2 whitespace-nowrap shrink-0 shadow-md flex items-center gap-1"
+                       @if(!empty($isRegistrationOpen)) target="_blank" rel="noopener noreferrer" @endif>
                         <span>Inscreva-se agora!</span>
                         <i data-lucide="arrow-up-right" class="w-3 h-3 shrink-0"></i>
                     </a>

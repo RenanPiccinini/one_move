@@ -1,11 +1,11 @@
 @extends('layouts.main')
 
 @section('title', 'Pré-Venda Inscrições | Circuito ONE MOVE RUN 2027 - Brasília')
-@section('meta_description', 'Contagem regressiva oficial para a abertura da Pré-Venda da ONE MOVE RUN Brasília 2027 com 20% OFF. Abertura dia 19/11/2026 às 07h00 (Horário de Brasília).')
+@section('meta_description', 'Contagem regressiva oficial para a abertura da Pré-Venda da ONE MOVE RUN Brasília 2027 com 20% OFF. Abertura do dia 18 para 19/11/2026 à meia-noite (00h00 - Horário de Brasília).')
 
 @php
     // Cálculo seguro de fallback server-side no Horário Oficial de Brasília (UTC-3)
-    $targetTimestamp = \Carbon\Carbon::create(2026, 11, 19, 7, 0, 0, 'America/Sao_Paulo')->timestamp;
+    $targetTimestamp = \Carbon\Carbon::create(2026, 11, 19, 0, 0, 0, 'America/Sao_Paulo')->timestamp;
     $nowTimestamp = \Carbon\Carbon::now('America/Sao_Paulo')->timestamp;
     $diffSeconds = max(0, $targetTimestamp - $nowTimestamp);
     $initialDays = sprintf('%02d', floor($diffSeconds / 86400));
@@ -48,7 +48,7 @@
             </h1>
 
             <p class="max-w-2xl mx-auto text-neutral-600 text-xs sm:text-sm leading-relaxed mt-2.5">
-                Prepare-se para a largada histórica do Circuito Nacional. As inscrições com lote promocional de <strong>Pré-Venda (20% OFF)</strong> abrem pontualmente no horário oficial de Brasília.
+                Prepare-se para a largada histórica do Circuito Nacional. As inscrições com lote promocional de <strong>Pré-Venda (20% OFF)</strong> abrem pontualmente na virada do dia 18 para 19/11 à meia-noite (00h00 • Horário de Brasília).
             </p>
         </div>
     </section>
@@ -77,7 +77,7 @@
                                 <span>PRÉ-VENDA EXCLUSIVA</span>
                             </span>
                             <span class="px-3 py-1 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-wider bg-white/10 text-slate-300 border border-white/10">
-                                📅 19/11/2026 às 07h00
+                                📅 19/11/2026 à 00h00 (Meia-noite)
                             </span>
                             <span class="px-3 py-1 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-wider bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 font-mono">
                                 Horário de Brasília (UTC-3)
@@ -198,7 +198,7 @@
                             </div>
                             <div>
                                 <strong class="text-white font-bold block">ABERTURA PONTUAL</strong>
-                                <span class="text-slate-400 text-[11px]">19/11 às 7h da manhã (Horário de Brasília)</span>
+                                <span class="text-slate-400 text-[11px]">Virada de 18 para 19/11 à 00h00 (Horário de Brasília)</span>
                             </div>
                         </div>
                     </div>
@@ -224,7 +224,7 @@
                 <div class="lg:col-span-5 space-y-4">
                     <div class="relative group rounded-3xl overflow-hidden border border-neutral-200/90 shadow-[0_10px_35px_rgba(0,0,0,0.08)] bg-neutral-900">
                         <img src="{{ asset('images/pre-venda-brasilia.jpg') }}" 
-                             alt="ONE MOVE RUN BRASIL 2027 • Pré-Venda 19/11/2026 às 7h da manhã com 20% OFF" 
+                             alt="ONE MOVE RUN BRASIL 2027 • Pré-Venda do dia 18 para 19/11/2026 à meia-noite com 20% OFF" 
                              class="w-full h-auto object-cover group-hover:scale-[1.02] transition-transform duration-500">
                         
                         <!-- Floating Badge -->
@@ -293,7 +293,7 @@
                             <div class="bg-[#F8F9FA] p-4 rounded-2xl border border-neutral-200/70">
                                 <span class="text-[10px] uppercase font-bold text-neutral-400 block mb-1 tracking-wider">Status das Inscrições</span>
                                 <strong class="text-[#FF4D00] text-xs sm:text-sm font-black uppercase block">Inscrições em Breve</strong>
-                                <span class="text-[11px] text-neutral-500 mt-0.5 block">Pré-Venda: 19/11 às 7h</span>
+                                <span class="text-[11px] text-neutral-500 mt-0.5 block">Pré-Venda: 19/11 à 00h00 (Meia-noite)</span>
                             </div>
                         </div>
 
@@ -327,7 +327,7 @@
 <script>
     function countdownPreVenda() {
         return {
-            targetDate: new Date('2026-11-19T07:00:00-03:00').getTime(),
+            targetDate: new Date('2026-11-19T00:00:00-03:00').getTime(),
             days: '{{ $initialDays }}',
             hours: '{{ $initialHours }}',
             minutes: '{{ $initialMinutes }}',
@@ -349,6 +349,7 @@
                     this.seconds = '00';
                     this.isExpired = true;
                     if (this.timer) clearInterval(this.timer);
+                    window.location.href = 'https://www.chippower.com.br/evento.php?slug=one-move-run-brasil';
                     return;
                 }
 

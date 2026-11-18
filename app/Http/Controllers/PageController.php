@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Stage;
+use App\Providers\AppServiceProvider;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\View\View;
@@ -62,10 +64,14 @@ class PageController extends Controller
     }
 
     /**
-     * Render the upcoming registrations announcement page.
+     * Render the upcoming registrations announcement page or redirect when open.
      */
-    public function inscricoesEmBreve(): View
+    public function inscricoesEmBreve(): View|RedirectResponse
     {
+        if (AppServiceProvider::isRegistrationOpen()) {
+            return redirect()->away(AppServiceProvider::CHIPPOWER_REGISTRATION_URL);
+        }
+
         return view('pages.inscricoes-breve');
     }
 

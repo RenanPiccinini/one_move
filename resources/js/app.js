@@ -178,13 +178,20 @@ window.startCountdown = function (targetDateString, containerPrefix = 'cd') {
     setInterval(update, 1000);
 };
 
-// Registration Redirect Handler
+// Registration Redirect Handler (Auto-redirects to Chippower from Nov 19 00:00 BRT onwards)
+const CHIPPOWER_REGISTRATION_URL = 'https://www.chippower.com.br/evento.php?slug=one-move-run-brasil';
+const REGISTRATION_OPENING_TIME = new Date('2026-11-19T00:00:00-03:00').getTime();
+
 window.openRegistrationRedirect = function () {
-    window.location.href = '/inscricoes-em-breve';
+    if (Date.now() >= REGISTRATION_OPENING_TIME) {
+        window.location.href = CHIPPOWER_REGISTRATION_URL;
+    } else {
+        window.location.href = '/inscricoes-em-breve';
+    }
 };
 
-// Alpine Data Component for Pre-Sale Countdown (19/11/2026 07:00 BRT)
-Alpine.data('countdownPreVenda', (targetDateString = '2026-11-19T07:00:00-03:00') => ({
+// Alpine Data Component for Pre-Sale Countdown (Midnight of Nov 18 to Nov 19, 2026 00:00 BRT)
+Alpine.data('countdownPreVenda', (targetDateString = '2026-11-19T00:00:00-03:00') => ({
     targetDate: new Date(targetDateString).getTime(),
     days: '00',
     hours: '00',
@@ -207,6 +214,8 @@ Alpine.data('countdownPreVenda', (targetDateString = '2026-11-19T07:00:00-03:00'
             this.seconds = '00';
             this.isExpired = true;
             if (this.timer) clearInterval(this.timer);
+            // Automatic redirect to Chippower when countdown completes
+            window.location.href = CHIPPOWER_REGISTRATION_URL;
             return;
         }
 

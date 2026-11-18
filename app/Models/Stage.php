@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Providers\AppServiceProvider;
 use Illuminate\Database\Eloquent\Model;
 
 class Stage extends Model
@@ -50,5 +51,14 @@ class Stage extends Model
         }
 
         return $value ?? '';
+    }
+
+    public function getRegistrationLinkAttribute($value): string
+    {
+        if ($this->slug === 'brasilia' && AppServiceProvider::isRegistrationOpen()) {
+            return AppServiceProvider::CHIPPOWER_REGISTRATION_URL;
+        }
+
+        return $value ?? route('pages.inscricoes-breve');
     }
 }
