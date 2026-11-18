@@ -50,11 +50,6 @@ class ExampleTest extends TestCase
         $response->assertStatus(200);
         $response->assertSee('INSCRIÇÕES');
         $response->assertSee('EM BREVE');
-        $response->assertSee('24 de Janeiro de 2027');
-        $response->assertSee('Brasília – DF');
-        $response->assertSee('5 km, 10 km e 15 km');
-        $response->assertSee('Ver Regulamento');
-        $response->assertSee('Voltar ao Calendário');
         $response->assertSee('PRÉ-VENDA');
         $response->assertSee('19/11/2026');
         $response->assertSee('00h00');
@@ -62,13 +57,14 @@ class ExampleTest extends TestCase
         $response->assertSee('Horário de Brasília');
         $response->assertSee('20% OFF');
         $response->assertSee('VAGAS LIMITADAS');
-        $response->assertSee('pre-venda-brasilia.jpg');
         $response->assertSee('countdownPreVenda');
         $response->assertSee('Dias');
         $response->assertSee('Horas');
         $response->assertSee('Minutos');
         $response->assertSee('Segundos');
         $response->assertSee('Acompanhar @onemoverun');
+        $response->assertDontSee('pre-venda-brasilia.jpg');
+        $response->assertDontSee('A LARGADA DO CIRCUITO ESTÁ CHEGANDO');
         $response->assertDontSee('Não perca o lote inicial');
         $response->assertDontSee('Ativar Alerta no WhatsApp');
         $response->assertDontSee('Cadastre seu alerta diretamente');
